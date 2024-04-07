@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js" defer></script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form {
+            width: 600px;
+            margin-top:120px;
+            margin-bottom: 20px;
+        }
+
+        .form input[type="text"],
+        .form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            display: inline-block;
+            border-radius: 5px; /* 添加圆角 */
+
+            
+        }
+        .form textarea {
+            height:360px;
+        }
+        .form input[type="submit"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px; /* 添加圆角 */
+            transition: background-color 0.3s;
+            margin-bottom: 100px;
+        }
+
+        .form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .form input[type="submit"]:active {
+            background-color: #0056b3;
+        }
+        .error {
+            height:20px;
+            line-height:20px;
+            color: red;
+            font-size: 14px;
+            width: calc(100% - 20px);
+            vertical-align: top;
+            margin-bottom: 10px;
+            text-align: left;
+            display: inline-block;
+
+        }
+    </style>
+
+</head>
+<body>
+         <!--header-->
+     <div class="header">
+        <div class="logo">
+            <h1>
+                <a href="index.html">Fineusing</a>
+            </h1>
+        </div>
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy</a>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <form class="form" action="#" method="post">
+                <!-- <input type="text" name="email" placeholder="请输入邮箱">
+                <div class="error" id="email-error"></div> -->
+                <textarea name="content" placeholder="Please enter feedback content
+                "></textarea>
+                <div class="error" id="content-error"></div>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+        <p>Copyright © 2024 Fineusing</p>
+    </div>
+
+
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var content = document.querySelector('textarea[name="content"]').value;
+            var contentError = document.getElementById('content-error');
+            if (!content) {
+                contentError.textContent = 'the content can not be blank';
+            } else {
+                contentError.textContent = '';
+            }
+
+            if (content) {
+                var mailtoLink = 'mailto:ttianyaa@icloud.com' + '?subject=Email Subject&body=' + encodeURIComponent(content);
+                window.location.href = mailtoLink;
+            }
+        });
+
+        // 监听输入框的输入事件，如果输入框有输入则隐藏错误提示
+        document.querySelectorAll('.form input[type="text"], .form textarea').forEach(function(input) {
+            input.addEventListener('input', function() {
+                var errorId = this.getAttribute('name') + '-error';
+                document.getElementById(errorId).textContent = "";
+            });
+        });
+    </script>
+    
+</body>
+</html>

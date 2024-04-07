@@ -1,151 +1,298 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>FineUsing-Screen Mirroring,Audio Converter</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <meta name="keywords" content="screen mirroring,airplay,audio converter,video recorder,app launcher" />
-        <meta name="description" content="Mirror iOS device to Mac via Wi-Fi connection, support AirPlay protocol. All-round audio converter, supporting almost all audio formats such as mp3, m4r, flac, wav, aiff, etc." />
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="screen mirroring,airplay,ntfs,ntfs for mac,audio converter,video recorder,app launcher" />
+    <meta name="description" content="Mirror iOS device to Mac via Wi-Fi connection, support AirPlay protocol,Mount NTFS disk in read-write mode on macOS, audio converter,image converter" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js" defer></script>
+    <style>
+        .appcontentbox {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 65px;
+        }
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-<!--					<span class="icon solid major fa-cloud"></span>-->
-					<h1> <strong>FineUsing</strong><br /></h1>
-					<h3>Committed to the development of excellent apps for macOS.</h3>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">Our Apps</a></li>
-					</ul>
-				</div>
-			</section>
+        .appbox {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            width: 90%;
+            margin-bottom: 20px;
+            border-radius: 20px;
+            flex-wrap: wrap;
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
+            text-align: center;
+            padding: 40px 30px;
+            height: auto;
+        }
 
-                            <img src="images/devicemirror_128x128.png" alt="" align="left" height="116" widht="116" />
+        .app1 {
+            background: linear-gradient(100deg, #E8FFF0 1.12%, #C7FFDD 100.25%);
+        }
+        .app2 {
+            background: linear-gradient(100deg, #FDFFE5 1.12%, #DCFFFF 97.67%);
+        }
+        .app3 {
+            background: linear-gradient(100deg, rgba(238, 144, 255, 0.20) 1.12%, rgba(72, 201, 255, 0.20) 49.14%, rgba(43, 255, 137, 0.20) 100.25%);
+        }
+        .app4 {
+            background: linear-gradient(274deg, rgba(25, 255, 247, 0.20) 4.37%, rgba(254, 255, 148, 0.20) 102.79%), #FFF;
+        }
 
-							<header class="major">
+        .plate_img {
+            width: 45%;
+            direction: ltr;
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+            height: 356px;
+            min-width: 512px;
+            margin: 10px;
+            justify-content: center;
 
-								<h2>DeviceMirror<br />
-                                    Mirror iPhone/iPad Screen to Mac</h2>
-							</header>
-							<p>Mirror iOS devices to Mac via Wi-Fi connection or data cable connection. Support AirPlay protocol, 4K, ultra-clear, high-definition and other resolution projection.</p>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/devicemirror_des.png" alt="" /></span>
-						</div>
+        }
+        .plate_img img {
+            border-radius: 20px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
 
-					</div>
-                    <a href="https://apps.apple.com/cn/app/id1576064082?mt=12" style="background-color: black; color: white; display: inline-block; width: 200px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                        <div style="display: flex; align-items: center; justify-content: center;">
-                            <img src="images/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
-                                    <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
-                                    </h5>
-                                </div>
-                        </div>
-                    </a>
-				</div>
-			</section>
-            <section id="one1" class="main style1">
-                <div class="container">
-                    <div class="row gtr-150">
-                        <div class="col-6 col-12-medium">
-                            <img src="images/aconverter_128x128.png" alt="" align="left" height="116" widht="116" />
+        .plate_text {
+            width: 48%;
+            direction: ltr;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            max-width: 536px;
+            margin: 10px;
+            min-width: 512px;
+        }
 
-                            <header class="major">
-                                <h2>AConverter<br />
-                                    Audio Format Converter</h2>
-                            </header>
-                            <p>All-round audio format conversion software. Almost supports converting audio and video files in any format to commonly used audio format files such as mp3, m4r, wav, ogg.</p>
-                        </div>
-                        <div class="col-6 col-12-medium imp-medium">
-                            <span class="image fit"><img src="images/aconverter_des.png" alt="" /></span>
-                        </div>
+        .plate_text h4 {
+            color: #03141C;
+            font-size: 24px;
+        }
+
+        h4 {
+            display: block;
+            margin-block-start: 1.33em;
+            margin-block-end: 1.33em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            unicode-bidi: isolate;
+        }
+
+        .vaml {
+            vertical-align: middle;
+        }
+
+        .plate_text h3 {
+            font-size: 36px;
+            color: #333;
+            margin-top: .3rem;
+        }
+
+        h3 {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+            unicode-bidi: isolate;
+        }
+
+        .plate_text p {
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+            font-size: 20px;
+        }
+
+        .content_btn .downloadbtn {
+            margin: 0;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: .1rem;
+            margin-right: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            text-align: center;
+            width: 206px;
+            height: 54px;
+            line-height: 54px;
+            /* color: #fff !important; */
+            /* background-color: #2C67FF; */
+            border-radius: 10px;
+            /* border: 1px solid #2C67FF; */
+            margin-block-end: 1.33em;
+
+        }
+
+        .content_btn .downloadbtn {
+            text-decoration: none;
+        }
+    </style>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="logo">
+            <h1>
+                <a href="index.html">Fineusing</a>
+            </h1>
+        </div>
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy</a>
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="appcontentbox">
+            <div class="appbox app1">
+                <div class="plate_text">
+                    <h4>
+                        <img width="50" src="img/devicemirror_icon.png" alt="" class="vaml">
+                        DeviceMirror
+                    </h4>
+                    <h3>Mirror iPhone/iPad/iPod screen to Mac</h3>
+                    <p>Supports Wi-Fi and wired connections to mirror your iOS device to Mac computer
+                    </p>
+                    <div class="content_btn">
+                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id1598771178?mt=12" style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="img/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
+                                    <div>
+                                        <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
+                                        <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
+                                        </h5>
+                                    </div>
+                            </div>
+                        </a>
                     </div>
-                    <a href="https://apps.apple.com/cn/app/id1606741874?mt=12" style="background-color: black; color: white; display: inline-block; width: 200px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                        <div style="display: flex; align-items: center; justify-content: center;">
-                            <img src="images/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
-                                    <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
-                                    </h5>
-                                </div>
-                        </div>
-                    </a>
-
 
                 </div>
-            </section>
-            <section id="one2" class="main style1">
-                <div class="container">
-                    <div class="row gtr-150">
-                        <div class="col-6 col-12-medium">
-                            <img src="images/hotlaunch_128x128.png" alt="" align="left" height="116" widht="116" />
+                <div class="plate_img">
+                    <img  src="img/mirror_banner.jpg" alt="">
+                </div>
+            </div>
 
-                            <header class="major">
-                                <h2>HotLaunch<br />
-                                App Launcher</h2>
-                            </header>
-                            <p>Use shortcut keys to quickly open and switch Apps, directories, files, and web links.</p>
-                        </div>
-                        <div class="col-6 col-12-medium imp-medium">
-                            <span class="image fit"><img src="images/hotlaunch_des.png" alt="" /></span>
-                        </div>
+
+            <div class="appbox app2">
+                <div class="plate_img">
+                    <img  src="img/ntfs_banner.png" alt="">
+                </div>
+                <div class="plate_text">
+                    <h4>
+                        <img width="50" src="img/ntfssync_icon.png" alt="" class="vaml">
+                        NTFSSync
+                    </h4>
+                    <h3>Mount NTFS disk in read-write mode on macOS</h3>
+                    <p>Supports NTFS disk reading, writing, repairing, data erasing and other functions
+                    </p>
+                    <div class="content_btn">
+                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id6475194342?mt=12" style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="img/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
+                                    <div>
+                                        <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
+                                        <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
+                                        </h5>
+                                    </div>
+                            </div>
+                        </a>
                     </div>
-                    <a href="https://apps.apple.com/cn/app/id1570656803?mt=12" style="background-color: black; color: white; display: inline-block; width: 200px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                        <div style="display: flex; align-items: center; justify-content: center;">
-                            <img src="images/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
-                                    <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
-                                    </h5>
-                                </div>
-                        </div>
-                    </a>
 
                 </div>
-            </section>
+            </div>
+
+            <div class="appbox app3">
+                <div class="plate_text">
+                    <h4>
+                        <img width="50" src="img/aconverter_icon.png" alt="" class="vaml">
+                        AConverter
+                    </h4>
+                    <h3>All-in-one audio format converter </h3>
+                    <p>Supports audio format conversion, cutting, and extracting audio from videos
+                    </p>
+                    <div class="content_btn">
+                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id1606741874?mt=12" style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="img/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
+                                    <div>
+                                        <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
+                                        <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
+                                        </h5>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="plate_img">
+                    <img  src="img/aconverter_banner.png" alt="">
+                </div>
+            </div>
+
+            <div class="appbox app4">
+                <div class="plate_img">
+                    <img  src="img/imageconverter_banner.png" alt="">
+                </div>
+                <div class="plate_text">
+                    <h4>
+                        <img width="50" src="img/imageconverter_icon.png" alt="" class="vaml">
+                        Image Converter
+                    </h4>
+                    <h3>All-in-one picture format converter
+                    </h3>
+                    <p>Professional-grade image format converter, supporting more than 100 image formats
+                    </p>
+                    <div class="content_btn">
+                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id6444903744?mt=12" style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <img src="img/apple.svg" alt="Apple Icon" style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
+                                    <div>
+                                        <p style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">Download for</p>
+                                        <h5 style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">App Store
+                                        </h5>
+                                    </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
 
 
-		
+    </div>
 
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-<!--					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>-->
-<!--					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>-->
-<!--					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>-->
-<!--					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>-->
-					<li><a href="mailto:ttianyaa@icloud.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy;2023 FineUsing. All rights reserved.</li><li><a href="privacy.html">Privacy</a></li>
-				</ul>
-			</section>
+    <div class="footer">
+        <p>Copyright © 2024 Fineusing</p>
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
-	</body>
+
+</body>
+
 </html>

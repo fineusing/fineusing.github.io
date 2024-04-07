@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="screen mirroring,airplay,ntfs,ntfs for mac,audio converter,video recorder,app launcher" />
+    <meta name="description" content="Mirror iOS device to Mac via Wi-Fi connection, support AirPlay protocol,Mount NTFS disk in read-write mode on macOS, audio converter,image converter" />
+
+    <title>Products</title>
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js" defer></script>
+</head>
+
+<style>
+
+
+.products ul {
+    display: flex;
+    width: 1150px;
+    margin: 60px auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.products ul li {
+    list-style: none;
+    width:49%;
+}
+
+.appcontent {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    border:1px solid rgb(230, 230, 230);
+}
+.appicon {
+    margin-left: 30px;
+    width: 80px;
+    height: 80px;
+    margin-top: 40px;
+
+}
+.appcontent h3 {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 52px;
+    font-size: 18px;
+    z-index: -1;
+
+
+}
+.appcontent p {
+    position: absolute;
+    margin-left: 130px;
+    margin-top: 80px;
+    font-size: 13px;
+    z-index: -1;
+    color: rgb(96, 96, 96);
+    width: 300px;
+
+}
+
+.appcontent button {
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    margin-top: 65px;
+    margin-left: 450px;
+    border: none;
+    background: rgb(74, 117, 218);
+    border-radius: 5px;
+    color: white;
+    z-index: 0;
+}
+
+.appcontent button:hover {
+
+    background: rgb(13, 138, 235);
+
+
+}
+
+
+
+</style>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="logo">
+            <h1>
+                <a href="index.html">Fineusing</a>
+            </h1>
+        </div>
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy</a>
+
+
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="products">
+            <ul>
+                <li>
+                    <div class="appcontent">
+                        <img src="img/devicemirror_icon.png" alt="" class="appicon">
+                        <h3>DeviceMirror</h3>
+                        <p>Mirror iPhone/iPad/iPod screen to Mac</p>
+                        <button class="appdownload" data-url="macappstore://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=1598771178&type=Utilities">Download</button>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="appcontent">
+                        <img src="img/ntfssync_icon.png" alt="" class="appicon">
+                        <h3>NTFSSync</h3>
+                        <p>Mount NTFS disk in read-write mode on macOS</p>
+                        <button class="appdownload" data-url="macappstore://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=6475194342&type=Utilities">Download</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="appcontent">
+                        <img src="img/aconverter_icon.png" alt="" class="appicon">
+                        <h3>AConverter</h3>
+                        <p>All-in-one audio format converter</p>
+                        <button class="appdownload" data-url="macappstore://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=1606741874&type=Utilities">Download</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="appcontent">
+                        <img src="img/hotlaunch_icon.png" alt="" class="appicon">
+                        <h3>HotLaunch</h3>
+                        <p>Use shortcut keys to quickly start and switch apps, directories, files, and URLs</p>
+                        <button class="appdownload" data-url="macappstore://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=1570656803&type=Productivity">Download</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="appcontent">
+                        <img src="img/imageconverter_icon.png" alt="" class="appicon">
+                        <h3>Image Converter</h3>
+                        <p>All-in-one picture format converter</p>
+                        <button class="appdownload" data-url="macappstore://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=6444903744&type=Utilities">Download</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="appcontent">
+                        <img src="img/quickswitcher_icon.png" alt="" class="appicon">
+                        <h3>QuickSwitcher</h3>
+                        <p>Hide desktop icons, set resolution, modify default browser, etc. with one click</p>
+                        <button class="appdownload" data-url="macappstore://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?id=1639697458&type=Utilities">Download</button>
+                    </div>
+                </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>Copyright © 2024 Fineusing</p>
+    </div>
+
+
+    <script>
+        // 获取所有按钮元素
+        var buttons = document.querySelectorAll('.appdownload');
+
+        // 为每个按钮添加点击事件监听器
+        buttons.forEach(function(button, index) {
+            button.addEventListener('click', function() {
+                // 点击按钮时执行的代码
+                var url = button.getAttribute('data-url');
+                // 打开对应的 URL
+                window.open(url, '_blank');
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
