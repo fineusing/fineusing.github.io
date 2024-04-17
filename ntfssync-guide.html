@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTFSSync Guide</title>
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/common.js" defer></script>
+    <style>
+        body {
+            background-color: white;
+        }
+        
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+               
+
+        .content {
+            width:100%;
+            flex:1;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!--header-->
+    <div class="header">
+        <div class="logo">
+            <h1>
+                <a href="index.html">Fineusing</a>
+            </h1>
+        </div>
+
+        <div class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy.html">Privacy</a>
+
+        </div>
+    </div>
+    <div class="content">
+        <iframe id="pdfViewer" style="width:100%; height:100%;" frameborder="0">
+        </iframe>
+
+    </div>
+
+
+    <div class="footer">
+        <p>Copyright © 2024 Fineusing</p>
+    </div>
+    
+    <script>
+            // 获取 URL 中的参数
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            // 获取参数值并设置 iframe 的 src
+            window.onload = function() {
+                var pdfParam = getParameterByName('pdf');
+                if (pdfParam) {
+                    var iframe = document.getElementById('pdfViewer');
+                    iframe.src = "guide/"+pdfParam;
+                } else {
+                    console.error('PDF parameter not found in URL');
+                }
+            };
+        </script>
+
+
+
+</body>
+
+</html>
