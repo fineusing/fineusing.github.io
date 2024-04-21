@@ -6,5 +6,7 @@
 	<string>2024-04-30</string>
 	<key>activitystate</key>
 	<string>1</string>
+	<key>popup</key>
+	<string>0</string>
 </dict>
 </plist>
