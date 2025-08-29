@@ -8,5 +8,7 @@
 	<string>0</string>
 	<key>popup</key>
 	<string>0</string>
+	<key>votexfreeexpired</key>
+	<false/>
 </dict>
 </plist>
