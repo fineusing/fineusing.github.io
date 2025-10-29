@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppPad - macOS 26 Tahoe Launchpad Alternative | Bring Back Classic Launchpad</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AppPad: The perfect Launchpad replacement for macOS 26 Tahoe. Restore the classic app launcher experience with enhanced features and modern design.">
+    <meta name="keywords" content="macOS 26, macOS Tahoe, Launchpad, app launcher, macOS app, Tahoe Launchpad, app organizer, macOS 26 Launchpad, app manager">
+    <meta name="author" content="Fineusing">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AppPad - macOS 26 Tahoe Launchpad Alternative">
+    <meta property="og:description" content="Bring back the classic Launchpad experience on macOS 26 Tahoe with enhanced features and modern design.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fineusing.com/apppad.html">
+    
+    <!-- Twitter Card Meta Tags -->
+<!--     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AppPad - macOS 26 Tahoe Launchpad Alternative">
+    <meta name="twitter:description" content="Restore the classic Launchpad experience on macOS 26 Tahoe">
+    <meta name="twitter:image" content="https://yourapppadwebsite.com/twitter-image.jpg">
+ -->    
+    <!-- Additional SEO Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#667eea">
+    <link rel="canonical" href="https://fineusing.com">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 20px;
+            position: relative;
+            background-color: #667eea;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+            border-radius: 24px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 56px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        h1 {
+            font-size: 52px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            line-height: 1.2;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            max-width: 500px;
+            line-height: 1.6;
+        }
+
+        .download-btn {
+            background: white;
+            color: #667eea;
+            padding: 16px 40px;
+            font-size: 17px;
+            font-weight: 600;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            background: #f8f9fa;
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-bg {
+            width: 100%;
+            max-width: 600px;
+            height: 500px;
+            background-image: url('img/apppad.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+/*            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);*/
+/*            animation: float 4s ease-in-out infinite;*/
+            animation-delay: 0.5s;
+        }
+
+        /* 添加一些装饰元素 */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .features {
+            background: white;
+            padding: 100px 20px;
+        }
+
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #2d3748;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            padding: 40px;
+            background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2d3748;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: #718096;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-description {
+            font-size: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        footer {
+            background: #2d3748;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-content {
+                align-items: center;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .tagline {
+                font-size: 18px;
+            }
+
+            .hero-bg {
+                height: 300px;
+                max-width: 300px;
+            }
+
+            .section-title, .cta-title {
+                font-size: 32px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 60px 20px;
+            }
+
+            .app-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 48px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .hero-bg {
+                height: 250px;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="app-icon">🚀</div>
+                <h1>AppPad</h1>
+                <p class="tagline">Designed for macOS 26, recreating Launchpad. Bring back the most familiar user experience with enhanced performance and modern design.</p>
+                <a href="#" class="download-btn" onclick="handleDownload(event)">⬇️ Free Download</a>
+            </div>
+            <div class="hero-image">
+                <div class="hero-bg"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-container">
+            <h2 class="section-title">Powerful Features, Simple Design</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-description">Millisecond response time, instantly find any app you need.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3 class="feature-title">Elegant Interface</h3>
+                    <p class="feature-description">Deeply restored Launchpad interface with first-class visual experience.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 class="feature-title">Quick Search</h3>
+                    <p class="feature-description">Enter keywords to quickly locate applications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📁</div>
+                    <h3 class="feature-title">Custom Grouping</h3>
+                    <p class="feature-description">Organize apps according to your habits, create folders to keep your desktop tidy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌨️</div>
+                    <h3 class="feature-title">Hotkey Support</h3>
+                    <p class="feature-description">One-key summon and close Launchpad.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Privacy & Security</h3>
+                    <p class="feature-description">Runs locally, collects no personal data, your privacy is fully protected.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2 class="cta-title">Ready to Boost Your Productivity?</h2>
+        <p class="cta-description">Download AppPad now and experience the most familiar app launching method</p>
+        <a href="#" class="download-btn" onclick="handleDownload(event)">⬇️ Download Now</a>
+    </section>
+
+    <footer>
+        <p class="footer-text">© 2025 Fineusing. Compatible with macOS 12.0 and above</p>
+    </footer>
+
+    <script>
+        function handleDownload(event) {
+            event.preventDefault();
+            const downloadUrl = 'https://fineusing.com/installer/AppPad-Installer.dmg';
+            window.location.href = downloadUrl;
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
