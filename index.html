@@ -1,338 +1,334 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords"
-        content="screen mirroring,airplay,ntfs,ntfs for mac,audio converter,video recorder,app launcher" />
-    <meta name="description"
-        content="Mirror iOS device to Mac via Wi-Fi connection, support AirPlay protocol,Mount NTFS disk in read-write mode on macOS, audio converter,image converter" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fineusing - Ultimate macOS Apps | AppPad Launcher & DeviceMirror Screen Mirroring</title>
+<meta name="description" content="Fineusing creates exceptional macOS applications including AppPad (Lightning-fast Launchpad alternative) and DeviceMirror (AirPlay screen mirroring for iPhone/iPad to Mac).">
+<meta name="keywords" content="Fineusing, macOS apps, Mac applications, AppPad, DeviceMirror, Launchpad alternative, AirPlay mirroring, screen mirroring, Mac utility apps, Swift development">
 
-    <title>Home</title>
-    <link rel="stylesheet" href="css/linearicons.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/common.js" defer></script>
-    <style>
-        .appcontentbox {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-top: 65px;
+<!-- 基础Open Graph标签 -->
+<meta property="og:title" content="Fineusing - Ultimate macOS Experience with AppPad & DeviceMirror">
+<meta property="og:description" content="Creating exceptional macOS applications including AppPad app launcher and DeviceMirror screen mirroring">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://fineusing.com/img/apppad-logo.png">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://fineusing.com">
+
+<!-- 结构化数据 - 组织信息 -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fineusing",
+    "description": "Creating the ultimate macOS experience with innovative applications",
+    "url": "https://fineusing.com",
+    "logo": "https://fineusing.com/img/apppad-logo.png",
+    "sameAs": [],
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+    },
+    "makesOffer": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "AppPad",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "Lightning-fast macOS Launchpad alternative with custom grouping and gesture support"
+        },
+        {
+            "@type": "SoftwareApplication", 
+            "name": "DeviceMirror",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS",
+            "description": "AirPlay screen mirroring for iPhone and iPad to Mac with wireless and wired support"
         }
+    ]
+}
+</script>
+    <!-- 引入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Inter 字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
 
-        .appbox {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1400px;
 
-            width: 90%;
-            margin-bottom: 20px;
-            border-radius: 20px;
-            flex-wrap: wrap;
 
-            text-align: center;
-            padding: 40px 30px;
-            height: auto;
-        }
-
-        @media (max-width: 800px) {
-            .appbox {
-                width: 100%;
-                /* 当宽度小于600px时将宽度设置为100% */
+ <!-- 【关键 1】 自动语言检测脚本 (必须放在 head 里最前面) -->
+    <!-- <script>
+        (function() {
+            var storedLang = localStorage.getItem('site_lang');
+            // 如果用户之前没选过，且浏览器语言是中文，则跳转
+            if (!storedLang) {
+                var userLang = navigator.language || navigator.userLanguage;
+                if (userLang.toLowerCase().includes('zh')) {
+                    window.location.href = 'cn/index.html';
+                }
             }
+            // 如果用户明确选过中文，也跳转
+            if (storedLang === 'zh') {
+                window.location.href = 'cn/index.html';
+            }
+        })();
+    </script> -->
+
+    <style>
+        body { 
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; 
+            scroll-behavior: smooth; 
         }
-
-        .app1 {
-            background: linear-gradient(100deg, #E8FFF0 1.12%, #C7FFDD 100.25%);
+        
+        /* === 导航栏下拉菜单修复与动画 === */
+        .dropdown-menu {
+            transition: all 0.2s ease-in-out;
+            opacity: 0;
+            visibility: hidden;
+            /* 初始位置稍微向下和居中 */
+            transform: translateY(10px) translateX(-50%);
         }
-
-        .app2 {
-            background: linear-gradient(100deg, #FDFFE5 1.12%, #DCFFFF 97.67%);
+        
+        /* 鼠标悬停显示 */
+        .group:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0) translateX(-50%);
         }
-
-        .app3 {
-            background: linear-gradient(100deg, rgba(238, 144, 255, 0.20) 1.12%, rgba(72, 201, 255, 0.20) 49.14%, rgba(43, 255, 137, 0.20) 100.25%);
-        }
-
-        .app4 {
-            background: linear-gradient(274deg, rgba(25, 255, 247, 0.20) 4.37%, rgba(254, 255, 148, 0.20) 102.79%), #FFF;
-        }
-
-        .plate_img {
-            width: 45%;
-            direction: ltr;
-            display: flex;
-            align-items: center;
-            vertical-align: middle;
-            height: 356px;
-            min-width: 350px;
-            margin: 10px auto;
-            justify-content: center;
-
-        }
-
-       
-
-        .plate_img img {
-            border-radius: 20px;
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .plate_text {
-            width: 48%;
-            direction: ltr;
-            display: inline-block;
-            vertical-align: middle;
-            text-align: left;
-            max-width: 536px;
-            margin: 10px auto;
-            min-width: 374px;
-        }
-
-        .plate_text h4 {
-            color: #03141C;
-            font-size: 24px;
-        }
-
-        h4 {
-            display: block;
-            margin-block-start: 1.33em;
-            margin-block-end: 1.33em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-            unicode-bidi: isolate;
-        }
-
-        .vaml {
-            vertical-align: middle;
-        }
-
-        .plate_text h3 {
-            font-size: 36px;
-            color: #333;
-            margin-top: .3rem;
-        }
-
-        h3 {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            font-weight: bold;
-            unicode-bidi: isolate;
-        }
-
-        .plate_text p {
-            display: block;
-            margin-block-start: 1em;
-            margin-block-end: 1em;
-            margin-inline-start: 0px;
-            margin-inline-end: 0px;
-            unicode-bidi: isolate;
-            font-size: 20px;
-        }
-
-        .content_btn .downloadbtn {
-            margin: 0;
-            display: inline-block;
-            vertical-align: middle;
-            border-radius: .1rem;
-            margin-right: 20px;
-            font-size: 20px;
-            font-weight: 600;
-            text-align: center;
-            width: 206px;
-            height: 54px;
-            line-height: 54px;
-            /* color: #fff !important; */
-            /* background-color: #2C67FF; */
-            border-radius: 10px;
-            /* border: 1px solid #2C67FF; */
-            margin-block-end: 1.33em;
-
-        }
-
-        .content_btn .downloadbtn {
-            text-decoration: none;
+        
+        /* === Mac 窗口风格阴影 === */
+        .mac-window {
+            box-shadow: 0 20px 60px -12px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0,0,0,0.05);
         }
     </style>
+</head>
+<body class="bg-white text-slate-900">
 
-<body>
-    <!--header-->
-    <div class="header">
-        <div class="logo">
-            <h1>
-                <a href="index.html">Fineusing</a>
-            </h1>
+    <!-- ================= 导航栏 (中文版) ================= -->
+    <nav class="fixed w-full z-50 top-0 start-0 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            
+            <!-- 品牌 Logo -->
+            <a href="index.html" class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-slate-900 text-white rounded-lg flex items-center justify-center font-bold">F</div>
+                <span class="self-center text-xl font-bold whitespace-nowrap tracking-tight">Fineusing</span>
+            </a>
+
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-toggle" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!-- 桌面端菜单链接 -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 items-center">
+                    
+                    <!-- 首页 -->
+                    <li><a href="index.html" class="block py-2 px-3 text-blue-600 rounded md:bg-transparent md:p-0" aria-current="page">Home</a></li>
+                    
+                    <!-- 产品 (下拉菜单) -->
+                    <li class="relative group">
+                        <button class="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 cursor-pointer">
+                            Products
+                            <svg class="w-2.5 h-2.5 ms-2.5" fill="none" stroke="currentColor" viewBox="0 0 10 6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+                        </button>
+                        
+                        <!-- 下拉框容器：pt-4 是防止鼠标断开的关键 -->
+                        <div class="dropdown-menu absolute left-1/2 top-full w-64 pt-4 z-50"> 
+                            <div class="bg-white divide-y divide-gray-100 rounded-xl shadow-xl border border-gray-100 overflow-hidden">
+                                <ul class="text-sm text-gray-700">
+                                    <!-- LaunchX -->
+                                    <li>
+                                        <a href="apppad.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                            <div class="w-8 h-8 rounded bg-blue-500 mr-3 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">L</div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">AppPad</div>
+                                                <div class="text-xs text-gray-500">Alternatives to macOS 26 Launchpad</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!-- FocusFlow -->
+                                    <li>
+                                        <a href="devicemirror.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                                            <div class="w-8 h-8 rounded bg-purple-500 mr-3 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">F</div>
+                                            <div>
+                                                <div class="font-semibold text-gray-900">DeviceMirror</div>
+                                                <div class="text-xs text-gray-500">iPhone Screen Mirroring To Mac</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 联系我们 & 隐私政策 -->
+                    <li><a href="contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">Contact Us</a></li>
+                    <li><a href="privacy.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">Privacy Policy</a></li>
+
+                    <!-- 语言切换按钮 (切换回英文) -->
+                   <!--  <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
+                        <button id="lang-toggle" class="flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors group/lang">
+                            <svg class="w-4 h-4 mr-1 text-slate-400 group-hover/lang:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                            CN
+                        </button>
+                    </li> -->
+
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <div class="nav">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="privacy.html">Privacy</a>
-
+    <!-- ================= Hero 标语区 ================= -->
+    <section class="pt-32 pb-12 text-center bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">Ultimate tools designed for macOS users</h1>
+            <p class="text-lg text-slate-500">Focused on improving efficiency and elegant interactive experience</p>
         </div>
+    </section>
+
+    <!-- ================= APP 列表展示区域 ================= -->
+    <div class="space-y-0">
+
+        <!-- ########## App 1: LaunchX ########## -->
+        <section class="py-20 border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                
+                <!-- Logo -->
+                <div class="flex flex-col items-center justify-center mb-6">
+                    <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+                                                
+                        <img src="img/apppad-logo.png">
+
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">AppPad</h2>
+                </div>
+
+                <!-- 作用简介 -->
+                <p class="text-xl text-blue-600 font-medium mb-10">The best alternative to the native Launchpad in macOS 26</p>
+
+                <!-- 截图 (CSS 模拟 Mac 窗口) -->
+<!--                 <div class="relative rounded-xl bg-gray-900 p-1.5 mac-window mb-10 mx-auto max-w-3xl transform hover:scale-[1.01] transition-transform duration-500">
+                    <div class="rounded-lg overflow-hidden bg-white aspect-[16/10] relative">
+ -->                        <!-- 窗口红绿灯 -->
+                       <!--  <div class="absolute top-3 left-3 flex space-x-1.5 z-10">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div> -->
+                        <!-- 截图占位 -->
+                        <div class="w-full h-full flex items-center justify-center bg-slate-50 text-slate-300">
+                            <!-- 请在这里替换为 <img src="../images/launchx.png" ...> -->
+                            <img src="img/apppad-home.png">
+                        </div>
+<!--                     </div>
+                </div>
+ -->
+                <!-- 详细介绍 -->
+                <div class="max-w-2xl mx-auto mb-10">
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        AppPad addresses the pain point of macOS lacking a Launchpad, providing a 1:1 replica of Launchpad and bringing back the most familiar launch experience.
+                    </p>
+                </div>
+
+                <!-- 按钮组 -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://fineusing.com/installer/AppPad-Installer.dmg" class="px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm0 2c4.418 0 8 3.582 8 8H4c0-4.418 3.582-8 8-8z"/></svg>
+                        Download
+                    </a>
+                    <a href="apppad.html" class="px-8 py-3 bg-white border border-gray-200 hover:border-blue-500 hover:text-blue-600 text-slate-700 rounded-full font-semibold transition-all">
+                        Learn more &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ########## App 2: FocusFlow ########## -->
+        <section class="py-20 bg-slate-50 border-b border-gray-100">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                
+                <!-- Logo -->
+                <div class="flex flex-col items-center justify-center mb-6">
+                    <div class="w-24 h-24 bg-gradient-to-br from-500 to-500 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+                                             
+                                               <img src="img/devicemirror-logo.png">
+
+                    </div>
+                    <h2 class="text-3xl font-bold text-slate-900">DeviceMirror</h2>
+                </div>
+
+                <!-- 作用简介 -->
+                <p class="text-xl text-purple-600 font-medium mb-10">iPhone/iPad screen mirroring to macOS</p>
+
+                <!-- 截图 -->
+               <div class="w-full h-full flex items-center justify-center bg-slate-50 text-slate-300">
+                            <!-- 请在这里替换为 <img src="../images/launchx.png" ...> -->
+                            <img src="img/devicemirror-home.png">
+                       
+               </div>
+
+                <!-- 详细介绍 -->
+                <div class="max-w-2xl mx-auto mb-10">
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        DeviceMirror supports casting your iPhone/iPad screen to your macOS computer for watching movies, playing games, listening to music, and demo presentations on a larger screen.
+                    </p>
+                </div>
+
+                <!-- 按钮组 -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="https://apps.apple.com/us/app/id1598771178?mt=12" class="px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 16l-5-5h3V4h4v7h3l-5 5zm0 2c4.418 0 8 3.582 8 8H4c0-4.418 3.582-8 8-8z"/></svg>
+                        Download
+                    </a>
+                    <a href="devicemirror.html" class="px-8 py-3 bg-white border border-gray-200 hover:border-purple-500 hover:text-purple-600 text-slate-700 rounded-full font-semibold transition-all">
+                        Learn more &rarr;
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
     </div>
 
-    <div class="content">
-        <div class="appcontentbox">
-            <div class="appbox app1">
-                <div class="plate_text">
-                    <h4>
-                        <img width="50" src="img/devicemirror_icon.png" alt="" class="vaml">
-                        DeviceMirror
-                    </h4>
-                    <h3>Mirror iPhone/iPad/iPod screen to Mac</h3>
-                    <p>Supports Wi-Fi and wired connections to mirror your iOS device to Mac computer
-                    </p>
-                    <div class="content_btn">
-                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id1598771178?mt=12"
-                            style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                            <div style="display: flex; align-items: center; justify-content: center;">
-                                <img src="img/apple.svg" alt="Apple Icon"
-                                    style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p
-                                        style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">
-                                        Download for</p>
-                                    <h5
-                                        style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">
-                                        App Store
-                                    </h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="plate_img">
-                    <img src="img/mirror_banner.jpg" alt="">
-                </div>
+    <!-- ================= 页脚 ================= -->
+    <footer class="bg-white py-12">
+        <div class="max-w-screen-xl mx-auto px-4 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0 text-center md:text-left">
+                <span class="text-xl font-bold text-slate-800">Fineusing</span>
+                <p class="text-sm text-slate-500 mt-1">Designed with care for macOS</p>
             </div>
-
-
-            <div class="appbox app2">
-                <div class="plate_img">
-                    <img src="img/ntfs_banner.png" alt="">
-                </div>
-                <div class="plate_text">
-                    <h4>
-                        <img width="50" src="img/ntfssync_icon.png" alt="" class="vaml">
-                        NTFSSync
-                    </h4>
-                    <h3>Mount NTFS disk in read-write mode on macOS</h3>
-                    <p>Supports NTFS disk reading, writing, repairing, data erasing and other functions
-                    </p>
-                    <div class="content_btn">
-                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id6475194342?mt=12"
-                            style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                            <div style="display: flex; align-items: center; justify-content: center;">
-                                <img src="img/apple.svg" alt="Apple Icon"
-                                    style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p
-                                        style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">
-                                        Download for</p>
-                                    <h5
-                                        style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">
-                                        App Store
-                                    </h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
+            <div class="flex space-x-6 text-slate-500 text-sm">
+                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact Us</a>
+                <a href="privacy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
+                <!-- <a href="#" class="hover:text-blue-600 transition-colors">Twitter</a> -->
             </div>
-
-            <div class="appbox app3">
-                <div class="plate_text">
-                    <h4>
-                        <img width="50" src="img/aconverter_icon.png" alt="" class="vaml">
-                        AConverter
-                    </h4>
-                    <h3>All-in-one audio format converter </h3>
-                    <p>Supports audio format conversion, cutting, and extracting audio from videos
-                    </p>
-                    <div class="content_btn">
-                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id1606741874?mt=12"
-                            style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                            <div style="display: flex; align-items: center; justify-content: center;">
-                                <img src="img/apple.svg" alt="Apple Icon"
-                                    style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p
-                                        style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">
-                                        Download for</p>
-                                    <h5
-                                        style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">
-                                        App Store
-                                    </h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-                <div class="plate_img">
-                    <img src="img/aconverter_banner.png" alt="">
-                </div>
-            </div>
-
-            <div class="appbox app4">
-                <div class="plate_img">
-                    <img src="img/imageconverter_banner.png" alt="">
-                </div>
-                <div class="plate_text">
-                    <h4>
-                        <img width="50" src="img/imageconverter_icon.png" alt="" class="vaml">
-                        Image Converter
-                    </h4>
-                    <h3>All-in-one picture format converter
-                    </h3>
-                    <p>Professional-grade image format converter, supporting more than 100 image formats
-                    </p>
-                    <div class="content_btn">
-                        <a class="downloadbtn" href="https://apps.apple.com/us/app/id6444903744?mt=12"
-                            style="background-color: black; color: white; display: inline-block; width: 210px; height: 60px; border-radius: 8px; text-decoration: none; text-align: center;">
-                            <div style="display: flex; align-items: center; justify-content: center;">
-                                <img src="img/apple.svg" alt="Apple Icon"
-                                    style="width: 40px; height: 40px; margin-right: 5px; margin-top:10px;">
-                                <div>
-                                    <p
-                                        style="text-align: left; margin: 0; margin-top:10px; font-size: 16px;  line-height:16px">
-                                        Download for</p>
-                                    <h5
-                                        style="text-align: left; margin: 0; color: white;  font-weight: bold; font-size: 24px; line-height:25px">
-                                        App Store
-                                    </h5>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
+        <div class="text-center text-slate-400 text-xs mt-8">
+            &copy; 2025 Fineusing. All Rights Reserved.
+        </div>
+    </footer>
 
+    <!-- ================= 交互脚本 ================= -->
+    <script>
+        // 1. 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbarDropdown = document.getElementById('navbar-dropdown');
 
-    </div>
+        menuToggle.addEventListener('click', () => {
+            navbarDropdown.classList.toggle('hidden');
+        });
 
-    <div class="footer">
-        <p>Copyright © 2024 Fineusing</p>
-    </div>
-
-
-
+        // 2. 语言切换逻辑 (切回英文)
+        document.getElementById('lang-toggle').addEventListener('click', function() {
+            // 设置 localStorage 为英文
+            localStorage.setItem('site_lang', 'zh');
+            // 跳转到上一级目录的 index.html (即英文版)
+            // 注意：因为本文件在 /cn/ 目录下，所以是 ../index.html
+            window.location.href = 'cn/index.html';
+        });
+    </script>
 </body>
-
 </html>

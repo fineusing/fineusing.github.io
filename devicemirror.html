@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 核心SEO标签 -->
-    <title>AppPad - Powerful macOS Launchpad Alternative | Fast App Launcher for Mac</title>
-    <meta name="description" content="AppPad is a powerful macOS Launchpad alternative with lightning-fast performance, custom app grouping, gesture support, and hot corners. Built with native Swift and AppKit.">
-    <meta name="keywords" content="AppPad, macOS Launchpad, application launcher, Mac app management, Swift development, AppKit, app grouping, gesture support, hot corners, Mac utility">
-    <meta name="author" content="AppPad">
+    <!-- Primary Meta Tags -->
+    <title>DeviceMirror - AirPlay Screen Mirroring for iPhone/iPad to Mac | Wireless & Wired</title>
+    <meta name="title" content="DeviceMirror - AirPlay Screen Mirroring for iPhone/iPad to Mac">
+    <meta name="description" content="Mirror your iPhone and iPad screens to Mac with DeviceMirror. Support AirPlay 2 wireless streaming, wired connection, 4K resolution, and screen recording.">
     
-    <!-- 基础Open Graph标签 -->
-    <meta property="og:title" content="AppPad - Powerful macOS Launchpad Alternative">
-    <meta property="og:description" content="Lightning-fast app launcher for macOS with custom grouping and gesture support">
+    <!-- Keywords -->
+    <meta name="keywords" content="DeviceMirror, AirPlay screen mirroring, iPhone to Mac, iPad to Mac, screen mirroring, AirPlay 2, wireless streaming, wired connection, screen recording, iOS to Mac">
+    
+    <!-- Author -->
+    <meta name="author" content="Fineusing">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="DeviceMirror - AirPlay Screen Mirroring for iPhone/iPad to Mac">
+    <meta property="og:description" content="Mirror your iPhone and iPad screens to Mac with DeviceMirror">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fineusing.com/img/apppad-home.png">
+    <meta property="og:image" content="https://fineusing.com/img/devicemirror-home.png">
+
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://fineusing.com/apppad.html">
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://fineusing.com/devicemirror.html">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/devicemirror-logo.png">
     
-    <!-- 结构化数据 -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "AppPad",
-        "applicationCategory": "UtilitiesApplication",
+        "name": "DeviceMirror",
+        "applicationCategory": "MultimediaApplication",
         "operatingSystem": "macOS",
-        "description": "A powerful macOS Launchpad alternative with fast launching, custom grouping, and gesture support",
-        "url": "https://fineusing.com/apppad.html",
+        "description": "Screen mirroring application for iPhone and iPad to Mac with AirPlay 2 support",
+        "url": "https://fineusing.com/devicemirror.html",
+
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
         "featureList": [
-            "Lightning Fast Launch",
-            "Custom App Grouping",
-            "Layout Compatibility", 
-            "Hotkey Support",
-            "Trackpad Gestures",
-            "Hot Corner Support"
+            "AirPlay 2 Wireless Mirroring",
+            "Wired Connection Support", 
+            "4K Resolution",
+            "Screen Recording",
+            "Audio Recording"
         ],
-        "author": {
-            "@type": "Organization",
-            "name": "Fineusing"
-        }
+        "operatingSystem": "macOS",
+        "permissions": "No app installation required on iOS devices"
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入 Inter 字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -64,7 +68,6 @@
         .group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0) translateX(-50%); }
     </style>
 </head>
-
 <body class="bg-white text-slate-900">
 
     <!-- ================= 导航栏 (修复版) ================= -->
@@ -130,7 +133,7 @@
                     <li><a href="privacy.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">Privacy Policy</a></li>
 
                     <!-- 语言切换按钮 (切换回英文) -->
-                   <!--  <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
+                    <!-- <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
                         <button id="lang-toggle" class="flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors group/lang">
                             <svg class="w-4 h-4 mr-1 text-slate-400 group-hover/lang:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
                             CN
@@ -145,14 +148,14 @@
     <!-- 产品页内容 -->
     <section class="pt-32 pb-16 px-4 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl font-bold mb-6">AppPad</h1>
-            <p class="text-xl text-slate-500 mb-10">Best alternative to Launchpad in macOS 26</p>
+            <h1 class="text-5xl font-bold mb-6">DeviceMirror</h1>
+            <p class="text-xl text-slate-500 mb-10">Mirror your iPhone/iPad screen to your macOS computer</p>
            <!--  <div class="flex justify-center gap-4">
                 <a href="#" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold">立即下载</a>
             </div> -->
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up delay-300">
-                <a href="https://fineusing.com/installer/AppPad-Installer.dmg" id="download" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+                <a href="https://apps.apple.com/us/app/id1598771178?mt=12" id="download" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"/></svg>
                     Free Download
                 </a>
@@ -160,33 +163,41 @@
         </div>
         <!-- 简单的截图展示 -->
         <div class="mt-20 max-w-5xl mx-auto rounded-2xl border border-gray-200 bg-gray-50 p-4 mac-shadow">
-                                    <img src="img/apppad-home.png">
+                                    <img src="img/devicemirror-home.png">
         </div>
     </section>
 
     <!-- 底部功能介绍 Grid -->
-    <section class="py-20 bg-slate-50"> <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"> <div class="bg-white p-8 rounded-2xl shadow-sm"> <h3 class="text-xl font-bold mb-2">Lightning Fast Launch</h3> <p class="text-slate-500">Built with native Swift using AppKit, fast as lightning.</p> </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Custom Grouping</h3>
-            <p class="text-slate-500">Categorize and group apps according to your preferences.</p>
+    <section class="py-20 bg-slate-50"> 
+    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"> 
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">Wireless Screen Mirroring via AirPlay 2</h3>
+            <p class="text-slate-500">Supports wireless screen mirroring using the AirPlay 2 protocol; no need to install an app on your iPhone/iPad.</p>
         </div>
 
         <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Layout Compatibility</h3>
-            <p class="text-slate-500">Automatically compatible with the old Launchpad layout, no manual adjustment needed.</p>
+            <h3 class="text-xl font-bold mb-2">Wired Connection Screen Mirroring</h3>
+            <p class="text-slate-500">Supports connecting your iPhone/iPad to the computer via a cable for stable 60 FPS output, smooth and without lag.</p>
         </div>
 
         <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Hotkey Support</h3>
-            <p class="text-slate-500">One-key shortcut to launch and close Launchpad.</p>
+            <h3 class="text-xl font-bold mb-2">Multiple Resolution Options, Up to 4K</h3>
+            <p class="text-slate-500">Supports various resolutions for screen mirroring.</p>
         </div>
-          <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Trackpad Gesture Support</h3>
-            <p class="text-slate-500">Use gestures to launch and close Launchpad.</p>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">AirPlay</h3>
+            <p class="text-slate-500">Allows you to cast movies and TV shows from online video platforms to your computer for a big-screen experience.</p>
         </div>
-         <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Hot Corner Support</h3>
-            <p class="text-slate-500">Customize hot corners to launch and close Launchpad.</p>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">Phone Screen Recording</h3>
+            <p class="text-slate-500">During screen mirroring, you can record your phone's screen and audio as an MP4 file.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">Computer System Audio Recording</h3>
+            <p class="text-slate-500">Easily record audio playing on your computer into an MP3 file without installing any audio drivers.</p>
         </div>
     </div>
 </section>
@@ -201,13 +212,13 @@
                     
 
                    <div class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-                                                        <img src="img/apppad-group.png">
+                                                        <img src="img/devicemirror-bigscreen.png">
 
                     </div> 
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold mb-4 text-slate-900">Custom Grouping</h3>
-                    <p class="text-lg text-slate-500 mb-6">Group and sort apps according to your preferences.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-slate-900">Enjoy the Big Screen</h3> 
+                    <p class="text-lg text-slate-500 mb-6">Instantly mirror movies and games from your iPhone/iPad to the computer with one click, enjoy the big screen experience.</p>
                 </div>
             </div>
 
@@ -216,12 +227,12 @@
                 <div class="w-full md:w-1/2">
                     <!-- 替换图片 -->
                     <div class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                                                        <img src="img/apppad-setting.png">
+                                                        <img src="img/devicemirror-record.png">
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold mb-4 text-slate-900">Software Settings</h3>
-                    <p class="text-lg text-slate-500">Customize shortcut keys, trigger angles, and layout modes.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-slate-900">iPhone/iPad Screen Recording</h3>
+                    <p class="text-lg text-slate-500">Easily record your iPhone/iPad screen to capture wonderful moments</p>
                 </div>
             </div>
         </div>
