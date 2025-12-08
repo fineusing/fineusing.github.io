@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
-
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- 核心SEO标签 -->
-    <title>AppPad: Launchpad Alternative for macOS 26 Tahoe</title>
-    <meta name="description" content="AppPad is the best Launchpad alternative for macOS 26 Tahoe with lightning-fast performance, custom app grouping, gesture support, and hot corners. Built with native Swift and AppKit.">
-    <meta name="keywords" content="Launchpad, AppPad, macOS 26 Tahoe Launchpad, App Launcher, application launcher, Mac app management, Swift development, AppKit, app grouping, gesture support, hot corners, Mac utility">
-    <meta name="author" content="AppPad">
+    <!-- 主要 Meta 标签 -->
+    <title>DeviceMirror: iPhone/iPad屏幕镜像到Mac | AirPlay屏幕镜像</title>
+    <meta name="title" content="DeviceMirror - 将iPhone/iPad的屏幕镜像到Mac电脑">
+    <meta name="description" content="最佳的Mac版iPhone镜像应用。通过AirPlay2或有线USB将iPhone/iPad屏幕镜像到Mac。支持4K分辨率、屏幕录制和实时流传输。">
+    <meta name="keywords" content="DeviceMirror, iPhone 镜像, Mac版iPhone镜像, iPhone到Mac屏幕镜像, AirPlay镜像, iPad镜像, 镜像iPhone到Mac, AirPlay屏幕镜像, 无线屏幕镜像, 4K屏幕镜像">    
+    <!-- 作者 -->
+    <meta name="author" content="Fineusing">
+    <meta name="robots" content="index, follow">
     
-    <!-- 基础Open Graph标签 -->
-    <meta property="og:title" content="AppPad: Best Launchpad Alternative for macOS 26 Tahoe">
-    <meta property="og:description" content="Lightning-fast app launcher for macOS 26 Tahoe with custom grouping and gesture support">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="DeviceMirror - iPhone/iPad 到 Mac 的 AirPlay 屏幕镜像">
+    <meta property="og:description" content="使用 DeviceMirror 将您的 iPhone 和 iPad 屏幕镜像到 Mac">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://fineusing.com/apppad.html">
-    <meta property="og:image" content="https://fineusing.com/img/apppad-home.png">
+    <meta property="og:url" content="https://fineusing.com/cn/devicemirror.html">
+    <meta property="og:image" content="https://fineusing.com/img/devicemirror-home.png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="800">
-
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://fineusing.com/apppad.html">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://fineusing.com/cn/devicemirror.html">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://fineusing.com/favicon.ico">
@@ -35,53 +35,29 @@
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "AppPad",
-        "applicationCategory": "UtilitiesApplication",
+        "name": "DeviceMirror",
+        "applicationCategory": "MultimediaApplication",
         "operatingSystem": "macOS",
-        "description": "A powerful macOS Launchpad alternative with fast launching, custom grouping, and gesture support",
-        "url": "https://fineusing.com/apppad.html",
-        "image": "https://fineusing.com/img/apppad-home.png",
-        "screenshot": "https://fineusing.com/img/apppad-home.png",
+        "description": "通过AirPlay协议将iPhone/iPad投屏到Mac电脑",
+        "url": "https://fineusing.com/cn/devicemirror.html",
+        "image": "https://fineusing.com/img/devicemirror-home.png",
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "USD"
+            "priceCurrency": "CNY"
         },
         "featureList": [
-            "Lightning Fast Launch",
-            "Custom App Grouping",
-            "Layout Compatibility", 
-            "Hotkey Support",
-            "Trackpad Gestures",
-            "Hot Corner Support"
+            "AirPlay 2 无线镜像",
+            "有线连接支持", 
+            "4K 分辨率",
+            "屏幕录制",
+            "音频录制"
         ],
-        "author": {
-            "@type": "Organization",
-            "name": "Fineusing"
-        }
+        "permissions": "iOS设备无需安装应用"
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-
-    <script>
-        (function() {
-            var storedLang = localStorage.getItem('site_lang');
-            // 如果用户之前没选过，且浏览器语言是中文，则跳转
-            if (!storedLang) {
-                var userLang = navigator.language || navigator.userLanguage;
-                if (userLang.toLowerCase().includes('zh')) {
-                    window.location.href = 'cn/apppad.html';
-                }
-            }
-            // 如果用户明确选过中文，也跳转
-            if (storedLang === 'zh') {
-                window.location.href = 'cn/apppad.html';
-            }
-        })();
-    </script>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -89,10 +65,9 @@
         .group:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0) translateX(-50%); }
     </style>
 </head>
-
 <body class="bg-white text-slate-900">
 
-    <!-- ================= 导航栏 (修复版) ================= -->
+    <!-- 导航栏 -->
    <nav class="fixed w-full z-50 top-0 start-0 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             
@@ -112,41 +87,33 @@
                 <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 items-center">
                     
                     <!-- 首页 -->
-                    <li><a href="index.html" class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0" aria-current="page">Home</a></li>
+                    <li><a href="index.html" class="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0" aria-current="page">首页</a></li>
                     
-                    <!-- 产品 (下拉菜单) -->
+                    <!-- 产品（下拉菜单） -->
                     <li class="relative group">
                         <button class="flex items-center justify-between w-full py-2 px-3 text-blue-600 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0 cursor-pointer">
-                            Products
+                            产品
                             <svg class="w-2.5 h-2.5 ms-2.5" fill="none" stroke="currentColor" viewBox="0 0 10 6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
                         </button>
                         
-                        <!-- 下拉框容器：pt-4 是防止鼠标断开的关键 -->
                         <div class="dropdown-menu absolute left-1/2 top-full w-64 pt-4 z-50"> 
                             <div class="bg-white divide-y divide-gray-100 rounded-xl shadow-xl border border-gray-100 overflow-hidden">
                                 <ul class="text-sm text-gray-700">
-                                    <!-- LaunchX -->
                                     <li>
                                         <a href="apppad.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
-                                            <!-- <div class="w-8 h-8 rounded bg-blue-500 mr-3 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">L</div> -->
-                                            <img src="img/apppad-logo.png" class="w-10 h-10 mr-3">
-
-
+                                            <img src="../img/apppad-logo.png" class="w-10 h-10 mr-3">
                                             <div>
                                                 <div class="font-semibold text-gray-900">AppPad</div>
-                                                <div class="text-xs text-gray-500">Alternatives to macOS 26 Launchpad</div>
+                                                <div class="text-xs text-gray-500">macOS 26启动台替代品</div>
                                             </div>
                                         </a>
                                     </li>
-                                    <!-- FocusFlow -->
                                     <li>
                                         <a href="devicemirror.html" class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
-                                            <!-- <div class="w-8 h-8 rounded bg-purple-500 mr-3 flex-shrink-0 flex items-center justify-center text-white font-bold text-xs">F</div> -->
-                                          <img src="img/devicemirror-logo.png" class="w-10 h-10 mr-3">
-
+                                            <img src="../img/devicemirror-logo.png" class="w-10 h-10 mr-3">
                                             <div>
                                                 <div class="font-semibold text-gray-900">DeviceMirror</div>
-                                                <div class="text-xs text-gray-500">iPhone Screen Mirroring To Mac</div>
+                                                <div class="text-xs text-gray-500">iPhone屏幕镜像到Mac</div>
                                             </div>
                                         </a>
                                     </li>
@@ -156,14 +123,14 @@
                     </li>
 
                     <!-- 联系我们 & 隐私政策 -->
-                    <li><a href="contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">Contact Us</a></li>
-                    <li><a href="privacy.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">Privacy Policy</a></li>
+                    <li><a href="contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">联系我们</a></li>
+                    <li><a href="privacy.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">隐私政策</a></li>
 
-                    <!-- 语言切换按钮 (切换回英文) -->
-                   <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
+                    <!-- 语言切换按钮 -->
+                    <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
                         <button id="lang-toggle" class="flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors group/lang">
                             <svg class="w-4 h-4 mr-1 text-slate-400 group-hover/lang:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
-                            CN
+                            EN
                         </button>
                     </li>
 
@@ -175,113 +142,108 @@
     <!-- 产品页内容 -->
     <section class="pt-32 pb-16 px-4 text-center">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl font-bold mb-6">AppPad</h1>
-            <p class="text-xl text-slate-500 mb-10">Best alternative to Launchpad in macOS 26</p>
-           <!--  <div class="flex justify-center gap-4">
-                <a href="#" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-bold">立即下载</a>
-            </div> -->
+            <h1 class="text-5xl font-bold mb-6">DeviceMirror</h1>
+            <p class="text-xl text-slate-500 mb-10">将您的iPhone/iPad屏幕镜像到macOS电脑</p>
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up delay-300">
-                <a href="https://fineusing.com/installer/AppPad-Installer.dmg" id="download" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+                <a href="https://apps.apple.com/us/app/id1598771178?mt=12" id="download" class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"/></svg>
-                    Free Download
+                    免费下载
                 </a>
             </div>
         </div>
         <!-- 简单的截图展示 -->
         <div class="mt-20 max-w-5xl mx-auto rounded-2xl border border-gray-200 bg-gray-50 p-4 mac-shadow">
-                                    <img src="img/apppad-home.png">
+            <img src="../img/devicemirror-home.png">
         </div>
     </section>
 
     <!-- 底部功能介绍 Grid -->
-    <section class="py-20 bg-slate-50"> <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"> <div class="bg-white p-8 rounded-2xl shadow-sm"> <h3 class="text-xl font-bold mb-2">Lightning Fast Launch</h3> <p class="text-slate-500">Built with native Swift using AppKit, fast as lightning.</p> </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Custom Grouping</h3>
-            <p class="text-slate-500">Categorize and group apps according to your preferences.</p>
+    <section class="py-20 bg-slate-50"> 
+    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8"> 
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">通过AirPlay2协议进行无线屏幕镜像</h3>
+            <p class="text-slate-500">支持使用AirPlay2协议进行无线屏幕镜像；无需在iPhone/iPad上安装应用。</p>
         </div>
 
         <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Layout Compatibility</h3>
-            <p class="text-slate-500">Automatically compatible with the old Launchpad layout, no manual adjustment needed.</p>
+            <h3 class="text-xl font-bold mb-2">有线连接屏幕镜像</h3>
+            <p class="text-slate-500">支持通过数据线将iPhone/iPad连接到电脑，稳定的60FPS输出，流畅无延迟。</p>
         </div>
 
         <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Hotkey Support</h3>
-            <p class="text-slate-500">One-key shortcut to launch and close Launchpad.</p>
+            <h3 class="text-xl font-bold mb-2">多种分辨率选项，最高支持4K</h3>
+            <p class="text-slate-500">支持多种屏幕镜像分辨率。</p>
         </div>
-          <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Trackpad Gesture Support</h3>
-            <p class="text-slate-500">Use gestures to launch and close Launchpad.</p>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">隔空播放</h3>
+            <p class="text-slate-500">允许您将在线视频平台的电影和电视节目投射到电脑上播放，享受大屏体验。</p>
         </div>
-         <div class="bg-white p-8 rounded-2xl shadow-sm">
-            <h3 class="text-xl font-bold mb-2">Hot Corner Support</h3>
-            <p class="text-slate-500">Customize hot corners to launch and close Launchpad.</p>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">手机屏幕录制</h3>
+            <p class="text-slate-500">在屏幕镜像期间，您可以将手机的屏幕和音频录制为MP4文件保存到电脑。</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-sm">
+            <h3 class="text-xl font-bold mb-2">电脑系统音频录制</h3>
+            <p class="text-slate-500">无需安装任何音频驱动程序，即可轻松将电脑上播放的音频录制为MP3文件。</p>
         </div>
     </div>
 </section>
 
- <!-- 更多截图/细节展示 (左右布局) -->
+    <!-- 更多截图/细节展示 -->
     <section id="showcase" class="py-20 overflow-hidden">
         <div class="max-w-screen-xl mx-auto px-4">
             <!-- Row 1 -->
             <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
                 <div class="w-full md:w-1/2">
-                    <!-- 替换图片 -->
-                    
-
                    <div class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform -rotate-2 hover:rotate-0 transition-transform duration-500">
-                                                        <img src="img/apppad-group.png">
-
+                        <img src="../img/devicemirror-bigscreen.png">
                     </div> 
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold mb-4 text-slate-900">Custom Grouping</h3>
-                    <p class="text-lg text-slate-500 mb-6">Group and sort apps according to your preferences.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-slate-900">享受大屏体验</h3> 
+                    <p class="text-lg text-slate-500 mb-6">一键即可将iPhone/iPad的电影和游戏镜像到电脑，享受大屏体验。</p>
                 </div>
             </div>
 
             <!-- Row 2 (Reverse) -->
             <div class="flex flex-col md:flex-row-reverse items-center gap-12">
                 <div class="w-full md:w-1/2">
-                    <!-- 替换图片 -->
                     <div class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-500">
-                                                        <img src="img/apppad-setting.png">
+                        <img src="../img/devicemirror-record.png">
                     </div>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-3xl font-bold mb-4 text-slate-900">Software Settings</h3>
-                    <p class="text-lg text-slate-500">Customize shortcut keys, trigger angles, and layout modes.</p>
+                    <h3 class="text-3xl font-bold mb-4 text-slate-900">iPhone/iPad 屏幕录制</h3>
+                    <p class="text-lg text-slate-500">轻松录制iPhone/iPad屏幕，捕捉精彩时刻</p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- ================= 页脚 ================= -->
+
+    <!-- 页脚 -->
     <footer class="bg-white py-12">
         <div class="max-w-screen-xl mx-auto px-4 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div class="mb-4 md:mb-0 text-center md:text-left">
                 <span class="text-xl font-bold text-slate-800">Fineusing</span>
-                <p class="text-sm text-slate-500 mt-1">Designed with care for macOS</p>
+                <p class="text-sm text-slate-500 mt-1">为macOS精心设计</p>
             </div>
             <div class="flex space-x-6 text-slate-500 text-sm">
-                <a href="contact.html" class="hover:text-blue-600 transition-colors">Contact Us</a>
-                <a href="privacy.html" class="hover:text-blue-600 transition-colors">Privacy Policy</a>
-                <!-- <a href="#" class="hover:text-blue-600 transition-colors">Twitter</a> -->
+                <a href="contact.html" class="hover:text-blue-600 transition-colors">联系我们</a>
+                <a href="privacy.html" class="hover:text-blue-600 transition-colors">隐私政策</a>
             </div>
         </div>
         <div class="text-center text-slate-400 text-xs mt-8">
-            &copy; 2025 Fineusing. All Rights Reserved.
+            &copy; 2025 Fineusing. 保留所有权利。
         </div>
     </footer>
 
+    <!-- 交互脚本 -->
     <script>
-        document.getElementById('menu-toggle').addEventListener('click', () => {
-            document.getElementById('navbar-dropdown').classList.toggle('hidden');
-        });
-    </script>
-     <!-- ================= 交互脚本 ================= -->
-    <script>
-        // 1. 移动端菜单切换
+        // 移动端菜单切换
         const menuToggle = document.getElementById('menu-toggle');
         const navbarDropdown = document.getElementById('navbar-dropdown');
 
@@ -289,13 +251,10 @@
             navbarDropdown.classList.toggle('hidden');
         });
 
-        // 2. 语言切换逻辑 (切回英文)
+        // 语言切换逻辑（切换到英文）
         document.getElementById('lang-toggle').addEventListener('click', function() {
-            // 设置 localStorage 为英文
-            localStorage.setItem('site_lang', 'zh');
-            // 跳转到上一级目录的 index.html (即英文版)
-            // 注意：因为本文件在 /cn/ 目录下，所以是 ../index.html
-            window.location.href = 'cn/apppad.html';
+            localStorage.setItem('site_lang', 'en');
+            window.location.href = '../devicemirror.html';
         });
     </script>
 </body>

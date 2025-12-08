@@ -64,6 +64,22 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        (function() {
+            var storedLang = localStorage.getItem('site_lang');
+            // 如果用户之前没选过，且浏览器语言是中文，则跳转
+            if (!storedLang) {
+                var userLang = navigator.language || navigator.userLanguage;
+                if (userLang.toLowerCase().includes('zh')) {
+                    window.location.href = 'cn/devicemirror.html';
+                }
+            }
+            // 如果用户明确选过中文，也跳转
+            if (storedLang === 'zh') {
+                window.location.href = 'cn/devicemirror.html';
+            }
+        })();
+    </script>
     <!-- 引入 Inter 字体 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -141,12 +157,12 @@
                     <li><a href="privacy.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-600 md:p-0">Privacy Policy</a></li>
 
                     <!-- 语言切换按钮 (切换回英文) -->
-                    <!-- <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
+                    <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
                         <button id="lang-toggle" class="flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors group/lang">
                             <svg class="w-4 h-4 mr-1 text-slate-400 group-hover/lang:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
                             CN
                         </button>
-                    </li> -->
+                    </li>
 
                 </ul>
             </div>
@@ -284,7 +300,7 @@
             localStorage.setItem('site_lang', 'zh');
             // 跳转到上一级目录的 index.html (即英文版)
             // 注意：因为本文件在 /cn/ 目录下，所以是 ../index.html
-            window.location.href = 'cn/launchx.html';
+            window.location.href = 'cn/devicemirror.html';
         });
     </script>
 </body>
