@@ -9,33 +9,58 @@
 
 <url>
   <loc>https://fineusing.com/</loc>
-  <lastmod>2025-12-01T13:37:14+00:00</lastmod>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://fineusing.com/index.html</loc>
-  <lastmod>2025-12-01T13:37:14+00:00</lastmod>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fineusing.com/apppad.html</loc>
-  <lastmod>2025-12-01T13:37:14+00:00</lastmod>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fineusing.com/devicemirror.html</loc>
-  <lastmod>2025-12-01T13:37:14+00:00</lastmod>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fineusing.com/contact.html</loc>
-  <lastmod>2025-12-01T13:37:14+00:00</lastmod>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://fineusing.com/privacy.html</loc>
-  <lastmod>2025-12-01T13:37:14+00:00</lastmod>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fineusing.com/cn/index.html</loc>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://fineusing.com/cn/apppad.html</loc>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fineusing.com/cn/devicemirror.html</loc>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fineusing.com/cn/contact.html</loc>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://fineusing.com/cn/privacy.html</loc>
+  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
