@@ -28,7 +28,7 @@
             ]]></description>
             
             
-            <enclosure url="https://fineusing.com/AppPad-Installer.dmg" length="4788224" type="application/octet-stream" sparkle:edSignature="JRbkGcwXGkvVBrA4jIQ8Eamd6MZNOyEGo1ChJxq11Wrl56xVfNBOPhEUP1BOkWWSoa4oSd/8cO2ZZnH+NkOyCg=="/>
+            <enclosure url="https://fineusing.com/installer/AppPad-Installer.dmg" length="4788224" type="application/octet-stream" sparkle:edSignature="JRbkGcwXGkvVBrA4jIQ8Eamd6MZNOyEGo1ChJxq11Wrl56xVfNBOPhEUP1BOkWWSoa4oSd/8cO2ZZnH+NkOyCg=="/>
         </item>
     </channel>
 </rss>
