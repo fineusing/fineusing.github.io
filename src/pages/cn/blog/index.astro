@@ -8,17 +8,26 @@ const locale = "cn";
 const dict = getDictionary(locale);
 
 const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
-  .map((mod) => ({
-    url: mod.url,
-    data: mod.frontmatter
-  }))
+  .map((mod: any) => {
+    let postUrl = mod.url || "";
+    if (postUrl && !postUrl.endsWith(".html")) {
+      postUrl = `${postUrl.replace(/\/+$/, "")}.html`;
+    }
+    return {
+      url: postUrl,
+      data: mod.frontmatter
+    };
+  })
   .sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
 ---
 <SiteLayout lang={dict.langTag}>
   <Fragment slot="head">
     <title>Fineusing 博客</title>
     <meta name="description" content="AppPad 与 DeviceMirror 的产品更新与使用指南。" />
-    <link rel="canonical" href="https://fineusing.com/cn/blog/" />
+    <link rel="canonical" href="https://fineusing.com/cn/blog/index.html" />
+    <link rel="alternate" hreflang="en" href="https://fineusing.com/blog/index.html" />
+    <link rel="alternate" hreflang="zh-Hans" href="https://fineusing.com/cn/blog/index.html" />
+    <link rel="alternate" hreflang="x-default" href="https://fineusing.com/blog/index.html" />
   </Fragment>
 
   <Navbar locale={locale} langHref="/blog/index.html" />
