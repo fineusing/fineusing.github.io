@@ -1,0 +1,300 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary, getLangHref, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
+const dict = getDictionary(locale);
+const langHref = getLangHref(locale, "/ntfssync.html");
+
+const ldJson = locale === DEFAULT_LOCALE
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NTFSSync",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "Professional NTFS read-write driver for macOS with auto-mounting, disk management, and fast file transfer",
+        "url": "https://fineusing.com/ntfssync.html",
+        "image": "https://fineusing.com/img/ntfssync-home.png",
+        "screenshot": "https://fineusing.com/img/ntfssync-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Full NTFS Read-Write Mounting",
+            "Auto Mount on Insertion",
+            "Disk Health Repair & Erase",
+            "One-Click Eject All Drives",
+            "Apple Silicon & Intel Compatible"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`
+  : `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NTFSSync",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "macOS 专业 NTFS 磁盘读写工具，支持读写挂载、插盘自动挂载、磁盘修复抹除与一键弹出",
+        "url": "https://fineusing.com/cn/ntfssync.html",
+        "image": "https://fineusing.com/img/ntfssync-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "featureList": [
+            "NTFS 磁盘读写模式挂载",
+            "插盘自动读写挂载",
+            "磁盘修复与抹除",
+            "一键推出所有磁盘",
+            "原生高速文件传输"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`;
+
+const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/ntfssync.html" : "https://fineusing.com/cn/ntfssync.html";
+const ogUrl = canonical;
+const altEn = "https://fineusing.com/ntfssync.html";
+const altZh = "https://fineusing.com/cn/ntfssync.html";
+---
+<SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
+  <Fragment slot="head">
+    <title>{locale === DEFAULT_LOCALE ? "NTFSSync: Professional NTFS Read-Write Driver for macOS" : "NTFSSync: macOS 专业 NTFS 磁盘读写工具"}</title>
+    <meta
+      name="description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "NTFSSync mounts external NTFS drives in read-write mode automatically on macOS. Fast file transfer between Mac and Windows, disk repair, and one-click unmounting."
+          : "NTFSSync 是 macOS 上专业的以读写模式挂载 NTFS 磁盘的软件，支持插盘自动挂载、原生高速读写、磁盘急救修复与抹除，让数据传输更高效稳定。"
+      }
+    />
+    <meta
+      name="keywords"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "NTFSSync, Mac NTFS, NTFS read write Mac, mount NTFS Mac, NTFS for Mac free, Apple Silicon NTFS, NTFS disk repair Mac"
+          : "NTFSSync, Mac NTFS 读写, NTFS 挂载 Mac, 移动硬盘 Mac 只读, NTFS 修复, Mac 读写 NTFS 硬盘, Apple Silicon NTFS"
+      }
+    />
+    <meta name="author" content="NTFSSync" />
+
+    <meta
+      property="og:title"
+      content={locale === DEFAULT_LOCALE ? "NTFSSync: Professional NTFS Read-Write Driver for macOS" : "NTFSSync: macOS 专业 NTFS 磁盘读写工具"}
+    />
+    <meta
+      property="og:description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Fast & reliable NTFS read-write for macOS. Mount automatically and transfer files at native speed."
+          : "专业的以读写模式挂载 NTFS 磁盘软件，快速稳定读写数据。"
+      }
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content="https://fineusing.com/img/ntfssync-home.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="x-default" href={altEn} />
+
+    <script type="application/ld+json" set:html={ldJson}></script>
+  </Fragment>
+
+  <Navbar locale={locale} active="products" langHref={langHref} />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-6">
+        <span>macOS Disk Utility</span>
+      </div>
+      <h1 class="text-5xl font-bold mb-6 tracking-tight text-slate-900">{dict.ntfssync.title}</h1>
+      <p class="text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">{dict.ntfssync.subtitle}</p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up delay-300">
+        <a
+          href={dict.ntfssync.downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          id="download"
+          class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"
+            ></path>
+          </svg>
+          {dict.ntfssync.cta}
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Visual / Screenshot -->
+    <div class="mt-16 max-w-5xl mx-auto rounded-2xl border border-gray-200 bg-gray-50 p-4 mac-shadow">
+      <img
+        src="/img/ntfssync-home.png"
+        onerror="this.onerror=null; this.src='/img/rightly-home.png';"
+        alt="NTFSSync macOS disk utility interface preview"
+        class="rounded-xl w-full"
+      />
+    </div>
+  </section>
+
+  <!-- Core Features Grid -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.ntfssync.featuresTitle}</h2>
+        <p class="text-slate-500 text-lg">
+          {locale === "cn" ? "功能强大、运行稳定的全能 NTFS 磁盘管理利器" : "Powerful and rock-solid disk management engineered for macOS"}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {dict.ntfssync.features.map((feature, idx) => (
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl mb-6">
+                0{idx + 1}
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
+              <p class="text-slate-500 leading-relaxed text-sm">{feature.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Sections -->
+  <section id="showcase" class="py-20 overflow-hidden">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <!-- Showcase 1: Auto Mount & Speed -->
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+        <div class="w-full md:w-1/2">
+          <div
+            class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden"
+          >
+            <img
+              src="/img/ntfssync-mount.png"
+              onerror="this.onerror=null; this.src='/img/rightly-newfile.png';"
+              alt="NTFSSync Auto Mount"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+            {locale === "cn" ? "即插即用 · 高速读写" : "Plug & Play · Native Speed"}
+          </span>
+          <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.ntfssync.showcase[0].title}</h3>
+          <p class="text-lg text-slate-500 leading-relaxed">{dict.ntfssync.showcase[0].body}</p>
+        </div>
+      </div>
+
+      <!-- Showcase 2: Disk Repair & Erase -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+        <div class="w-full md:w-1/2">
+          <div
+            class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden"
+          >
+            <img
+              src="/img/ntfssync-manage.png"
+              onerror="this.onerror=null; this.src='/img/rightly-archive.png';"
+              alt="NTFSSync Disk Repair & Erase"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">
+            {locale === "cn" ? "磁盘急救 · 分区抹除" : "First Aid · Partition Erase"}
+          </span>
+          <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.ntfssync.showcase[1].title}</h3>
+          <p class="text-lg text-slate-500 leading-relaxed">{dict.ntfssync.showcase[1].body}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- When Do You Need NTFSSync Section -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.ntfssync.whenNeedTitle}</h2>
+        <p class="text-slate-500 text-lg">
+          {locale === "cn" ? "解决日常使用外接移动硬盘时的常见痛点" : "Overcome everyday external storage roadblocks on Mac"}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {dict.ntfssync.whenNeed.map((item) => (
+          <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-300 transition-colors">
+            <div class="text-lg font-bold text-slate-900 mb-2">{item.title}</div>
+            <p class="text-slate-500 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose NTFSSync Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.ntfssync.whyTitle}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {dict.ntfssync.whyPoints.map((point) => (
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+            <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-slate-700 font-medium">{point}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom Download CTA -->
+      <div class="mt-16 text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-3xl p-10 shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">
+          {locale === "cn" ? "立即下载 NTFSSync，让 NTFS 磁盘在 Mac 上畅行无阻" : "Unlock Full NTFS Read-Write on Mac Today"}
+        </h3>
+        <p class="text-slate-300 mb-8 max-w-xl mx-auto">
+          {locale === "cn" ? "支持 macOS 10.15 及以上系统，可在 Mac App Store 免费下载体验。" : "Compatible with macOS 10.15+. Free download on Mac App Store."}
+        </p>
+        <a
+          href={dict.ntfssync.downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-xl font-bold text-lg transition-transform hover:scale-105 shadow-md"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"
+            ></path>
+          </svg>
+          {dict.ntfssync.cta}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</SiteLayout>

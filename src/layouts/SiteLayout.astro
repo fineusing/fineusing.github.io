@@ -1,0 +1,81 @@
+---
+import "../styles/global.css";
+
+const {
+  lang = "en-US",
+  bodyClass = "bg-white text-slate-900",
+  enableLangRedirect = false
+} = Astro.props;
+---
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <slot name="head" />
+    <link rel="icon" type="image/x-icon" href="https://fineusing.com/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://fineusing.com/apple-touch-icon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F65HXNPQRY"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      // 解析页面所属软件
+      var path = window.location.pathname.toLowerCase();
+      var softName = 'Fineusing_Portal';
+      if (path.indexOf('rightly') !== -1) softName = 'Rightly';
+      else if (path.indexOf('zipgo') !== -1) softName = 'ZipGo';
+      else if (path.indexOf('ntfssync') !== -1) softName = 'NTFSSync';
+      else if (path.indexOf('apppad') !== -1) softName = 'AppPad';
+      else if (path.indexOf('devicemirror') !== -1) softName = 'DeviceMirror';
+      else if (path.indexOf('blog') !== -1) softName = 'Blog_Portal';
+      else if (path.indexOf('contact') !== -1) softName = 'Contact';
+      else if (path.indexOf('privacy') !== -1) softName = 'Privacy';
+      else if (path.indexOf('cleanhelper') !== -1) softName = 'CleanHelper';
+
+      // 匿名设备序列号
+      var serial = 'web_anonymous';
+      try {
+        serial = localStorage.getItem('fu_serial');
+        if (!serial) {
+          serial = 'web_' + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
+          localStorage.setItem('fu_serial', serial);
+        }
+      } catch (e) {}
+
+      // 操作系统版本检测
+      var ua = navigator.userAgent;
+      var sysVer = 'Other';
+      if (ua.indexOf('Mac OS X') !== -1) {
+        var match = ua.match(/Mac OS X ([0-9_]+)/);
+        sysVer = match ? 'macOS ' + match[1].replace(/_/g, '.') : 'macOS';
+      } else if (ua.indexOf('Windows NT 10.0') !== -1) sysVer = 'Windows 10/11';
+      else if (ua.indexOf('Windows') !== -1) sysVer = 'Windows';
+      else if (ua.indexOf('iPhone') !== -1 || ua.indexOf('iPad') !== -1) sysVer = 'iOS';
+      else if (ua.indexOf('Android') !== -1) sysVer = 'Android';
+      else if (ua.indexOf('Linux') !== -1) sysVer = 'Linux';
+
+      gtag('config', 'G-F65HXNPQRY', {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        soft_name: softName,
+        track_version: 'web_v1.0',
+        system_version: sysVer,
+        serial: serial,
+        event_action: 'page_view',
+        event_label: document.title
+      });
+    </script>
+  </head>
+  <body class={bodyClass}>
+    <slot />
+    <script src="/js/site.js" defer></script>
+    <script src="/js/analytics.js" defer></script>
+    {enableLangRedirect && <script src="/js/lang-redirect.js" defer></script>}
+  </body>
+</html>

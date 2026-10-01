@@ -1,0 +1,100 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary, getLangHref, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
+const dict = getDictionary(locale);
+const langHref = getLangHref(locale, "/cleanhelperinstaller.html");
+
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com/cleanhelperinstaller.html"
+  : "https://fineusing.com/cn/cleanhelperinstaller.html";
+const altEn = "https://fineusing.com/cleanhelperinstaller.html";
+const altZh = "https://fineusing.com/cn/cleanhelperinstaller.html";
+---
+<SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
+  <Fragment slot="head">
+    <title>{dict.cleanHelper.metaTitle}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="x-default" href={altEn} />
+  </Fragment>
+
+  <Navbar locale={locale} langHref={langHref} />
+
+  <main class="pt-32 pb-20 px-4">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
+          {dict.cleanHelper.title}
+        </h1>
+        <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-100 rounded-3xl p-8 md:p-12 mb-10 shadow-sm">
+        <div class="flex items-start space-x-4 mb-6">
+          <div class="bg-blue-100 p-3 rounded-2xl flex-shrink-0">
+            <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 mb-2">{dict.cleanHelper.whyTitle}</h2>
+            <p class="text-slate-600 leading-relaxed">
+              {dict.cleanHelper.whyDesc}
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-200 pt-6 mt-6">
+          <p class="text-slate-600 leading-relaxed mb-8">
+            {dict.cleanHelper.howDesc}
+          </p>
+
+          <div class="flex flex-col items-center">
+            <a
+              href={dict.cleanHelper.downloadUrl}
+              data-track-soft="CleanHelper"
+              data-track-label="download_clean_helper_pkg"
+              class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-slate-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-slate-800 hover:shadow-lg w-full md:w-auto cursor-pointer"
+              role="button"
+            >
+              <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+              {dict.cleanHelper.downloadBtn}
+            </a>
+            <p class="mt-4 text-xs text-slate-400">{dict.cleanHelper.compat}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 安装指南卡片 -->
+      <div class="mb-4 text-center">
+        <h2 class="text-lg font-bold text-slate-800">{dict.cleanHelper.stepsTitle}</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center mb-4">1</div>
+          <h3 class="font-bold text-slate-900 mb-2">{dict.cleanHelper.step1Title}</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">{dict.cleanHelper.step1Desc}</p>
+        </div>
+        <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center mb-4">2</div>
+          <h3 class="font-bold text-slate-900 mb-2">{dict.cleanHelper.step2Title}</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">{dict.cleanHelper.step2Desc}</p>
+        </div>
+        <div class="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 font-bold flex items-center justify-center mb-4">3</div>
+          <h3 class="font-bold text-slate-900 mb-2">{dict.cleanHelper.step3Title}</h3>
+          <p class="text-sm text-slate-500 leading-relaxed">{dict.cleanHelper.step3Desc}</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+</SiteLayout>

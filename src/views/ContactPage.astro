@@ -1,0 +1,85 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary, getLangHref, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
+const dict = getDictionary(locale);
+const langHref = getLangHref(locale, "/contact.html");
+
+const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/contact.html" : "https://fineusing.com/cn/contact.html";
+const altEn = "https://fineusing.com/contact.html";
+const altZh = "https://fineusing.com/cn/contact.html";
+---
+<SiteLayout lang={dict.langTag} bodyClass="bg-slate-50 text-slate-900 flex flex-col min-h-screen" enableLangRedirect={enableLangRedirect}>
+  <Fragment slot="head">
+    <title>{locale === DEFAULT_LOCALE ? "Fineusing: Contact Us" : "Fineusing: 联系我们"}</title>
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="x-default" href={altEn} />
+  </Fragment>
+
+  <Navbar locale={locale} langHref={langHref} />
+
+  <main class="flex-grow flex items-center justify-center pt-32 pb-20 px-4">
+    <div class="w-full max-w-lg bg-white rounded-2xl shadow-sm border border-gray-100 p-8">
+      <h1 class="text-3xl font-bold text-slate-900 mb-2">{dict.contact.title}</h1>
+      <p class="text-slate-500 mb-8">{dict.contact.subtitle}</p>
+
+      <div id="error-msg" class="hidden mb-4 p-3 rounded-lg bg-red-50 text-red-600 text-sm font-medium flex items-center">
+        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+        {dict.contact.error}
+      </div>
+
+      <div class="space-y-4">
+        <div>
+          <label for="message" class="block mb-2 text-sm font-medium text-slate-700">{dict.contact.label}</label>
+          <textarea
+            id="message"
+            rows="6"
+            class="block p-3 w-full text-sm text-slate-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
+            placeholder={dict.contact.placeholder}
+          ></textarea>
+        </div>
+
+        <button
+          onclick="sendEmail()"
+          class="w-full text-white bg-slate-900 hover:bg-slate-800 focus:ring-4 focus:ring-slate-300 font-medium rounded-lg text-sm px-5 py-3 text-center transition-all"
+        >
+          {dict.contact.button}
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <Footer locale={locale} />
+
+  <script is:inline>
+    function sendEmail() {
+      const textarea = document.getElementById('message');
+      const errorDiv = document.getElementById('error-msg');
+      const content = textarea.value.trim();
+
+      if (content === '') {
+        errorDiv.classList.remove('hidden');
+        textarea.classList.add('border-red-500', 'bg-red-50');
+        textarea.focus();
+      } else {
+        errorDiv.classList.add('hidden');
+        textarea.classList.remove('border-red-500', 'bg-red-50');
+
+        const subject = encodeURIComponent('{dict.contact.subject}');
+        const body = encodeURIComponent(content);
+        window.location.href = `mailto:ttianyaa@icloud.com?subject=${subject}&body=${body}`;
+      }
+    }
+  </script>
+</SiteLayout>

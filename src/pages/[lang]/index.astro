@@ -1,0 +1,13 @@
+---
+import HomePage from "../../views/HomePage.astro";
+import { locales, DEFAULT_LOCALE } from "../../i18n";
+
+export function getStaticPaths() {
+  return locales
+    .filter((locale) => locale !== DEFAULT_LOCALE)
+    .map((locale) => ({ params: { lang: locale } }));
+}
+
+const { lang } = Astro.params;
+---
+<HomePage locale={lang} />

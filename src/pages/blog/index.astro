@@ -1,0 +1,204 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { DEFAULT_LOCALE } from "../../i18n";
+
+const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
+  .map((mod) => ({
+    url: mod.url,
+    data: mod.frontmatter
+  }))
+  .sort((a, b) => (a.data.date < b.data.date ? 1 : -1));
+---
+<SiteLayout lang="en-US" enableLangRedirect>
+  <Fragment slot="head">
+    <title>Fineusing Blog</title>
+    <meta name="description" content="Product updates and guides for AppPad and DeviceMirror." />
+    <link rel="canonical" href="https://fineusing.com/blog/" />
+  </Fragment>
+
+  <Navbar locale={DEFAULT_LOCALE} langHref="/blog/index.html" />
+
+  <main class="pt-28 pb-20 px-4 sm:px-6 bg-[#fafafa] min-h-screen">
+    <section class="max-w-5xl mx-auto pb-10 border-b border-slate-200">
+      <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">Insights &amp; Product Notes</h1>
+      <p class="text-slate-500 max-w-2xl leading-relaxed mt-4">
+        Stories, design decisions, and practical guides across Rightly, DeviceMirror, NTFSSync, AppPad, and ZipGo.
+      </p>
+    </section>
+
+    <section class="max-w-5xl mx-auto mt-10">
+      <div class="flex flex-wrap gap-2.5 mb-12" id="blog-filters">
+        <button
+          class="px-4 py-1.5 rounded-md bg-slate-900 text-white text-sm font-medium"
+          data-filter="all"
+        >
+          All
+        </button>
+        <button
+          class="px-4 py-1.5 rounded-md bg-white border border-slate-200 text-slate-600 text-sm hover:border-slate-400 transition-colors"
+          data-filter="Rightly"
+        >
+          Rightly
+        </button>
+        <button
+          class="px-4 py-1.5 rounded-md bg-white border border-slate-200 text-slate-600 text-sm hover:border-slate-400 transition-colors"
+          data-filter="DeviceMirror"
+        >
+          DeviceMirror
+        </button>
+        <button
+          class="px-4 py-1.5 rounded-md bg-white border border-slate-200 text-slate-600 text-sm hover:border-slate-400 transition-colors"
+          data-filter="NTFSSync"
+        >
+          NTFSSync
+        </button>
+        <button
+          class="px-4 py-1.5 rounded-md bg-white border border-slate-200 text-slate-600 text-sm hover:border-slate-400 transition-colors"
+          data-filter="AppPad"
+        >
+          AppPad
+        </button>
+        <button
+          class="px-4 py-1.5 rounded-md bg-white border border-slate-200 text-slate-600 text-sm hover:border-slate-400 transition-colors"
+          data-filter="ZipGo"
+        >
+          ZipGo
+        </button>
+      </div>
+
+      <div class="space-y-14" id="blog-list">
+        {posts.map((post) => (
+          <article class="group relative flex flex-col items-start" data-tag={post.data.product ?? "Fineusing"}>
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class={`p-2 rounded-lg ${
+                  post.data.product === "Rightly"
+                    ? "bg-blue-50 text-blue-600"
+                    : post.data.product === "DeviceMirror"
+                    ? "bg-purple-50 text-purple-600"
+                    : post.data.product === "NTFSSync"
+                    ? "bg-teal-50 text-teal-600"
+                    : post.data.product === "ZipGo"
+                    ? "bg-amber-50 text-amber-600"
+                    : "bg-indigo-50 text-indigo-600"
+                }`}
+              >
+                <span class="text-xs font-bold">{
+                  post.data.product === "Rightly" ? "RT"
+                  : post.data.product === "DeviceMirror" ? "DM"
+                  : post.data.product === "NTFSSync" ? "NS"
+                  : post.data.product === "ZipGo" ? "ZG"
+                  : "AP"
+                }</span>
+              </div>
+              <span
+                class={`text-xs font-semibold uppercase tracking-wider ${
+                  post.data.product === "Rightly"
+                    ? "text-blue-600"
+                    : post.data.product === "DeviceMirror"
+                    ? "text-purple-600"
+                    : post.data.product === "NTFSSync"
+                    ? "text-teal-600"
+                    : post.data.product === "ZipGo"
+                    ? "text-amber-600"
+                    : "text-indigo-600"
+                }`}
+              >
+                {post.data.product ?? "Fineusing"}
+              </span>
+              <span class="text-slate-300">/</span>
+              <time class="text-xs text-slate-400">{post.data.date}</time>
+            </div>
+            <h2 class="text-2xl font-bold mb-3 group-hover:text-slate-900 transition-colors">
+              <a href={post.url}>{post.data.title}</a>
+            </h2>
+            {post.data.description && (
+              <p class="text-slate-500 leading-relaxed mb-4 text-[15px]">{post.data.description}</p>
+            )}
+            <a
+              href={post.url}
+              class="flex items-center gap-2 text-sm font-medium text-slate-900 group-hover:gap-3 transition-all"
+            >
+              Read article <span>→</span>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-20 pt-8 border-t border-slate-100 flex justify-between items-center text-sm text-slate-500" id="blog-pagination">
+        <button class="hover:text-black" data-page="prev">Previous</button>
+        <span data-page="status">Page 1 / 1</span>
+        <button class="hover:text-black" data-page="next">Next</button>
+      </div>
+    </section>
+  </main>
+
+  <script is:inline>
+    const PAGE_SIZE = 4;
+    const filters = document.getElementById('blog-filters');
+    const list = document.getElementById('blog-list');
+    const pagination = document.getElementById('blog-pagination');
+    const status = pagination?.querySelector('[data-page=\"status\"]');
+    const prevBtn = pagination?.querySelector('[data-page=\"prev\"]');
+    const nextBtn = pagination?.querySelector('[data-page=\"next\"]');
+
+    const items = Array.from(list?.children || []);
+    let activeFilter = 'all';
+    let currentPage = 1;
+
+    function getFilteredItems() {
+      if (activeFilter === 'all') return items;
+      return items.filter((item) => item.dataset.tag === activeFilter);
+    }
+
+    function render() {
+      const filtered = getFilteredItems();
+      const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+      currentPage = Math.min(currentPage, totalPages);
+
+      items.forEach((item) => (item.style.display = 'none'));
+      filtered
+        .slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+        .forEach((item) => (item.style.display = 'flex'));
+
+      if (status) status.textContent = `Page ${currentPage} / ${totalPages}`;
+      if (prevBtn) prevBtn.disabled = currentPage === 1;
+      if (nextBtn) nextBtn.disabled = currentPage === totalPages;
+    }
+
+    filters?.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-filter]');
+      if (!btn) return;
+      activeFilter = btn.dataset.filter || 'all';
+      currentPage = 1;
+      filters.querySelectorAll('[data-filter]').forEach((el) => {
+        el.classList.remove('bg-slate-900', 'text-white');
+        el.classList.add('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+      });
+      btn.classList.add('bg-slate-900', 'text-white');
+      btn.classList.remove('bg-white', 'border', 'border-slate-200', 'text-slate-600');
+      render();
+    });
+
+    prevBtn?.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage -= 1;
+        render();
+      }
+    });
+
+    nextBtn?.addEventListener('click', () => {
+      const totalPages = Math.max(1, Math.ceil(getFilteredItems().length / PAGE_SIZE));
+      if (currentPage < totalPages) {
+        currentPage += 1;
+        render();
+      }
+    });
+
+    render();
+  </script>
+
+  <Footer locale={DEFAULT_LOCALE} />
+</SiteLayout>

@@ -1,0 +1,306 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary, getLangHref, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
+const dict = getDictionary(locale);
+const langHref = getLangHref(locale, "/zipgo.html");
+
+const ldJson = locale === DEFAULT_LOCALE
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ZipGo",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "Powerful macOS context menu archiver for Finder with right-click extraction, 30+ formats, compression, and instant preview",
+        "url": "https://fineusing.com/zipgo.html",
+        "image": "https://fineusing.com/img/zipgo-home.png",
+        "screenshot": "https://fineusing.com/img/zipgo-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Right-Click Extraction",
+            "Right-Click Compression",
+            "Instant Archive Preview",
+            "30+ Archive Formats",
+            "Password Protection & Split Volumes"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`
+  : `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ZipGo",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "macOS Finder 原生右键解压缩工具，支持 30+ 种格式、免解压预览、加密压缩与分卷发送",
+        "url": "https://fineusing.com/cn/zipgo.html",
+        "image": "https://fineusing.com/img/zipgo-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "featureList": [
+            "右键一键解压",
+            "右键快速压缩为 ZIP/7Z/TAR.GZ",
+            "免解压直接预览内容",
+            "支持超过 30 种格式",
+            "密码保护与分卷压缩"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`;
+
+const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/zipgo.html" : "https://fineusing.com/cn/zipgo.html";
+const ogUrl = canonical;
+const altEn = "https://fineusing.com/zipgo.html";
+const altZh = "https://fineusing.com/cn/zipgo.html";
+
+const formatTags = [
+  "7Z", "ZIP", "RAR", "TAR", "GZIP", "BZIP2", "XZ", "ISO",
+  "CAB", "ARJ", "LZIP", "VHD", "DMG", "TGZ", "TBZ2", "TXZ"
+];
+---
+<SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
+  <Fragment slot="head">
+    <title>{locale === DEFAULT_LOCALE ? "ZipGo: Powerful Finder Archiver & Extractor for macOS" : "ZipGo: macOS Finder 原生右键解压缩工具"}</title>
+    <meta
+      name="description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "ZipGo seamlessly integrates into the macOS Finder context menu. Compress to ZIP/7Z/TAR.GZ with encryption, extract 30+ archive formats, and preview contents directly without unpacking."
+          : "告别繁琐跨应用操作。ZipGo 深度集成于 macOS Finder 右键菜单，支持右键解压、压缩、免解压预览及 30+ 种格式，支持加密与分卷压缩。"
+      }
+    />
+    <meta
+      name="keywords"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "ZipGo, Mac unarchive, Mac unzip, 7Z Mac, RAR Mac, Finder right click archiver, Mac archive preview, password encrypted zip Mac"
+          : "ZipGo, Mac 解压, Mac 压缩, 7Z 解压 Mac, RAR 解压 Mac, Finder 右键解压, Mac 免解压预览, 加密压缩, 分卷压缩"
+      }
+    />
+    <meta name="author" content="ZipGo" />
+
+    <meta
+      property="og:title"
+      content={locale === DEFAULT_LOCALE ? "ZipGo: Finder Right-Click Archiver for macOS" : "ZipGo: macOS Finder 原生右键解压缩工具"}
+    />
+    <meta
+      property="og:description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Effortless macOS archiver right inside your Finder context menu. Extract, compress, and preview 30+ formats."
+          : "告别繁琐的跨应用操作流程，Finder 右键一键搞定压缩、解压与预览。"
+      }
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content="https://fineusing.com/img/zipgo-home.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="x-default" href={altEn} />
+
+    <script type="application/ld+json" set:html={ldJson}></script>
+  </Fragment>
+
+  <Navbar locale={locale} active="products" langHref={langHref} />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold uppercase tracking-wider mb-6">
+        <span>macOS Finder Extension</span>
+      </div>
+      <h1 class="text-5xl font-bold mb-6 tracking-tight text-slate-900">{dict.zipgo.title}</h1>
+      <p class="text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">{dict.zipgo.subtitle}</p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up delay-300">
+        <a
+          href={dict.zipgo.downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          id="download"
+          class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"
+            ></path>
+          </svg>
+          {dict.zipgo.cta}
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Visual / Screenshot -->
+    <div class="mt-16 max-w-5xl mx-auto rounded-2xl border border-gray-200 bg-gray-50 p-4 mac-shadow">
+      <img
+        src="/img/zipgo-home.png"
+        onerror="this.onerror=null; this.src='/img/rightly-home.png';"
+        alt="ZipGo macOS context menu archiver preview"
+        class="rounded-xl w-full"
+      />
+    </div>
+  </section>
+
+  <!-- Core Highlights Grid -->
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.zipgo.featuresTitle}</h2>
+        <p class="text-slate-500 text-lg">
+          {locale === "cn" ? "右键直达，告别繁琐跨应用切换" : "Instant actions from right-click, zero cross-app switching"}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {dict.zipgo.features.map((feature, idx) => (
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-xl mb-6">
+                0{idx + 1}
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
+              <p class="text-slate-500 leading-relaxed text-sm">{feature.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase Sections -->
+  <section id="showcase" class="py-20 overflow-hidden">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <!-- Showcase 1: Archive Preview -->
+      <div class="flex flex-col md:flex-row items-center gap-12 mb-24">
+        <div class="w-full md:w-1/2">
+          <div
+            class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden"
+          >
+            <img
+              src="/img/zipgo-preview.png"
+              onerror="this.onerror=null; this.src='/img/rightly-newfile.png';"
+              alt="ZipGo Archive preview"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">
+            {locale === "cn" ? "免解压 · 即时预览" : "No Unpack · Instant Preview"}
+          </span>
+          <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.zipgo.showcase[0].title}</h3>
+          <p class="text-lg text-slate-500 leading-relaxed">{dict.zipgo.showcase[0].body}</p>
+        </div>
+      </div>
+
+      <!-- Showcase 2: Encryption & Split -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-20">
+        <div class="w-full md:w-1/2">
+          <div
+            class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden"
+          >
+            <img
+              src="/img/zipgo-archive.png"
+              onerror="this.onerror=null; this.src='/img/rightly-archive.png';"
+              alt="ZipGo Encryption & Volume Split"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">
+            {locale === "cn" ? "机密加密 · 自由分卷" : "Encrypted · Volume Split"}
+          </span>
+          <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.zipgo.showcase[1].title}</h3>
+          <p class="text-lg text-slate-500 leading-relaxed">{dict.zipgo.showcase[1].body}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supported Formats Badge Grid -->
+  <section class="py-16 bg-slate-50 border-y border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-slate-900 mb-4">
+        {locale === "cn" ? "支持超过 30 种主流及专业归档格式" : "Supports Over 30 Popular & Specialized Formats"}
+      </h2>
+      <p class="text-slate-500 text-sm mb-8">
+        {locale === "cn" ? "从常见的办公压缩包到专业开发镜像，无论是 Linux 安装包还是老旧软件归档都能轻松应对" : "Handle standard archives, Linux system packages, and legacy software files with ease"}
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-2.5">
+        {formatTags.map((fmt) => (
+          <span class="px-3.5 py-1.5 rounded-lg bg-white border border-slate-200 text-slate-700 text-sm font-semibold shadow-xs">
+            {fmt}
+          </span>
+        ))}
+        <span class="px-3.5 py-1.5 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-sm font-semibold">
+          +14 More
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose ZipGo Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.zipgo.whyTitle}</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {dict.zipgo.whyPoints.map((point) => (
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-50 border border-slate-100">
+            <svg class="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            <span class="text-slate-700 font-medium">{point}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- Bottom Download CTA -->
+      <div class="mt-16 text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-3xl p-10 shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold mb-4">
+          {locale === "cn" ? "立即下载 ZipGo，让解压与压缩快人一步" : "Get ZipGo Today for Faster File Management"}
+        </h3>
+        <p class="text-slate-300 mb-8 max-w-xl mx-auto">
+          {locale === "cn" ? "支持 macOS 11 及以上系统，可在 Mac App Store 免费下载体验。" : "Compatible with macOS 11+. Free download on Mac App Store."}
+        </p>
+        <a
+          href={dict.zipgo.downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 hover:bg-slate-100 rounded-xl font-bold text-lg transition-transform hover:scale-105 shadow-md"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"
+            ></path>
+          </svg>
+          {dict.zipgo.cta}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</SiteLayout>

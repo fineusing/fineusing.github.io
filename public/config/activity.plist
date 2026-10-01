@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>time</key>
+	<string>2024-04-30</string>
+	<key>activitystate</key>
+	<string>0</string>
+	<key>popup</key>
+	<string>0</string>
+	<key>votexfreeexpired</key>
+	<false/>
+</dict>
+</plist>

@@ -1,0 +1,373 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary, getBasePath, getLangHref, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
+const dict = getDictionary(locale);
+const base = getBasePath(locale);
+const langHref = getLangHref(locale, "/index.html");
+
+const ldJson = locale === DEFAULT_LOCALE
+  ? `{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fineusing",
+    "description": "Creating the ultimate macOS experience with innovative applications",
+    "url": "https://fineusing.com",
+    "image": "https://fineusing.com/img/apppad-home.png",
+    "screenshot": "https://fineusing.com/img/apppad-home.png",
+    "logo": "https://fineusing.com/img/apppad-logo.png",
+    "sameAs": [],
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "US"
+    },
+    "makesOffer": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "Rightly",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS Finder context menu enhancer with instant file creation, archive tools, and quick access"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "DeviceMirror",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS",
+            "description": "AirPlay screen mirroring for iPhone and iPad to Mac with wireless and wired support"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "NTFSSync",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "Professional NTFS read-write mount tool for macOS with auto-mount and high-speed data transfer"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "AppPad",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "Lightning-fast macOS Launchpad alternative with custom grouping and gesture support"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "ZipGo",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS Finder context menu archiver with 30+ formats, extraction, compression, and preview"
+        }
+    ]
+}`
+  : `{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fineusing",
+    "description": "为macOS用户打造创新应用的终极体验",
+    "url": "https://fineusing.com/cn/",
+    "image": "https://fineusing.com/img/apppad-home.png",
+    "logo": "https://fineusing.com/img/apppad-logo.png",
+    "sameAs": [],
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "CN"
+    },
+    "makesOffer": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "Rightly",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS 原生右键增强工具，深度集成 Finder 右键菜单"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "DeviceMirror",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS",
+            "description": "iPhone/iPad 屏幕镜像投屏到 Mac"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "NTFSSync",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS 专业以读写模式挂载 NTFS 磁盘工具，支持自动挂载与高速传输"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "AppPad",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS 极速启动台替代品"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "ZipGo",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS Finder 原生右键解压缩工具，支持 30+ 种格式与免解压预览"
+        }
+    ]
+}`;
+
+const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com" : "https://fineusing.com/cn/";
+const ogUrl = locale === DEFAULT_LOCALE ? "https://fineusing.com" : "https://fineusing.com/cn/index.html";
+const altEn = "https://fineusing.com";
+const altZh = "https://fineusing.com/cn/";
+---
+<SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
+  <Fragment slot="head">
+    <title>{locale === DEFAULT_LOCALE ? "Fineusing: macOS 26 Tahoe Launchpad Alternative & iPhone Screen Mirroring" : "Fineusing: macOS 26 Tahoe启动台替代品与iPhone屏幕镜像到Mac"}</title>
+    <meta
+      name="description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Fineusing creates exceptional macOS applications including Rightly, ZipGo, NTFSSync, AppPad, and DeviceMirror."
+          : "Fineusing为macOS打造卓越应用，包括Rightly、ZipGo、NTFSSync、AppPad和DeviceMirror。"
+      }
+    />
+    <meta
+      name="keywords"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Fineusing, NTFSSync, NTFS for Mac, read write NTFS, ZipGo, Rightly, AppPad, DeviceMirror, Mac utility apps, Swift development"
+          : "Fineusing, NTFSSync, NTFS 读写, NTFS for Mac, ZipGo, Rightly, AppPad, DeviceMirror, Mac实用工具, Swift 开发"
+      }
+    />
+
+    <meta property="og:title" content={locale === DEFAULT_LOCALE ? "Fineusing: Ultimate macOS Experience with AppPad & DeviceMirror" : "Fineusing: 使用AppPad和DeviceMirror打造终极 macOS 体验"} />
+    <meta
+      property="og:description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Creating exceptional macOS applications including AppPad app launcher and DeviceMirror screen mirroring"
+          : "打造卓越的macOS应用，包括AppPad应用启动器和DeviceMirror屏幕镜像"
+      }
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl} />
+    <meta property="og:image" content="https://fineusing.com/img/apppad-home.png" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="800" />
+
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="x-default" href={altEn} />
+
+    <script type="application/ld+json" set:html={ldJson}></script>
+  </Fragment>
+
+  <Navbar locale={locale} active="home" langHref={langHref} />
+
+  <section class="pt-32 pb-12 text-center bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">{dict.home.title}</h1>
+      <p class="text-lg text-slate-500">{dict.home.subtitle}</p>
+    </div>
+  </section>
+
+  <div class="space-y-0">
+    <section class="py-20 border-b border-gray-100">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="flex flex-col items-center justify-center mb-6">
+          <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="/img/rightly-logo.png" alt="Rightly logo" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">{dict.home.rightlyTitle}</h2>
+          <p class="text-lg text-slate-500 mt-2">{dict.home.rightlySubtitle}</p>
+        </div>
+
+        <div class="mt-10">
+          <img
+            src="/img/rightly-home.png"
+            class="rounded-xl shadow-md mx-auto max-w-full"
+            alt="Rightly screenshot"
+          />
+
+          <div class="max-w-2xl mx-auto text-center mt-8">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-4">{dict.home.rightlyHeading}</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">{dict.home.rightlyBody}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all"
+              >
+                {dict.home.ctaPrimary}
+              </a>
+              <a
+                href={`${base}/rightly.html`}
+                class="inline-flex px-8 py-3 bg-white border border-gray-200 hover:border-blue-500 hover:text-blue-600 text-slate-700 rounded-full font-semibold transition-all"
+              >
+                {dict.home.learnMore}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 border-b border-gray-100 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="flex flex-col items-center justify-center mb-6">
+          <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="/img/devicemirror-logo.png" alt="DeviceMirror logo" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">{dict.home.devicemirrorTitle}</h2>
+          <p class="text-lg text-slate-500 mt-2">{dict.home.devicemirrorSubtitle}</p>
+        </div>
+
+        <div class="mt-10">
+          <img src="/img/devicemirror-home.png" class="rounded-xl shadow-md mx-auto" alt="DeviceMirror screenshot" />
+
+          <div class="max-w-2xl mx-auto text-center mt-8">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-4">{dict.home.devicemirrorHeading}</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">{dict.home.devicemirrorBody}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://apps.apple.com/us/app/id1598771178?mt=12"
+                class="inline-flex px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all"
+              >
+                {dict.home.ctaPrimary}
+              </a>
+              <a
+                href={`${base}/devicemirror.html`}
+                class="inline-flex px-8 py-3 bg-white border border-gray-200 hover:border-purple-500 hover:text-purple-600 text-slate-700 rounded-full font-semibold transition-all"
+              >
+                {dict.home.learnMore}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 border-b border-gray-100">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="flex flex-col items-center justify-center mb-6">
+          <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="/img/ntfssync-logo.png" onerror="this.onerror=null; this.src='/img/rightly-logo.png';" alt="NTFSSync logo" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">{dict.home.ntfssyncTitle}</h2>
+          <p class="text-lg text-slate-500 mt-2">{dict.home.ntfssyncSubtitle}</p>
+        </div>
+
+        <div class="mt-10">
+          <img
+            src="/img/ntfssync-home.png"
+            onerror="this.onerror=null; this.src='/img/rightly-home.png';"
+            class="rounded-xl shadow-md mx-auto max-w-full"
+            alt="NTFSSync screenshot"
+          />
+
+          <div class="max-w-2xl mx-auto text-center mt-8">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-4">{dict.home.ntfssyncHeading}</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">{dict.home.ntfssyncBody}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all"
+              >
+                {dict.home.ctaPrimary}
+              </a>
+              <a
+                href={`${base}/ntfssync.html`}
+                class="inline-flex px-8 py-3 bg-white border border-gray-200 hover:border-blue-500 hover:text-blue-600 text-slate-700 rounded-full font-semibold transition-all"
+              >
+                {dict.home.learnMore}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 border-b border-gray-100 bg-slate-50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="flex flex-col items-center justify-center mb-6">
+          <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="/img/apppad-logo.png" alt="AppPad logo" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">{dict.home.apppadTitle}</h2>
+          <p class="text-lg text-slate-500 mt-2">{dict.home.apppadSubtitle}</p>
+        </div>
+
+        <div class="mt-10">
+          <img src="/img/apppad-home.png" class="rounded-xl shadow-md mx-auto" alt="AppPad screenshot" />
+
+          <div class="max-w-2xl mx-auto text-center mt-8">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-4">{dict.home.apppadHeading}</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">{dict.home.apppadBody}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://fineusing.com/installer/AppPad-Installer.dmg"
+                class="inline-flex px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all"
+              >
+                {dict.home.ctaPrimary}
+              </a>
+              <a
+                href={`${base}/apppad.html`}
+                class="inline-flex px-8 py-3 bg-white border border-gray-200 hover:border-blue-500 hover:text-blue-600 text-slate-700 rounded-full font-semibold transition-all"
+              >
+                {dict.home.learnMore}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 border-b border-gray-100">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="flex flex-col items-center justify-center mb-6">
+          <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="/img/zipgo-logo.png" onerror="this.onerror=null; this.src='/img/rightly-logo.png';" alt="ZipGo logo" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">{dict.home.zipgoTitle}</h2>
+          <p class="text-lg text-slate-500 mt-2">{dict.home.zipgoSubtitle}</p>
+        </div>
+
+        <div class="mt-10">
+          <img
+            src="/img/zipgo-home.png"
+            onerror="this.onerror=null; this.src='/img/rightly-home.png';"
+            class="rounded-xl shadow-md mx-auto max-w-full"
+            alt="ZipGo screenshot"
+          />
+
+          <div class="max-w-2xl mx-auto text-center mt-8">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-4">{dict.home.zipgoHeading}</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">{dict.home.zipgoBody}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all"
+              >
+                {dict.home.ctaPrimary}
+              </a>
+              <a
+                href={`${base}/zipgo.html`}
+                class="inline-flex px-8 py-3 bg-white border border-gray-200 hover:border-blue-500 hover:text-blue-600 text-slate-700 rounded-full font-semibold transition-all"
+              >
+                {dict.home.learnMore}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <Footer locale={locale} />
+</SiteLayout>

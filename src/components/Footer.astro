@@ -1,0 +1,23 @@
+---
+import { getBasePath, getDictionary, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE } = Astro.props;
+const dict = getDictionary(locale);
+const base = getBasePath(locale);
+
+const contactHref = `${base}/contact.html`;
+const privacyHref = `${base}/privacy.html`;
+---
+<footer class="bg-white py-12">
+  <div class="max-w-screen-xl mx-auto px-4 border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center">
+    <div class="mb-4 md:mb-0 text-center md:text-left">
+      <span class="text-xl font-bold text-slate-800">Fineusing</span>
+      <p class="text-sm text-slate-500 mt-1">{dict.footer.slogan}</p>
+    </div>
+    <div class="flex space-x-6 text-slate-500 text-sm">
+      <a href={contactHref} class="hover:text-blue-600 transition-colors">{dict.footer.contact}</a>
+      <a href={privacyHref} class="hover:text-blue-600 transition-colors">{dict.footer.privacy}</a>
+    </div>
+  </div>
+  <div class="text-center text-slate-400 text-xs mt-8">&copy; 2025 Fineusing. {dict.footer.rights}.</div>
+</footer>
