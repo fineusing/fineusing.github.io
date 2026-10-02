@@ -1,67 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<?xml-stylesheet type="text/css" href="https://www.xml-sitemaps.com/css/sitemap.css"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-
-<url>
-  <loc>https://fineusing.com/</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/index.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/apppad.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/devicemirror.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/contact.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/privacy.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/cn/index.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/cn/apppad.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/cn/devicemirror.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/cn/contact.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://fineusing.com/cn/privacy.html</loc>
-  <lastmod>2025-12-08T13:33:07+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+  <url>
+       <loc>https://fineusing.com/</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>1.0000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/rightly.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/devicemirror.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ntfssync.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/apppad.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/zipgo.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/index.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/contact.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/privacy.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/rightly.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/devicemirror.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/ntfssync.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/apppad.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/zipgo.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/index.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/contact.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/privacy.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/zipgo-password-protected-split-zip-compression-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/ntfssync-repair-erase-ntfs-disks-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/rightly-best-macos-context-menu-enhancers.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/devicemirror-airplay-to-mac-troubleshooting.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/zipgo-preview-archive-files-without-extracting.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/ntfssync-cross-platform-file-transfer-mac-windows.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/apppad-organize-apps-fast-launcher-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/rightly-finder-right-click-productivity-tips.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/devicemirror-screen-mirror-iphone-to-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/zipgo-extract-7z-rar-zip-finder-right-click.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/ntfssync-read-write-ntfs-drive-macos.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/rightly-create-new-files-finder-right-click.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/devicemirror-big-screen.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/apppad-launchpad-alternative.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/zipgo-password-protected-split-zip-compression-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/ntfssync-repair-erase-ntfs-disks-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/rightly-best-macos-context-menu-enhancers.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/devicemirror-airplay-to-mac-troubleshooting.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/zipgo-preview-archive-files-without-extracting.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/ntfssync-cross-platform-file-transfer-mac-windows.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/apppad-organize-apps-fast-launcher-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/rightly-finder-right-click-productivity-tips.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/devicemirror-screen-mirror-iphone-to-mac.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/zipgo-extract-7z-rar-zip-finder-right-click.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/ntfssync-read-write-ntfs-drive-macos.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/rightly-create-new-files-finder-right-click.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/devicemirror-big-screen.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/apppad-launchpad-alternative.html</loc>
+       <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.5120</priority>
+  </url>
 </urlset>
