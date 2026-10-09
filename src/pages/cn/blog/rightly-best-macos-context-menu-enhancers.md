@@ -12,7 +12,7 @@ product: "Rightly"
 
 虽然 macOS 的界面设计优雅、动画丝滑，但 Finder（访达）原生的右键菜单功能却相当克制：不能直接新建文件、不能方便地解压缩、不能一键打开终端……这让很多日常文件操作变得异常繁琐。
 
-在本文中，我们将深入分析 Mac 右键增强工具的底层实现差异，梳理一款优秀的右键工具应该具备哪些核心要素，以及为什么推荐使用 [Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12)。
+在本文中，我们将深入分析 Mac 右键增强工具的底层实现差异，梳理一款优秀的右键工具应该具备哪些核心要素，以及为什么推荐使用 [Rightly](https://apps.apple.com/app/id6806805796)。
 
 ## 底层原理对比：外挂注入 vs. 苹果官方 Finder 扩展
 
@@ -47,7 +47,7 @@ product: "Rightly"
 
 ## 为什么选择 Rightly？
 
-[Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) 正是将上述高频需求完美整合的原生 macOS 工具。
+[Rightly](https://apps.apple.com/app/id6806805796) 正是将上述高频需求完美整合的原生 macOS 工具。
 
 - **原生触感**：菜单设计完全遵循 macOS Human Interface Guidelines，自适应浅色与深色模式；
 - **随用随走**：内存占用极低，无常驻后台弹窗与干扰；
@@ -57,4 +57,4 @@ product: "Rightly"
 
 让 Mac 适应你的工作习惯，而不是去强迫自己迁就繁琐的操作步骤。通过 Rightly 增强 Finder 右键菜单，是提升日常文件流转效率成本最低、见效最快的方式。
 
-欢迎[前往 Mac App Store 免费下载 Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12)，亲自感受高效从容的每一次右键点击。
+欢迎[前往 Mac App Store 免费下载 Rightly](https://apps.apple.com/app/id6806805796)，亲自感受高效从容的每一次右键点击。

@@ -37,7 +37,7 @@ product: "NTFSSync"
 
 既然 NTFS 是最稳健的跨平台载体，那么唯一需要解决的，就是 **Mac 端默认无法写入 NTFS** 的系统缺陷。
 
-[NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) 让 Mac 设备直接获得原汁原味的完整 NTFS 读写能力：
+[NTFSSync](https://apps.apple.com/app/id6475194342) 让 Mac 设备直接获得原汁原味的完整 NTFS 读写能力：
 
 ### 1. 客户/同事拿来的盘，插上即写
 无需让 Windows 端同事做出任何格式改变，也不需要将大文件先上传到百度网盘或企业云盘慢慢下载。插入客户的 NTFS 移动硬盘，直接在 Mac 访达里把改好的设计稿或成片拖入硬盘，即刻带走。
@@ -54,4 +54,4 @@ product: "NTFSSync"
 2. **Mac 设备安装 NTFSSync**：彻底消除“只读”权限卡点，无缝融入 Windows 办公生态；
 3. **养成安全推出习惯**：避免随意硬拔，保证重要商业数据万无一失。
 
-[立即前往 Mac App Store 下载 NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12)，让跨平台文件协作从此变得轻而易举。
+[立即前往 Mac App Store 下载 NTFSSync](https://apps.apple.com/app/id6475194342)，让跨平台文件协作从此变得轻而易举。

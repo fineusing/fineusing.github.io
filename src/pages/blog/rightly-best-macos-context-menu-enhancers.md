@@ -11,7 +11,7 @@ When switching from Windows or exploring macOS customization, one of the first t
 
 While macOS has an exceptionally polished UI, Finder's default contextual menu feels surprisingly barren compared to Windows or modern Linux desktops. There is no simple way to create new files, navigate directly to terminal paths, or handle archives without third-party utilities.
 
-In this guide, we review what makes a great context menu tool on Mac, explore the architectural differences between native and hacky implementations, and look at why [Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) is the premier choice.
+In this guide, we review what makes a great context menu tool on Mac, explore the architectural differences between native and hacky implementations, and look at why [Rightly](https://apps.apple.com/app/id6806805796) is the premier choice.
 
 ## The Architecture Problem: Native Extensions vs. Code Injection
 
@@ -46,7 +46,7 @@ Features like **Copy Path**, **Open Terminal Here**, and **Show/Hide Extensions*
 
 ## Why Rightly is the Preferred Solution
 
-[Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) combines all of these capabilities into a single, beautifully designed native Mac application.
+[Rightly](https://apps.apple.com/app/id6806805796) combines all of these capabilities into a single, beautifully designed native Mac application.
 
 - **Deep Finder Integration**: Seamlessly matches macOS Dark Mode and system styling.
 - **Privacy-First**: No background tracking, no unnecessary network requests, fully sandboxed.
@@ -56,4 +56,4 @@ Features like **Copy Path**, **Open Terminal Here**, and **Show/Hide Extensions*
 
 If you want your Mac to feel faster, more capable, and less restricted by default Finder limitations, enhancing your right-click context menu is one of the highest-ROI improvements you can make.
 
-[Download Rightly from the Mac App Store](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) and unlock the true potential of your Finder context menu.
+[Download Rightly from the Mac App Store](https://apps.apple.com/app/id6806805796) and unlock the true potential of your Finder context menu.

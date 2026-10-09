@@ -11,7 +11,7 @@ The macOS Finder is clean and straightforward, but when it comes to power workfl
 
 Power users, software developers, and content creators frequently find themselves needing to copy absolute file paths, jump straight into Terminal, toggle file extensions, or share files via AirDrop.
 
-By integrating these repetitive operations directly into your right-click context menu with [Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12), you can eliminate friction and get more done in less time. Here are 5 essential right-click tweaks you should be using.
+By integrating these repetitive operations directly into your right-click context menu with [Rightly](https://apps.apple.com/app/id6806805796), you can eliminate friction and get more done in less time. Here are 5 essential right-click tweaks you should be using.
 
 ## 1. Copy Full File Path in One Click
 
@@ -56,4 +56,4 @@ Rightly provides built-in archive capabilities directly inside Finder. Select fi
 
 Small papercuts throughout your workday add up to hours of lost productivity over a month. Bringing high-frequency operations into Finder's native context menu makes macOS feel smoother, faster, and more tailored to how you actually work.
 
-[Download Rightly on the Mac App Store](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) to unlock these productivity shortcuts today.
+[Download Rightly on the Mac App Store](https://apps.apple.com/app/id6806805796) to unlock these productivity shortcuts today.

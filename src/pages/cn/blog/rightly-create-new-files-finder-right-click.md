@@ -30,7 +30,7 @@ product: "Rightly"
 
 ## 原生优雅的解法：Rightly 右键效率工具
 
-为了在不破坏系统稳定性的前提下彻底解决这一痛点，[Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) 应运而生。它基于苹果官方推荐的 Finder Sync 扩展机制构建，随用随走，轻量无感。
+为了在不破坏系统稳定性的前提下彻底解决这一痛点，[Rightly](https://apps.apple.com/app/id6806805796) 应运而生。它基于苹果官方推荐的 Finder Sync 扩展机制构建，随用随走，轻量无感。
 
 ### 1. 开箱即用的 10+ 种高频文件格式
 安装并启用 Rightly 后，在 Finder 的任何文件夹空白处点击右键，即可看到整洁的“新建文件”二级菜单，内置覆盖绝大多数日常需求：
@@ -55,4 +55,4 @@ product: "Rightly"
 
 ## 结语
 
-一个简单的右键新建功能，能帮您在每个工作日减少数十次无意义的窗口切换。如果您希望重获高效流畅的 macOS 文件管理体验，不妨[前往 App Store 下载 Rightly 体验](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12)。
+一个简单的右键新建功能，能帮您在每个工作日减少数十次无意义的窗口切换。如果您希望重获高效流畅的 macOS 文件管理体验，不妨[前往 App Store 下载 Rightly 体验](https://apps.apple.com/app/id6806805796)。

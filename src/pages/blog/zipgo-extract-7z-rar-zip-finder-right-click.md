@@ -13,7 +13,7 @@ Yet on macOS, the default archiving experience often feels jarring:
 - **macOS Archive Utility only supports basic ZIP**: Try double-clicking a `.7z` or `.rar` file, and macOS will bluntly report that it cannot open the file.
 - **Third-party standalone archivers launch clunky windows**: You double-click a file, an extra window pops up, asks you where to unpack, prompts you to upgrade, and litters unorganized files across your desktop.
 
-There is a much cleaner way: doing everything directly within the **macOS Finder right-click menu** using [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12).
+There is a much cleaner way: doing everything directly within the **macOS Finder right-click menu** using [ZipGo](https://apps.apple.com/app/id6799313183).
 
 ## The Fragmentation of Compression Formats
 
@@ -29,7 +29,7 @@ Opening these formats shouldn't require installing multiple separate utilities o
 
 When you want to unarchive a file, your mind is focused on **where you are in Finder**. You don't want to switch applications.
 
-With [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12), unarchiving is built directly into Finder's contextual menu:
+With [ZipGo](https://apps.apple.com/app/id6799313183), unarchiving is built directly into Finder's contextual menu:
 
 ### 1. Extract to Current Folder vs. Extract to Dedicated Folder
 Right-clicking any archive presents two smart options:
@@ -45,7 +45,7 @@ Powered by modern Swift and native multi-threading, ZipGo extracts multi-gigabyt
 
 ## How to Set Up Right-Click Extraction on macOS
 
-1. Download **ZipGo** from the [Mac App Store](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12).
+1. Download **ZipGo** from the [Mac App Store](https://apps.apple.com/app/id6799313183).
 2. Launch ZipGo and verify Finder Extension permission in *System Settings > Extensions*.
 3. Right-click any `.rar`, `.7z`, or `.zip` file in Finder, and choose your extraction destination.
 
@@ -53,4 +53,4 @@ Powered by modern Swift and native multi-threading, ZipGo extracts multi-gigabyt
 
 You don't need heavyweight archiving software cluttering your Dock or popping up unwanted windows. With ZipGo, professional decompression is right where it belongs: in your native right-click menu.
 
-[Install ZipGo from the Mac App Store](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) and make file unarchiving effortless.
+[Install ZipGo from the Mac App Store](https://apps.apple.com/app/id6799313183) and make file unarchiving effortless.

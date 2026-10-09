@@ -11,7 +11,7 @@ With the introduction of macOS Monterey, Apple announced a headline feature: **A
 
 Yet thousands of users open their Mac Settings only to discover that the option is completely missing, or find that their iPhone's Screen Mirroring list endlessly searches without ever detecting their computer.
 
-If you are struggling with "AirPlay to Mac not working," here is an honest look at Apple's strict hardware restrictions and how you can bypass them effortlessly using [DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12).
+If you are struggling with "AirPlay to Mac not working," here is an honest look at Apple's strict hardware restrictions and how you can bypass them effortlessly using [DeviceMirror](https://apps.apple.com/app/id1598771178).
 
 ## The Hidden Trap: Apple's Strict Hardware Exclusions
 
@@ -34,7 +34,7 @@ Even on officially supported hardware, users constantly encounter frustrating co
 
 ## The Reliable Alternative: DeviceMirror
 
-Instead of relying on Apple's rigid system dependencies, [DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12) acts as an independent, high-performance multimedia receiver designed to work on virtually any Mac.
+Instead of relying on Apple's rigid system dependencies, [DeviceMirror](https://apps.apple.com/app/id1598771178) acts as an independent, high-performance multimedia receiver designed to work on virtually any Mac.
 
 ### 1. Zero Model Discrimination
 DeviceMirror runs on older Intel Macs and modern Apple Silicon devices alike. It revitalizes older MacBooks and desktop iMacs, turning them into capable second screens and wireless gaming displays.
@@ -59,4 +59,4 @@ If you are trying to mirror your screen right now:
 
 You don't need to buy a brand-new Mac just to cast your phone screen to your computer. With DeviceMirror, every Mac becomes a capable, fluid receiver ready for presentations, gaming, and media.
 
-[Download DeviceMirror on the Mac App Store](https://apps.apple.com/us/app/id1598771178?mt=12) to solve your screen mirroring roadblocks today.
+[Download DeviceMirror on the Mac App Store](https://apps.apple.com/app/id1598771178) to solve your screen mirroring roadblocks today.

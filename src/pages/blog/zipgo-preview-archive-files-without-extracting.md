@@ -13,7 +13,7 @@ On default macOS, your only choice is to wait several minutes for the system to 
 
 What if you could browse inside compressed archives just like browsing a regular folder in Finder — **without unpacking a single byte**?
 
-With [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12), you can.
+With [ZipGo](https://apps.apple.com/app/id6799313183), you can.
 
 ## Why Full Extraction is a Waste of Time and SSD Lifespan
 
@@ -24,7 +24,7 @@ Every time you decompress an archive that you only need to inspect:
 
 ## The Better Way: In-Place Archive Preview with ZipGo
 
-[ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) introduces an intelligent **Right-Click Archive Preview** feature directly into macOS Finder.
+[ZipGo](https://apps.apple.com/app/id6799313183) introduces an intelligent **Right-Click Archive Preview** feature directly into macOS Finder.
 
 ### How It Works:
 - **Instant Directory Tree**: Right-click any `.zip`, `.rar`, `.7z`, or `.tar` archive and choose **Preview Archive**.
@@ -49,4 +49,4 @@ ZipGo's preview engine handles all major packaging standards:
 
 Don't let bulky archives slow down your Mac. Inspecting files inside archives should be as instantaneous as viewing a photo.
 
-[Download ZipGo from the Mac App Store](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) and bring effortless archive previews to your macOS workflow.
+[Download ZipGo from the Mac App Store](https://apps.apple.com/app/id6799313183) and bring effortless archive previews to your macOS workflow.

@@ -17,7 +17,7 @@ product: "DeviceMirror"
 
 虽然苹果官方在较新的系统上增加了基础的 AirPlay 接收功能，但很多用户依然面临**声音画面不同步、高延迟卡顿、或者机型受限无法启用**等困扰。
 
-借助 [DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12)，你可以轻松在任何 Mac 上解锁高清、稳定且超低延迟的屏幕镜像体验。
+借助 [DeviceMirror](https://apps.apple.com/app/id1598771178)，你可以轻松在任何 Mac 上解锁高清、稳定且超低延迟的屏幕镜像体验。
 
 ## 无线投屏 vs. 有线投屏：如何选择最适合的模式？
 
@@ -34,7 +34,7 @@ product: "DeviceMirror"
 
 ## 为什么选择 DeviceMirror？
 
-[DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12) 专为追求极致音画质的用户打造：
+[DeviceMirror](https://apps.apple.com/app/id1598771178) 专为追求极致音画质的用户打造：
 
 ### 1. 60 帧丝滑流畅与视网膜级锐利度
 支持最高 60fps 动态帧率输出，无论是细腻的文字渲染还是高速运动的游戏画面，都能在 Mac 上完美复刻 iPhone 视网膜屏幕的细腻质感。
@@ -47,7 +47,7 @@ product: "DeviceMirror"
 
 ## 3 步开启大屏镜像
 
-1. 在 Mac 上打开 [Mac App Store 下载并启动 DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12)；
+1. 在 Mac 上打开 [Mac App Store 下载并启动 DeviceMirror](https://apps.apple.com/app/id1598771178)；
 2. 确保 iPhone 与 Mac 连接到同一 Wi-Fi（或使用原装 Lightning/USB-C 数据线直接连接）；
 3. 从 iPhone 右上角下拉唤出控制中心，点击 **“屏幕镜像”** 并选择你的 Mac 电脑名称。
 
@@ -57,4 +57,4 @@ product: "DeviceMirror"
 
 让 iPhone 的便携灵动，与 Mac 的大屏沉浸完美融合。无论你是硬核手游玩家、主播、设计师还是职场商务精英，DeviceMirror 都是你 Mac 工具箱中不可或缺的视听利器。
 
-欢迎[前往 Mac App Store 免费下载 DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12)，即刻开启震撼的大屏视觉之旅。
+欢迎[前往 Mac App Store 免费下载 DeviceMirror](https://apps.apple.com/app/id1598771178)，即刻开启震撼的大屏视觉之旅。

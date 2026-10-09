@@ -15,7 +15,7 @@ At the same time, email servers and messaging platforms enforce strict attachmen
 
 If you need to compress a 300MB pitch deck into password-protected archives or split a 2GB raw design library into bite-sized 50MB chunks on macOS, the default Finder tool offers zero help: **macOS built-in compression has no password prompt and no split-volume feature.**
 
-Here is how to solve both security and size constraints natively on your Mac using [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12).
+Here is how to solve both security and size constraints natively on your Mac using [ZipGo](https://apps.apple.com/app/id6799313183).
 
 ## 1. Strong AES Encryption: Protecting Sensitive Data
 
@@ -61,4 +61,4 @@ When the recipient receives all parts, they simply right-click the first file wi
 
 Data privacy and file size limits shouldn't complicate your daily communications. With ZipGo, bank-grade encryption and versatile multi-volume splitting become effortless right-click actions in Finder.
 
-[Download ZipGo from the Mac App Store](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) to secure and package your files with confidence.
+[Download ZipGo from the Mac App Store](https://apps.apple.com/app/id6799313183) to secure and package your files with confidence.

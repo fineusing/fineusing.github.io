@@ -29,7 +29,7 @@ Over the years, Mac power users have relied on several workarounds:
 
 ## The Clean Solution: Rightly for macOS
 
-To solve this problem without compromising system stability, [Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) was built using Apple's official Finder Sync extension API.
+To solve this problem without compromising system stability, [Rightly](https://apps.apple.com/app/id6806805796) was built using Apple's official Finder Sync extension API.
 
 Rightly deeply integrates into the macOS Finder context menu, giving you instant file creation wherever you right-click.
 
@@ -60,4 +60,4 @@ No background daemons slowing down your system, and no complex setup required.
 
 ## Conclusion
 
-A simple right-click file creation feature saves dozens of window switches every workday. If you want a faster, smoother macOS file management workflow, [install Rightly from the Mac App Store](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) and streamline your daily desk work.
+A simple right-click file creation feature saves dozens of window switches every workday. If you want a faster, smoother macOS file management workflow, [install Rightly from the Mac App Store](https://apps.apple.com/app/id6806805796) and streamline your daily desk work.

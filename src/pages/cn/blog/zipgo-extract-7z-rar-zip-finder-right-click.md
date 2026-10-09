@@ -14,7 +14,7 @@ product: "ZipGo"
 - **系统自带的“归档实用工具”功能极弱**：一旦遇到 Windows 或 Linux 用户常用的 `.7z` 或 `.rar` 格式，直接弹窗报错提示“无法打开”；
 - **市面上的第三方解压软件过于臃肿**：双击一个文件，弹出一个硕大的独立软件窗口，还要经历广告弹窗、选择解压路径等繁琐步骤；如果不小心点了“解压到当前”，几百个散乱文件瞬间铺满整个桌面或“下载”文件夹，极其崩溃。
 
-解决这个问题的优雅姿态是：**不要跳出当前文件夹，直接在 Finder 右键菜单中搞定一切。** 这正是 [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) 的设计初衷。
+解决这个问题的优雅姿态是：**不要跳出当前文件夹，直接在 Finder 右键菜单中搞定一切。** 这正是 [ZipGo](https://apps.apple.com/app/id6799313183) 的设计初衷。
 
 ## 常见压缩格式的跨平台现状
 
@@ -30,7 +30,7 @@ product: "ZipGo"
 
 当你需要解压某个文件时，你的思维与注意力正停留在 **Finder 当前所处的目录中**。你最希望的操作是“随手一点，解压完毕”。
 
-通过深度集成于 macOS 访达右键菜单的 [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12)，你能获得以下丝滑体验：
+通过深度集成于 macOS 访达右键菜单的 [ZipGo](https://apps.apple.com/app/id6799313183)，你能获得以下丝滑体验：
 
 ### 1. “解压到当前”与“解压到同名文件夹”自由选择
 右键点击任意压缩包，直接呈现两个极其清晰的选项：
@@ -45,7 +45,7 @@ ZipGo 针对苹果 Apple Silicon（M1/M2/M3/M4）芯片架构进行了全核多�
 
 ## 如何在 1 分钟内开启右键解压？
 
-1. 前往 [Mac App Store 下载 ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12)；
+1. 前往 [Mac App Store 下载 ZipGo](https://apps.apple.com/app/id6799313183)；
 2. 启动软件，并在「系统设置 > 扩展 > 访达扩展」中确认已勾选 ZipGo；
 3. 在 Finder 中右键任意 `.zip`、`.rar`、`.7z` 文件，即可直接开启高效解压。
 
@@ -53,4 +53,4 @@ ZipGo 针对苹果 Apple Silicon（M1/M2/M3/M4）芯片架构进行了全核多�
 
 解压缩是一项高频但基础的任务，不应该打断你的操作节奏，更不应该占用大量的屏幕空间。把解压功能放回它原本最该在的地方——右键菜单。
 
-立即[在 Mac App Store 免费下载 ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12)，享受纯粹、无感的 Mac 解压新体验。
+立即[在 Mac App Store 免费下载 ZipGo](https://apps.apple.com/app/id6799313183)，享受纯粹、无感的 Mac 解压新体验。

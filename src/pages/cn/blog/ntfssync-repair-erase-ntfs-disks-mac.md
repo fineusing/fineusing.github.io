@@ -12,7 +12,7 @@ product: "NTFSSync"
 
 同样，如果你新买了一块大容量移动固态硬盘（PSSD），希望把它格式化为兼具日志保护与大文件支持的 NTFS 格式用于跨系统备份，macOS 自带的“磁盘工具（Disk Utility）”却往往只提供 APFS、Mac OS 扩展或 ExFAT 选项，无法直接格式化为 NTFS。
 
-现在，你完全不需要虚拟机，也不用找别人借 Windows 电脑。借助 [NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12)，在 Mac 上就能直接完成 NTFS 磁盘的健康急救、错误修复与分区抹除。
+现在，你完全不需要虚拟机，也不用找别人借 Windows 电脑。借助 [NTFSSync](https://apps.apple.com/app/id6475194342)，在 Mac 上就能直接完成 NTFS 磁盘的健康急救、错误修复与分区抹除。
 
 ## 移动硬盘常见文件系统异常表现
 
@@ -28,7 +28,7 @@ macOS 自带的“磁盘工具”虽然有“急救（First Aid）”功能，�
 
 ## NTFSSync 的全能急救与管理方案
 
-[NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) 不仅是一款高性能的读写挂载工具，更是一套完备的 macOS 存储管理套件：
+[NTFSSync](https://apps.apple.com/app/id6475194342) 不仅是一款高性能的读写挂载工具，更是一套完备的 macOS 存储管理套件：
 
 ### 1. 内置原生级 NTFS 磁盘急救修复
 NTFSSync 集成了针对 NTFS 卷宗的深层诊断机制：
@@ -55,4 +55,4 @@ NTFSSync 集成了针对 NTFS 卷宗的深层诊断机制：
 
 在 macOS 上管理 Windows 硬盘不该受制于系统壁垒。拥有一款兼具“自动读写挂载”与“深层急救维护”的专业工具，能让你的跨平台工作流更加稳健从容。
 
-立即[在 Mac App Store 免费下载 NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12)，轻松搞定所有外部磁盘管理需求。
+立即[在 Mac App Store 免费下载 NTFSSync](https://apps.apple.com/app/id6475194342)，轻松搞定所有外部磁盘管理需求。

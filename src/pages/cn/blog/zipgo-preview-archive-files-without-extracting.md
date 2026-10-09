@@ -19,7 +19,7 @@ product: "ZipGo"
 
 有没有一种办法，能像打开普通文件夹一样，**不解压任何文件，就能瞬间看清压缩包里的内容结构？**
 
-答案就是：[ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) 的**右键即时归档预览**功能。
+答案就是：[ZipGo](https://apps.apple.com/app/id6799313183) 的**右键即时归档预览**功能。
 
 ## 为什么全量解压是低效的？
 
@@ -29,7 +29,7 @@ product: "ZipGo"
 
 ## 革命性的解法：ZipGo 右键即时预览
 
-[ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12) 深度挖掘了压缩文件格式的底层结构规范。几乎所有主流压缩包都在文件尾部或头部保留了一份轻量级的文件目录索引表（Central Directory）。
+[ZipGo](https://apps.apple.com/app/id6799313183) 深度挖掘了压缩文件格式的底层结构规范。几乎所有主流压缩包都在文件尾部或头部保留了一份轻量级的文件目录索引表（Central Directory）。
 
 借助这一机制，ZipGo 实现了**毫秒级极速解析**：
 
@@ -55,4 +55,4 @@ product: "ZipGo"
 
 在追求极简与高效的 Mac 系统中，工具应当越用越轻。ZipGo 让复杂的解压缩任务化繁为简，免去无谓等待，守护硬盘空间。
 
-欢迎[前往 Mac App Store 免费下载 ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12)，立即解锁免解压极速预览的高效体验。
+欢迎[前往 Mac App Store 免费下载 ZipGo](https://apps.apple.com/app/id6799313183)，立即解锁免解压极速预览的高效体验。

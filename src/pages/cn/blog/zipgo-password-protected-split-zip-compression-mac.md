@@ -16,7 +16,7 @@ product: "ZipGo"
 
 在 macOS 系统原生状态下，右键自带的压缩功能极其简陋：**既不能设置压缩密码，也完全不支持分卷切片。**
 
-借助 [ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12)，在 Finder 右键菜单中就能随手完成高强度加密与精准分卷压缩。
+借助 [ZipGo](https://apps.apple.com/app/id6799313183)，在 Finder 右键菜单中就能随手完成高强度加密与精准分卷压缩。
 
 ## 1. 高强度 AES-256 加密：筑牢商业机密防线
 
@@ -57,4 +57,4 @@ ZipGo 充分调动了 Mac 芯片自带的硬件级 AES 加密加速指令集，�
 
 商业机密保护不能心存侥幸，大文件传输更不该受制于平台规则。通过 ZipGo，你在 Mac 访达中就能随时发起银行级的数据加密与灵活分卷，让每一次文件归档与分享都安全、合规、从容。
 
-立即[前往 Mac App Store 免费下载 ZipGo](https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12)，体验专业的 macOS 归档与加密利器。
+立即[前往 Mac App Store 免费下载 ZipGo](https://apps.apple.com/app/id6799313183)，体验专业的 macOS 归档与加密利器。

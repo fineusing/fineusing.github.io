@@ -43,7 +43,7 @@ You find yourself uploading gigabytes through cloud drives or asking colleagues 
 
 ## The Solution: Seamless NTFS Interoperability with NTFSSync
 
-With [NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12), the friction disappears entirely.
+With [NTFSSync](https://apps.apple.com/app/id6475194342), the friction disappears entirely.
 
 ### 1. Zero Extra Configuration
 You do not need to format your drive or ask Windows users to change their workflows. Plug any NTFS drive into your Mac, and NTFSSync silently mounts it with full read-write permissions.
@@ -64,4 +64,4 @@ Unplugging a drive while background write operations are finalizing can damage t
 
 A mixed Mac and PC environment shouldn't force you into slow workarounds or unreliable storage formats. By unlocking full NTFS read-write capabilities on macOS, your workflow stays uninterrupted.
 
-[Get NTFSSync on the Mac App Store](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) and streamline your cross-platform workflows today.
+[Get NTFSSync on the Mac App Store](https://apps.apple.com/app/id6475194342) and streamline your cross-platform workflows today.

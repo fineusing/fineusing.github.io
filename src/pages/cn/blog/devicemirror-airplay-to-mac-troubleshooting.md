@@ -34,7 +34,7 @@ product: "DeviceMirror"
 
 ## 终极破局之道：专业投屏工具 DeviceMirror
 
-无需受制于苹果苛刻的系统条框限制，[DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12) 作为一款轻量独立的高性能多媒体接收器，全面解决了上述痛点：
+无需受制于苹果苛刻的系统条框限制，[DeviceMirror](https://apps.apple.com/app/id1598771178) 作为一款轻量独立的高性能多媒体接收器，全面解决了上述痛点：
 
 ### 1. 全面释放老款与全系 Mac 潜力
 无论是经典的 Intel 架构老款 Mac，还是最新的 M 系列芯片电脑，DeviceMirror 都能稳定运行。让闲置的旧款 iMac 或 MacBook 变废为宝，摇身一变成为专属于你手机的高清外接显示屏。
@@ -59,4 +59,4 @@ DeviceMirror 以标准 macOS 窗口形式呈现投屏内容。你可以把手机
 
 你不必为了偶尔投个屏而被迫花重金升级全新的 Mac 电脑。借助 DeviceMirror，每一台 Mac 都能拥有极致高清、随心所欲的音画投屏体验。
 
-欢迎[前往 Mac App Store 免费下载 DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12)，告别投屏失败的烦恼！
+欢迎[前往 Mac App Store 免费下载 DeviceMirror](https://apps.apple.com/app/id1598771178)，告别投屏失败的烦恼！

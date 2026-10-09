@@ -34,7 +34,7 @@ In older tutorials, you might see advice recommending risky workarounds:
 
 ## The Modern, Reliable Solution: NTFSSync
 
-To solve this problem without formatting or risking data corruption, [NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) provides a seamless, native read-write mounting experience engineered specifically for macOS.
+To solve this problem without formatting or risking data corruption, [NTFSSync](https://apps.apple.com/app/id6475194342) provides a seamless, native read-write mounting experience engineered specifically for macOS.
 
 ### 1. Automatic Plug-and-Play Read-Write Mounting
 With NTFSSync installed, you don't have to fiddle with manual mount commands. Whenever you plug in an external NTFS hard drive, thumb drive, or SD card, NTFSSync automatically detects and mounts the partition in full **Read-Write mode**. You can drag, drop, edit, save, and delete files just like on a native Mac disk.
@@ -49,7 +49,7 @@ NTFSSync is optimized for both Apple Silicon (M1, M2, M3, M4) and Intel Macs. Fi
 
 ## How to Enable Full NTFS Read-Write Access in 3 Steps
 
-1. Download **NTFSSync** from the [Mac App Store](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12).
+1. Download **NTFSSync** from the [Mac App Store](https://apps.apple.com/app/id6475194342).
 2. Launch NTFSSync and follow the one-time helper setup.
 3. Plug in your NTFS external drive — it will immediately mount with full read and write permissions.
 
@@ -57,4 +57,4 @@ NTFSSync is optimized for both Apple Silicon (M1, M2, M3, M4) and Intel Macs. Fi
 
 You don't need to wipe your hard drives or risk your valuable documents with unstable terminal hacks. With NTFSSync, your Mac gains seamless compatibility with all Windows NTFS drives.
 
-[Download NTFSSync on the Mac App Store](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) today and enjoy complete freedom with external storage on macOS.
+[Download NTFSSync on the Mac App Store](https://apps.apple.com/app/id6475194342) today and enjoy complete freedom with external storage on macOS.

@@ -12,7 +12,7 @@ macOS 的访达（Finder）以界面简洁美观著称，但在高频深度办�
 
 例如：想要在终端定位当前文件夹？想要复制某个资源文件的完整绝对路径？想要查看并修改隐藏的扩展名？这些微小的痛点每天都会发生几十次。
 
-借助 [Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12) 这款 macOS 原生右键增强工具，你可以把这些高频操作直接放进 Finder 右键菜单中，随用随走。以下是 5 个强烈推荐的效率技巧：
+借助 [Rightly](https://apps.apple.com/app/id6806805796) 这款 macOS 原生右键增强工具，你可以把这些高频操作直接放进 Finder 右键菜单中，随用随走。以下是 5 个强烈推荐的效率技巧：
 
 ## 1. 一键复制文件完整路径
 
@@ -57,4 +57,4 @@ Rightly 深度集成了专业解压缩引擎，支持在右键菜单中直接打
 
 日常操作中看似微小的点击延误，累积起来就是大量的生产力消耗。将高频工具深度注入系统原生右键菜单，让 Mac 的文件管理更自然高效。
 
-欢迎[前往 Mac App Store 免费下载 Rightly](https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12)，开启更顺畅的 Mac 效率之旅。
+欢迎[前往 Mac App Store 免费下载 Rightly](https://apps.apple.com/app/id6806805796)，开启更顺畅的 Mac 效率之旅。

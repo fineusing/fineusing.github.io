@@ -14,7 +14,7 @@ While Apple offers basic AirPlay receiver capabilities on select newer Mac hardw
 - Frustrating Wi-Fi network dropouts or corporate firewalls blocking peer-to-peer discovery.
 - Strict hardware model limits that lock out older MacBooks, iMacs, and Mac minis.
 
-Here is how [DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12) solves these challenges, delivering pristine, low-latency screen mirroring over both wireless and USB wired connections.
+Here is how [DeviceMirror](https://apps.apple.com/app/id1598771178) solves these challenges, delivering pristine, low-latency screen mirroring over both wireless and USB wired connections.
 
 ## Wireless vs. Wired Mirroring: Choosing the Right Mode
 
@@ -30,7 +30,7 @@ Depending on your use case, your mirroring requirements differ:
 
 ## Key Features That Make DeviceMirror Stand Out
 
-[DeviceMirror](https://apps.apple.com/us/app/id1598771178?mt=12) was engineered to turn any Mac into a high-performance multimedia receiver:
+[DeviceMirror](https://apps.apple.com/app/id1598771178) was engineered to turn any Mac into a high-performance multimedia receiver:
 
 ### 1. High-FPS Fluidity & Native Resolution
 DeviceMirror supports up to 60fps silky-smooth rendering with sharp text reproduction and accurate color profiles, preserving the retina clarity of your iPhone or iPad screen on your Studio Display, MacBook Pro, or external monitor.
@@ -43,7 +43,7 @@ Unlike Apple's built-in AirPlay receiver feature (which requires 2018 or newer M
 
 ## How to Mirror Your Screen in 3 Easy Steps
 
-1. Install **DeviceMirror** from the [Mac App Store](https://apps.apple.com/us/app/id1598771178?mt=12) and launch it on your Mac.
+1. Install **DeviceMirror** from the [Mac App Store](https://apps.apple.com/app/id1598771178) and launch it on your Mac.
 2. Ensure your iPhone and Mac are on the same Wi-Fi network (or connect your device via USB cable).
 3. Swipe down to open Control Center on your iPhone/iPad, tap **Screen Mirroring**, and select your Mac.
 
@@ -53,4 +53,4 @@ Your mobile screen will instantly appear inside a responsive, resizable macOS wi
 
 Whether you are an app developer showcasing a live prototype, a gamer broadcasting your mobile matches, or simply enjoying photos on a bigger screen, DeviceMirror offers the speed, clarity, and reliability you need.
 
-[Download DeviceMirror from the Mac App Store](https://apps.apple.com/us/app/id1598771178?mt=12) today and bring your mobile screen to life on the big stage.
+[Download DeviceMirror from the Mac App Store](https://apps.apple.com/app/id1598771178) today and bring your mobile screen to life on the big stage.

@@ -11,7 +11,7 @@ When an external Windows NTFS drive starts acting up — taking forever to mount
 
 Likewise, if you want to completely erase a portable drive and set it up as a clean NTFS partition for cross-platform sharing, macOS Disk Utility often restricts your options, pushing you toward APFS or Mac OS Extended.
 
-Fortunately, modern Mac software now allows you to diagnose, repair, and format NTFS storage devices directly on your Mac. Here is how to keep your drives healthy with [NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12).
+Fortunately, modern Mac software now allows you to diagnose, repair, and format NTFS storage devices directly on your Mac. Here is how to keep your drives healthy with [NTFSSync](https://apps.apple.com/app/id6475194342).
 
 ## Common Symptoms of a Corrupted NTFS External Drive
 
@@ -28,7 +28,7 @@ The built-in macOS **Disk Utility** app includes a "First Aid" feature. However,
 
 ## The Solution: First Aid & Diagnostics with NTFSSync
 
-[NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) is more than just a mount driver — it is a complete storage management toolkit for macOS.
+[NTFSSync](https://apps.apple.com/app/id6475194342) is more than just a mount driver — it is a complete storage management toolkit for macOS.
 
 ### 1. Built-in NTFS File System First Aid
 NTFSSync incorporates specialized diagnostic engines that examine the integrity of your drive's Master File Table (MFT), log files, and sector allocations:
@@ -56,4 +56,4 @@ Having multiple drives named "Untitled" or "New Volume" leads to confusion and a
 
 You do not need to switch to a Windows PC every time an external drive experiences a hiccup. With NTFSSync on your Mac, you have full diagnostic, repair, format, and management capabilities right at your fingertips.
 
-[Download NTFSSync on the Mac App Store](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) to take complete control of your external storage.
+[Download NTFSSync on the Mac App Store](https://apps.apple.com/app/id6475194342) to take complete control of your external storage.

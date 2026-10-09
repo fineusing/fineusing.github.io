@@ -105,6 +105,7 @@ const dictionaries = {
       title: "DeviceMirror",
       subtitle: "Mirror your iPhone/iPad screen to your macOS computer",
       cta: "Free Download",
+      downloadUrl: "https://apps.apple.com/app/id1598771178",
       features: [
         {
           title: "Wireless Screen Mirroring via AirPlay 2",
@@ -147,7 +148,7 @@ const dictionaries = {
       title: "Rightly",
       subtitle: "Put frequent actions into the context menu for ultimate Mac file management efficiency",
       cta: "Download on Mac App Store",
-      downloadUrl: "https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12",
+      downloadUrl: "https://apps.apple.com/app/id6806805796",
       featuresTitle: "Core Features",
       features: [
         {
@@ -208,7 +209,7 @@ const dictionaries = {
       title: "ZipGo",
       subtitle: "Powerful Finder right-click archiver: effortlessly extract, compress, and preview 30+ formats",
       cta: "Download on Mac App Store",
-      downloadUrl: "https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12",
+      downloadUrl: "https://apps.apple.com/app/id6799313183",
       featuresTitle: "Core Highlights",
       features: [
         {
@@ -250,7 +251,7 @@ const dictionaries = {
       title: "NTFSSync",
       subtitle: "Professional NTFS read-write driver for macOS with native-speed performance",
       cta: "Download on Mac App Store",
-      downloadUrl: "https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12",
+      downloadUrl: "https://apps.apple.com/app/id6475194342",
       featuresTitle: "Core Features",
       features: [
         {
@@ -470,6 +471,7 @@ const dictionaries = {
       title: "DeviceMirror",
       subtitle: "将iPhone/iPad屏幕镜像到macOS电脑",
       cta: "免费下载",
+      downloadUrl: "https://apps.apple.com/app/id1598771178",
       features: [
         {
           title: "AirPlay 2 无线镜像",
@@ -511,7 +513,7 @@ const dictionaries = {
       title: "Rightly",
       subtitle: "把常用操作放进右键菜单，让 Mac 文件管理更高效",
       cta: "App Store 免费下载",
-      downloadUrl: "https://apps.apple.com/app/rightly-right-click-toolkit/id6806805796?mt=12",
+      downloadUrl: "https://apps.apple.com/app/id6806805796",
       featuresTitle: "主要功能",
       features: [
         {
@@ -572,7 +574,7 @@ const dictionaries = {
       title: "ZipGo",
       subtitle: "告别繁琐跨应用操作，Finder 右键一键搞定压缩、解压与预览",
       cta: "App Store 免费下载",
-      downloadUrl: "https://apps.apple.com/app/zipgo-unarchive-rar-7z-zip/id6799313183?mt=12",
+      downloadUrl: "https://apps.apple.com/app/id6799313183",
       featuresTitle: "核心亮点",
       features: [
         {
@@ -614,7 +616,7 @@ const dictionaries = {
       title: "NTFSSync",
       subtitle: "专业的以读写模式挂载 NTFS 磁盘软件，快速稳定读写数据",
       cta: "App Store 免费下载",
-      downloadUrl: "https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12",
+      downloadUrl: "https://apps.apple.com/app/id6475194342",
       featuresTitle: "主要功能",
       features: [
         {

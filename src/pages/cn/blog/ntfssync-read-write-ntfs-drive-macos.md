@@ -32,7 +32,7 @@ product: "NTFSSync"
 
 ## 现代可靠的解决方案：NTFSSync
 
-为了让 Mac 用户能像在 Windows 上一样无感、顺畅地使用 NTFS 硬盘，[NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12) 提供了全方位的解决方案。
+为了让 Mac 用户能像在 Windows 上一样无感、顺畅地使用 NTFS 硬盘，[NTFSSync](https://apps.apple.com/app/id6475194342) 提供了全方位的解决方案。
 
 ### 1. 插盘自动以读写模式挂载（即插即用）
 安装 NTFSSync 后，无需每次插盘都手动打开软件操作。只要插入移动硬盘、U 盘或 SD 卡，软件就会在毫秒内自动识别并以**“读写模式”**将其挂载到 Finder 中。你可以直接把文件拖拽进去，实时在硬盘内编辑保存文档。
@@ -46,7 +46,7 @@ NTFSSync 经过底层性能调优，完美兼容 Apple Silicon（M1/M2/M3/M4 全
 
 ## 3 步快速上手
 
-1. 前往 [Mac App Store 下载 NTFSSync](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12)；
+1. 前往 [Mac App Store 下载 NTFSSync](https://apps.apple.com/app/id6475194342)；
 2. 按照向导完成极简的系统授权；
 3. 插入你的 NTFS 移动硬盘，即可在 Finder 中畅快读写！
 
@@ -54,4 +54,4 @@ NTFSSync 经过底层性能调优，完美兼容 Apple Silicon（M1/M2/M3/M4 全
 
 不要再为了读写移动硬盘而小心翼翼地到处借 Windows 电脑，更无需冒着清空珍贵数据的风险去格式化硬盘。
 
-立即[在 Mac App Store 免费下载 NTFSSync 体验](https://apps.apple.com/app/ntfssync-ntfs-read-write/id6475194342?mt=12)，让移动硬盘在 Mac 上真正畅行无阻。
+立即[在 Mac App Store 免费下载 NTFSSync 体验](https://apps.apple.com/app/id6475194342)，让移动硬盘在 Mac 上真正畅行无阻。
