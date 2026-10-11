@@ -4,8 +4,8 @@
         <title>AppPad</title>
         <item>
             <title>1.4.2</title>
-            <pubDate>Sun, 11 Oct 2026 18:21:24 +0800</pubDate>
-            <sparkle:version>11.8</sparkle:version>
+            <pubDate>Sun, 11 Oct 2026 23:37:11 +0800</pubDate>
+            <sparkle:version>11.9</sparkle:version>
             <sparkle:shortVersionString>1.4.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             
@@ -67,7 +67,9 @@
                 </div>
             ]]></description>
             
-            <enclosure url="https://fineusing.com/installer/AppPad-Installer.dmg" length="4914176" type="application/octet-stream" sparkle:edSignature="tBNmhNB44/wN82Y81PKPJ981W9CXY9D74MUabMXy1z3k9pEm4sTZTw6H0EqDVpkjBchsCXFWQakzQ3jGsnP/BQ=="/>
+            
+            
+            <enclosure url="https://fineusing.com/installer/AppPad-Installer.dmg" length="4897792" type="application/octet-stream" sparkle:edSignature="8XeqMYQ8aQc040eYvqHH0psAGeDhiofbsEFoBOt43HYWX8smv6CnMFpIm65VaTRW/Wwna5Gpss+vTSaXA2zaDw=="/>
         </item>
     </channel>
 </rss>
