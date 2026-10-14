@@ -46,8 +46,8 @@ const productMetaMap: Record<string, any> = {
   },
   NTFSSync: {
     name: "NTFSSync",
-    tagline: locale === "cn" ? "macOS 专业 NTFS 磁盘读写工具" : "Professional NTFS Read-Write Driver for macOS",
-    desc: locale === "cn" ? "打破 Mac 移动硬盘只读限制，插盘自动以读写模式挂载，原生高速文件传输与磁盘修复抹除。" : "Mount external NTFS drives in full read-write mode automatically with native transfer speed and disk repair tools.",
+    tagline: locale === "cn" ? "免内核扩展的 macOS NTFS 读写与格式化工具" : "Zero-Kext NTFS Read-Write & Formatter for macOS",
+    desc: locale === "cn" ? "基于 FUSE-T 用户态架构，免装内核驱动，零安全降级。插盘秒级读写挂载，并支持在 Mac 上将外置 U 盘/硬盘直接格式化为 NTFS。" : "Powered by FUSE-T (NFS v4) in pure userspace. No kernel extensions, no SIP disabling. Instant read-write mounting and direct NTFS formatting on Mac.",
     href: `${base}/ntfssync.html`,
     cta: locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6475194342",

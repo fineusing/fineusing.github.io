@@ -15,7 +15,7 @@ const ldJson = locale === DEFAULT_LOCALE
         "name": "NTFSSync",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS",
-        "description": "Professional NTFS read-write driver for macOS with auto-mounting, disk management, and fast file transfer",
+        "description": "Userspace NTFS read-write driver & formatter for macOS. Powered by FUSE-T (NFS v4) with zero kernel extensions, direct NTFS formatting, and automatic mounting.",
         "url": "https://fineusing.com/ntfssync.html",
         "image": "https://fineusing.com/img/ntfssync-home.png",
         "screenshot": "https://fineusing.com/img/ntfssync-home.png",
@@ -25,11 +25,12 @@ const ldJson = locale === DEFAULT_LOCALE
             "priceCurrency": "USD"
         },
         "featureList": [
-            "Full NTFS Read-Write Mounting",
-            "Auto Mount on Insertion",
-            "Disk Health Repair & Erase",
-            "One-Click Eject All Drives",
-            "Apple Silicon & Intel Compatible"
+            "Zero Kernel Extensions (100% Userspace FUSE-T)",
+            "Directly Format USB Drives to NTFS on Mac",
+            "Automatic Read-Write Plug & Play",
+            "NTFS Filesystem First Aid & Repair",
+            "One-Click Menu Bar Batch Eject",
+            "Native Apple Silicon (M1-M4) & Intel Performance"
         ],
         "author": {
             "@type": "Organization",
@@ -42,7 +43,7 @@ const ldJson = locale === DEFAULT_LOCALE
         "name": "NTFSSync",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "macOS",
-        "description": "macOS 专业 NTFS 磁盘读写工具，支持读写挂载、插盘自动挂载、磁盘修复抹除与一键弹出",
+        "description": "macOS 专业纯用户态 NTFS 磁盘读写与格式化工具，底层基于 FUSE-T 与 NFS v4，免装内核扩展，不降低系统安全，支持插盘自动挂载与直接格式化 NTFS。",
         "url": "https://fineusing.com/cn/ntfssync.html",
         "image": "https://fineusing.com/img/ntfssync-home.png",
         "offers": {
@@ -51,11 +52,12 @@ const ldJson = locale === DEFAULT_LOCALE
             "priceCurrency": "CNY"
         },
         "featureList": [
-            "NTFS 磁盘读写模式挂载",
-            "插盘自动读写挂载",
-            "磁盘修复与抹除",
-            "一键推出所有磁盘",
-            "原生高速文件传输"
+            "免内核扩展纯用户态架构 (FUSE-T / NFS v4)",
+            "支持在 Mac 上直接格式化为 NTFS",
+            "插盘自动识别与读写挂载",
+            "NTFS 磁盘急救修复与抹除",
+            "菜单栏一键安全推出所有磁盘",
+            "原生跑满 Apple Silicon 与外接硬件吞吐"
         ],
         "author": {
             "@type": "Organization",
@@ -70,35 +72,35 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
-    <title>{locale === DEFAULT_LOCALE ? "NTFSSync: Professional NTFS Read-Write Driver for macOS" : "NTFSSync: macOS 专业 NTFS 磁盘读写工具"}</title>
+    <title>{locale === DEFAULT_LOCALE ? "NTFSSync: Zero-Kext NTFS Read-Write & Formatter for Mac" : "NTFSSync: 免内核扩展的 macOS NTFS 读写与格式化工具"}</title>
     <meta
       name="description"
       content={
         locale === DEFAULT_LOCALE
-          ? "NTFSSync mounts external NTFS drives in read-write mode automatically on macOS. Fast file transfer between Mac and Windows, disk repair, and one-click unmounting."
-          : "NTFSSync 是 macOS 上专业的以读写模式挂载 NTFS 磁盘的软件，支持插盘自动挂载、原生高速读写、磁盘急救修复与抹除，让数据传输更高效稳定。"
+          ? "NTFSSync mounts external NTFS drives in read-write mode automatically on macOS. Powered by FUSE-T userspace architecture with zero kernel extensions and direct NTFS drive formatting."
+          : "NTFSSync 是 macOS 上免内核扩展的纯用户态 NTFS 读写与格式化工具。底层采用 FUSE-T + NFS v4 架构，零安全降级，插盘自动挂载，支持直接把 U 盘抹为 NTFS。"
       }
     />
     <meta
       name="keywords"
       content={
         locale === DEFAULT_LOCALE
-          ? "NTFSSync, Mac NTFS, NTFS read write Mac, mount NTFS Mac, NTFS for Mac free, Apple Silicon NTFS, NTFS disk repair Mac"
-          : "NTFSSync, Mac NTFS 读写, NTFS 挂载 Mac, 移动硬盘 Mac 只读, NTFS 修复, Mac 读写 NTFS 硬盘, Apple Silicon NTFS"
+          ? "NTFSSync, Mac NTFS, format NTFS on Mac, NTFS for Mac no kext, FUSE-T Mac NTFS, mount NTFS Mac, Apple Silicon NTFS, format USB to NTFS Mac, NTFS read write Mac"
+          : "NTFSSync, Mac NTFS 读写, Mac 格式化 NTFS, Mac U盘格式化为NTFS, 免内核扩展 NTFS, FUSE-T Mac, 移动硬盘 Mac 只读, Apple Silicon NTFS 读写, macOS Sequoia NTFS"
       }
     />
     <meta name="author" content="NTFSSync" />
 
     <meta
       property="og:title"
-      content={locale === DEFAULT_LOCALE ? "NTFSSync: Professional NTFS Read-Write Driver for macOS" : "NTFSSync: macOS 专业 NTFS 磁盘读写工具"}
+      content={locale === DEFAULT_LOCALE ? "NTFSSync: Zero-Kext NTFS Read-Write & Formatter for Mac" : "NTFSSync: 免内核扩展的 macOS NTFS 读写与格式化工具"}
     />
     <meta
       property="og:description"
       content={
         locale === DEFAULT_LOCALE
-          ? "Fast & reliable NTFS read-write for macOS. Mount automatically and transfer files at native speed."
-          : "专业的以读写模式挂载 NTFS 磁盘软件，快速稳定读写数据。"
+          ? "Safe, fast & reliable userspace NTFS read-write and direct formatting on macOS. No kernel extensions, no security compromises."
+          : "基于 FUSE-T 用户态架构的 macOS NTFS 读写与直接格式化工具，告别内核扩展，安全不降级。"
       }
     />
     <meta property="og:type" content="website" />

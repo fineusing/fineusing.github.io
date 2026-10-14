@@ -48,10 +48,10 @@ const dictionaries = {
       zipgoBody:
         "ZipGo seamlessly integrates into the macOS Finder context menu. Compress to ZIP/7Z/TAR.GZ with encryption, extract 30+ archive formats, and preview contents directly without unpacking.",
       ntfssyncTitle: "NTFSSync",
-      ntfssyncSubtitle: "Fast & Reliable NTFS Read-Write for macOS",
-      ntfssyncHeading: "Read & write NTFS drives seamlessly",
+      ntfssyncSubtitle: "Zero-Kext NTFS Read-Write & Formatter for Mac",
+      ntfssyncHeading: "Read, write & format NTFS drives with zero security risks",
       ntfssyncBody:
-        "NTFSSync mounts external NTFS drives in read-write mode automatically. Enjoy high-speed file transfer between Mac and Windows, disk health repair, and one-click unmounting.",
+        "Built on a modern FUSE-T userspace architecture using NFS v4. Plug in external NTFS drives for instant read-write access, or format any USB flash drive or portable hard drive to NTFS directly on your Mac — without disabling SIP or installing risky kernel extensions.",
       ctaTitle: "Start using Fineusing apps today",
       ctaBody:
         "DeviceMirror supports casting your iPhone/iPad screen to your macOS computer for watching movies, playing games, listening to music, and demo presentations on a larger screen.",
@@ -249,73 +249,73 @@ const dictionaries = {
     },
     ntfssync: {
       title: "NTFSSync",
-      subtitle: "Professional NTFS read-write driver for macOS with native-speed performance",
+      subtitle: "Userspace NTFS read-write driver & direct formatter for macOS. No kernel extensions, no security compromises.",
       cta: "Download on Mac App Store",
       downloadUrl: "https://apps.apple.com/app/id6475194342",
       featuresTitle: "Core Features",
       features: [
         {
-          title: "Full Read-Write Mode",
-          body: "Effortlessly read, edit, copy, and delete files on any Windows NTFS-formatted external storage without limitations."
+          title: "100% Userspace (Zero Kernel Extensions)",
+          body: "Powered by modern FUSE-T over local NFS v4 protocol. Runs completely in userspace without requiring third-party kexts, keeping System Integrity Protection (SIP) untouched and eliminating kernel panics."
         },
         {
-          title: "Auto Mount on Insertion",
-          body: "Automatically detects and mounts NTFS hard drives, USB flash drives, and SD cards in read-write mode upon connection."
+          title: "Format Any External Drive to NTFS on Mac",
+          body: "Bypass macOS Disk Utility limitations. Easily erase and format non-NTFS external USB thumb drives, SSDs, and mechanical hard drives directly into clean, standard NTFS format."
         },
         {
-          title: "Comprehensive Disk Management",
-          body: "View detailed disk info, open partitions directly, check mount statuses, and safely eject disks with ease."
+          title: "Auto-Mount on Plug-in",
+          body: "Plug in your external drive and start working right away. Partitions mount automatically with full read and write access without running manual terminal commands."
         },
         {
-          title: "Disk Repair & Erase",
-          body: "Built-in NTFS disk first aid tool to verify, repair file system errors, and format or erase NTFS partitions directly on macOS."
+          title: "Fast, Native Transfer Speeds",
+          body: "Optimized for both Apple Silicon (M1–M4) and Intel Macs. Copies large 4K video clips, virtual disk images, and massive project archives at native hardware speeds."
+        },
+        {
+          title: "NTFS First Aid & Repair",
+          body: "Diagnose volume health and fix dirty bit errors caused by unsafe disconnections on Windows PCs, restoring write access without wiping your data."
         },
         {
           title: "One-Click Batch Eject",
-          body: "Safely unmount all mounted drives in a single click, preventing data corruption when unplugging multiple devices."
-        },
-        {
-          title: "Rename NTFS Disks",
-          body: "Customize and rename NTFS drive labels directly within macOS for clear device identification."
+          body: "Safely unmount all connected external disks with a single menu bar click to protect filesystem headers before pulling cables."
         }
       ],
       showcase: [
         {
-          title: "Automatic Read-Write Mounting & Native Speed",
-          body: "Plug and play without complex terminal commands. Enjoy blazing-fast file copy speeds between macOS and NTFS storage."
+          title: "Auto-Mount & Direct NTFS Formatting",
+          body: "No Windows machine nearby? Plug in your drive, format it to NTFS in seconds, and start transferring large files across platforms without hitting FAT32's 4GB ceiling."
         },
         {
-          title: "Complete Disk Health Inspection & Repair",
-          body: "Detect partition anomalies, repair corrupted NTFS file systems, and format disks securely without needing a Windows PC."
+          title: "Zero Security Degradation (SIP Untouched)",
+          body: "Forget holding the power button to boot into Recovery Mode or lowering security policies. NTFSSync runs entirely in userspace, making it fully safe for personal setups and corporate MDM devices."
         }
       ],
       whenNeedTitle: "When Do You Need NTFSSync?",
       whenNeed: [
         {
-          title: "Read-Only NTFS Limitation",
-          desc: "External NTFS hard drives open as read-only by default on macOS, blocking file saving."
+          title: "NTFS Drives Are Read-Only on Mac",
+          desc: "You plug in a colleague's or client's Windows drive, but Finder blocks dragging, editing, or saving files onto it."
         },
         {
-          title: "Unable to Copy or Edit Files",
-          desc: "Cannot add new documents, edit existing spreadsheets, or delete outdated files on NTFS drives."
+          title: "Need to Format a USB Drive to NTFS",
+          desc: "macOS Disk Utility cannot create NTFS partitions. You need a Windows-ready drive without hunting for a PC."
         },
         {
-          title: "Cross-Platform File Transfer",
-          desc: "Frequently swapping drives and moving heavy files between Windows PCs and Mac computers."
+          title: "Unwilling to Downgrade M-Series Security",
+          desc: "Tired of older drivers forcing you into Recovery Mode to enable reduced security just to read an external disk."
         },
         {
-          title: "Organizing NTFS External Drives",
-          desc: "Need to manage folders, rename volumes, or fix file errors on NTFS storage directly from your Mac."
+          title: "Company Mac Blocked by IT Policies",
+          desc: "Corporate MDM profiles strictly prohibit installing kernel extensions, rendering legacy NTFS tools unusable."
         }
       ],
       whyTitle: "Why Choose NTFSSync?",
       whyPoints: [
-        "Full read and write capability for all NTFS external storage devices",
-        "Plug-and-play automatic mounting without extra manual steps",
-        "High-speed, stable data transfer matching native drive speeds",
-        "Supports external hard drives, SSDs, USB thumb drives, and SD cards",
-        "Fully optimized for both Apple Silicon (M1/M2/M3/M4) and Intel Macs",
-        "Rock-solid data integrity guarantees safety without file corruption"
+        "Zero kernel extensions: 100% userspace execution powered by FUSE-T and NFS v4",
+        "Keeps Apple Silicon security policies fully intact — no Recovery Mode or SIP disabling",
+        "Full read-write access plus direct NTFS formatting for non-NTFS external drives",
+        "Automatic plug-and-play mounting at full hardware bus speeds",
+        "Built-in filesystem first aid and safe batch ejection from the menu bar",
+        "Process-level isolation prevents crashes or kernel panics from freezing macOS"
       ]
     },
     contact: {
@@ -416,10 +416,10 @@ const dictionaries = {
       zipgoBody:
         "ZipGo 深度集成于 macOS Finder 的右键菜单中，支持解压超过 30 种格式、快速压缩为 ZIP/7Z/TAR.GZ 并支持密码加密与分卷，更提供免解压直接预览归档内容的强大功能。",
       ntfssyncTitle: "NTFSSync",
-      ntfssyncSubtitle: "专业高效的 macOS NTFS 磁盘读写工具",
-      ntfssyncHeading: "轻松实现 NTFS 磁盘读写与数据传输",
+      ntfssyncSubtitle: "免内核扩展的 macOS 原生级 NTFS 读写与格式化利器",
+      ntfssyncHeading: "轻松读写、格式化 NTFS 移动硬盘，零系统安全风险",
       ntfssyncBody:
-        "NTFSSync 是 macOS 上专业的 NTFS 磁盘读写挂载工具。插盘自动以读写模式挂载，支持原生高速传输、磁盘修复与抹除、一键推出所有磁盘，兼容 Apple Silicon 与 Intel Mac。",
+        "底层采用 FUSE-T 通过 NFS v4 协议在用户空间实现。插入 NTFS 移动硬盘秒级自动挂载读写，更支持将外置 U 盘/硬盘直接格式化为 NTFS。无需进入恢复模式降级安全，彻底告别内核扩展崩溃隐患。",
       ctaTitle: "立即体验 Fineusing 应用",
       ctaBody: "DeviceMirror支持将您的iPhone/iPad屏幕投射到macOS电脑，在大屏幕上观看电影、玩游戏、听音乐和演示展示。",
       ctaPrimary: "立即下载",
@@ -614,73 +614,73 @@ const dictionaries = {
     },
     ntfssync: {
       title: "NTFSSync",
-      subtitle: "专业的以读写模式挂载 NTFS 磁盘软件，快速稳定读写数据",
+      subtitle: "纯用户态架构的专业 macOS NTFS 读写与格式化工具，免内核扩展，安全不降级",
       cta: "App Store 免费下载",
       downloadUrl: "https://apps.apple.com/app/id6475194342",
       featuresTitle: "主要功能",
       features: [
         {
-          title: "NTFS 磁盘读写挂载",
-          body: "彻底打破 macOS 默认只读限制，以完整的读写模式挂载 NTFS 驱动器，自由新建、编辑与删除文件。"
+          title: "纯用户态架构（免内核扩展）",
+          body: "底层采用 FUSE-T 通过本地 NFS v4 协议在用户空间实现。无需安装老旧内核扩展（kext），无需降低系统安全性，从根源杜绝五国蓝屏死锁（Kernel Panic）。"
         },
         {
-          title: "插盘自动读写挂载",
-          body: "插入移动硬盘、U 盘或 SD 卡时，自动识别并静默挂载为读写模式，即插即用无需手动操作。"
+          title: "在 Mac 上直接格式化为 NTFS",
+          body: "突破 macOS 自带“磁盘工具”无法格式化 NTFS 的限制。随时把外置 U 盘、移动硬盘或固态 SSD 抹除并格式化为标准 NTFS 分区，无缝兼容 Windows。"
         },
         {
-          title: "磁盘状态与快捷管理",
-          body: "直观展示已挂载磁盘列表与存储信息，支持在 Finder 中快速打开磁盘或安全推出设备。"
+          title: "插盘即用，自动读写挂载",
+          body: "插上移动硬盘或 U 盘，系统静默识别并自动以完全读写模式挂载。拖拽拷贝、重命名、直接编辑保存文件，体验与原生 Mac 磁盘毫无二致。"
         },
         {
-          title: "NTFS 磁盘修复与抹除",
-          body: "内置急救修复功能，快速检测并修复文件系统错误；支持直接在 Mac 上抹除与格式化 NTFS 分区。"
+          title: "原生级文件传输吞吐",
+          body: "深度优化 Apple Silicon（M1~M4）与 Intel 架构。拷贝数十 GB 的 4K 视频原片、虚拟机镜像或工程归档，跑满外接硬盘物理读写上限。"
         },
         {
-          title: "一键推出所有磁盘",
-          body: "多设备同时连接时，支持一键安全弹出所有已挂载磁盘，拔出更安心，防止数据损坏。"
+          title: "NTFS 磁盘急救与修复",
+          body: "内置磁盘修复工具。在 Mac 上直接检测并修复因 Windows 快速启动或意外拔盘导致的“脏标记（Dirty Bit）”，快速恢复可写状态。"
         },
         {
-          title: "支持自定义磁盘名称",
-          body: "随心设置并修改 NTFS 磁盘卷标名称，设备管理更直观清晰。"
+          title: "菜单栏一键安全推出",
+          body: "连接多个外接存储设备时，可通过菜单栏一键安全推出全部磁盘，防止拔掉数据线造成文件头损坏或未写入缓存丢失。"
         }
       ],
       showcase: [
         {
-          title: "自动读写挂载与原生传输速度",
-          body: "告别繁琐的终端命令与驱动安装。插入移动硬盘即刻实现读写挂载，跨平台拷贝大文件极速稳定。"
+          title: "自动读写挂载与直接格式化 NTFS",
+          body: "手头没有 Windows 电脑？插上 U 盘或移动硬盘，直接在 Mac 上抹成标准 NTFS 格式，即插即写，跨平台传输大文件告别 FAT32 4GB 限制。"
         },
         {
-          title: "全方位磁盘健康修复与分区管理",
-          body: "无需切换到 Windows 系统。在 Mac 上即可直接进行磁盘急救修复、抹除格式化与状态监控。"
+          title: "无需进恢复模式，系统安全零妥协",
+          body: "不用关机长按开机键去改“降低安全性”，完全保留苹果原生系统完整性保护（SIP）。个人主力机省心安全，企业受管（MDM）Mac 也能合规即装即用。"
         }
       ],
       whenNeedTitle: "什么时候需要 NTFSSync？",
       whenNeed: [
         {
-          title: "NTFS 外接硬盘在 Mac 上只读",
-          desc: "插入朋友或同事的移动硬盘，发现只能查看文件，无法修改或保存内容。"
+          title: "Windows 移动硬盘在 Mac 上只读",
+          desc: "插上同事或客户的 NTFS 移动硬盘，文件只能看不能改，往里拖文件直接弹禁止符号。"
         },
         {
-          title: "无法复制或编辑文件",
-          desc: "无法将 Mac 上的资料拖拽拷贝到 NTFS 驱动器中，工作流程受阻。"
+          title: "需要在 Mac 上把 U 盘格式化为 NTFS",
+          desc: "Mac 自带磁盘工具抹掉列表里根本没有 NTFS 选项，无法为 Windows 环境准备现成硬盘。"
         },
         {
-          title: "Mac 与 Windows 间跨平台传输",
-          desc: "双系统或办公环境中，经常需要在两台电脑之间使用移动硬盘互传大文件。"
+          title: "不想改安全策略降低 Apple Silicon 防御",
+          desc: "厌倦了老牌软件要求进 Recovery 模式放行第三方内核扩展的繁琐流程和潜在崩溃风险。"
         },
         {
-          title: "在 Mac 上全面管理 NTFS 存储",
-          desc: "需要在 macOS 下对 NTFS 设备进行重命名、格式化抹除或文件系统修复。"
+          title: "企业受管电脑无法安装内核驱动",
+          desc: "公司 IT 部门开启了 MDM 策略，严格限制安装 kext 驱动，常规 NTFS 工具全部被拦截报错。"
         }
       ],
       whyTitle: "为什么选择 NTFSSync",
       whyPoints: [
-        "对所有 NTFS 驱动器提供无缝的读写支持",
-        "插盘自动挂载，无需手动频繁配置",
-        "极速数据传输性能，充分发挥硬盘吞吐能力",
-        "广泛支持外接移动硬盘、SSD、U 盘和 SD 卡",
-        "深度兼容 Apple Silicon (M系列芯片) 与 Intel 架构 Mac",
-        "经过严苛测试的数据安全保护，绝不损坏原有磁盘数据"
+        "零内核扩展：基于 FUSE-T + NFS v4 纯用户空间运行，架构现代纯净",
+        "完美适配 Apple Silicon（M1~M4）与最新 macOS，无需进恢复模式降低安全性",
+        "完整读写支持，兼具将非 NTFS 盘一键直接格式化为 NTFS 的能力",
+        "即插即用自动挂载，文件传输跑满磁盘硬件物理带宽",
+        "内置 NTFS 磁盘健康检查与急救修复，告别数据损坏与只读锁死",
+        "用户态进程隔离，彻底杜绝因文件系统异常导致整个 macOS 死锁或崩溃"
       ]
     },
     contact: {
