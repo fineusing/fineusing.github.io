@@ -28,10 +28,10 @@ const dictionaries = {
       title: "Ultimate tools designed for macOS users",
       subtitle: "Focused on improving efficiency and elegant interactive experience",
       apppadTitle: "AppPad",
-      apppadSubtitle: "macOS 26 Launchpad Alternative",
-      apppadHeading: "Launch apps instantly",
+      apppadSubtitle: "The Ultimate Launchpad Alternative for macOS 26+",
+      apppadHeading: "Organize, launch, and deep-clean apps with native Swift speed",
       apppadBody:
-        "AppPad is a lightning-fast macOS Launchpad alternative. Built in Swift and AppKit for native speed, it lets you organize apps in custom groups and open with gestures or hot corners.",
+        "AppPad restores and supercharges the classic visual Launchpad experience on macOS 26 Tahoe and beyond. Featuring customizable grid densities, full-screen and floating window modes, right-click deep uninstallation, and seamless trackpad pinch gestures.",
       devicemirrorTitle: "DeviceMirror",
       devicemirrorSubtitle: "iPhone Screen Mirroring to Mac",
       devicemirrorHeading: "Mirror iPhone with zero latency",
@@ -61,43 +61,56 @@ const dictionaries = {
     },
     apppad: {
       title: "AppPad",
-      subtitle: "Best alternative to Launchpad in macOS 26",
+      subtitle: "The definitive macOS 26+ Launchpad alternative. Native Swift speed, custom grid layout, deep uninstaller, and flawless gesture controls.",
       cta: "Free Download",
-      featuresTitle: "Lightning Fast Launch",
+      downloadUrl: "https://fineusing.com/installer/AppPad-Installer.dmg",
+      featuresTitle: "Core Features",
       features: [
         {
-          title: "Lightning Fast Launch",
-          body: "Built with native Swift using AppKit, fast as lightning."
+          title: "Visual Grid & Multi-Page Layout",
+          body: "Display all your Mac applications in clean, paginated grids. Freely customize row and column counts and icon sizes, or toggle between immersive Fullscreen and sleek Windowed modes."
         },
         {
-          title: "Custom Grouping",
-          body: "Categorize and group apps according to your preferences."
+          title: "Intuitive Drag & Drop Organization",
+          body: "Drag apps to create and nest folders, adjust sorting order, drag across pages, or drag icons directly from AppPad into your macOS Dock."
         },
         {
-          title: "Layout Compatibility",
-          body: "Automatically compatible with the old Launchpad layout, no manual adjustment needed."
+          title: "Right-Click Organization & Deep Uninstall",
+          body: "Right-click any app to move it to a specific page or group, reveal in Finder, or trigger Deep Uninstall to scan and nuke hidden ~/Library caches, preferences, and leftover files."
         },
         {
-          title: "Hotkey Support",
-          body: "One-key shortcut to launch and close Launchpad."
+          title: "Smart Group Management",
+          body: "Right-click any folder to quickly rename, move the entire group to another page, or ungroup to automatically dissolve icons back into the current page."
         },
         {
-          title: "Trackpad Gesture Support",
-          body: "Use gestures to launch and close Launchpad."
+          title: "Trackpad Pinch, Hotkeys & Hot Corners",
+          body: "Trigger AppPad exactly how you like: authentic 4-finger or 5-finger pinch gestures on the trackpad, custom global keyboard shortcuts, or screen Hot Corners."
         },
         {
-          title: "Hot Corner Support",
-          body: "Customize hot corners to launch and close Launchpad."
+          title: "Layout Backup & Old Launchpad Restore",
+          body: "Never rearrange apps from scratch. Export and import AppPad layout backups, or restore your legacy macOS Launchpad folder structure with a single click."
+        },
+        {
+          title: "Custom App Scan Directories",
+          body: "Index apps beyond the default /Applications and /System/Applications folders. Add ~/Applications, Steam libraries, Setapp tools, or custom portable directories."
+        },
+        {
+          title: "Fluid Multi-Input Page Flipping",
+          body: "Flip between pages naturally with standard mouse scroll wheels, fluid two-finger trackpad swipes, or mouse click-and-drag gestures."
+        },
+        {
+          title: "Instant Precision Search",
+          body: "Start typing anywhere to filter apps in real time. Combine visual spatial layout with fast fuzzy matching to launch any app in milliseconds."
         }
       ],
       showcase: [
         {
-          title: "Custom Grouping",
-          body: "Group and sort apps according to your preferences."
+          title: "Total Layout Freedom & Windowed Mode",
+          body: "Break free from fixed 5×7 grids with giant wasted borders. Tailor your grid density, scale icons to your liking, and choose between full-screen and floating window layouts."
         },
         {
-          title: "Software Settings",
-          body: "Customize shortcut keys, trigger angles, and layout modes."
+          title: "Right-Click Deep Clean & App Management",
+          body: "Move apps across pages without clumsy dragging. When you're done with an app, use Deep Uninstall to wipe application support files, logs, and caches in seconds."
         }
       ]
     },
@@ -397,9 +410,10 @@ const dictionaries = {
       title: "为macOS用户精心设计的终极工具",
       subtitle: "专注于提升效率和优雅的交互体验",
       apppadTitle: "AppPad",
-      apppadSubtitle: "macOS 26原生启动台的最佳替代品",
-      apppadHeading: "即时启动应用",
-      apppadBody: "AppPad解决了macOS 26缺少启动台的痛点，提供1:1还原的启动台体验，带回最熟悉的启动方式。",
+      apppadSubtitle: "macOS 26 及以上系统原生级启动台替代品",
+      apppadHeading: "原生极速启动、自由网格布局与深度卸载清理",
+      apppadBody:
+        "AppPad 完美找回并大幅超越经典启动台体验。基于 Swift 原生开发，支持自定义网格行列与窗口/全屏双模式，提供四指/五指触控板捏合唤出、右键深度卸载残留缓存、老启动台布局一键无损还原，以及直接拖拽图标到 Dock 栏。",
       devicemirrorTitle: "DeviceMirror",
       devicemirrorSubtitle: "iPhone/iPad屏幕镜像到macOS",
       devicemirrorHeading: "低延迟投屏体验",
@@ -428,42 +442,56 @@ const dictionaries = {
     },
     apppad: {
       title: "AppPad",
-      subtitle: "macOS 26启动台的最佳替代品",
+      subtitle: "专为 macOS 26 及更高版本打造的原生级启动台利器。毫秒级极速响应，自由网格布局，右键深度卸载，手势肌肉记忆无缝衔接。",
       cta: "免费下载",
+      downloadUrl: "https://fineusing.com/installer/AppPad-Installer.dmg",
+      featuresTitle: "核心功能亮点",
       features: [
         {
-          title: "闪电般快速启动",
-          body: "使用AppKit原生Swift构建，快如闪电。"
+          title: "视觉网格与分页浏览",
+          body: "清晰分页呈现 Mac 上的所有应用程序。自由定义网格行数与列数、调节图标大小，支持全屏沉浸与小窗口悬浮双显示模式。"
         },
         {
-          title: "自定义分组",
-          body: "根据您的喜好对应用进行分类和分组。"
+          title: "自由拖拽排序与建组",
+          body: "像使用手机一样自然。拖拽 App 合并创建分组文件夹、随心调整排列顺序、跨页拖动收纳，更支持直接将 App 拖拽添加至系统 Dock 栏。"
         },
         {
-          title: "布局兼容性",
-          body: "自动兼容旧版启动台布局，无需手动调整。"
+          title: "App 右键快捷整理与深度卸载",
+          body: "右键单个 App 即可快速“移动到分组”、“移动到指定页”或在 Finder 中定位；内置深度卸载功能，全盘深层扫描关联的 ~/Library 缓存与残留配置文件并彻底清除。"
         },
         {
-          title: "快捷键支持",
-          body: "一键快捷键启动和关闭启动台。"
+          title: "分组右键快捷管理",
+          body: "右键分组文件夹支持一键重命名、快速将整个分组迁移到其他页面，或一键“取消分组”自动解散还原图标至当前页面。"
         },
         {
-          title: "触控板手势支持",
-          body: "使用手势启动和关闭启动台。"
+          title: "四指/五指捏合手势、快捷键与触发角",
+          body: "肌肉记忆无需改变。完美还原触控板四指或五指捏合手势呼出启动台，更支持自定义全局快捷键与屏幕四个触发角即时唤起。"
         },
         {
-          title: "热角支持",
-          body: "自定义热角启动和关闭启动台。"
+          title: "布局数据备份与老启动台还原",
+          body: "换机或升级不用重新排图标。支持导出与导入 AppPad 布局备份文件，更能一键读取并精准还原老系统原生启动台的原有分组与排列。"
+        },
+        {
+          title: "自定义 App 数据扫描目录",
+          body: "突破限制，不仅默认扫描 /Applications 与 /System/Applications，还能自由添加个人目录（~/Applications）、Steam 游戏库、Setapp 等额外软件来源。"
+        },
+        {
+          title: "多维丝滑翻页交互",
+          body: "为各种输入设备量身打造。支持普通鼠标滚轮平滑滚页、苹果触控板双指滑动切页，以及鼠标按住空白处拖拽翻页。"
+        },
+        {
+          title: "快速精准即时搜索",
+          body: "无需点击搜索框，呼出后直接敲击键盘即可实时过滤筛选软件，结合视觉网格定位与模糊拼写匹配，毫秒级快速打开应用。"
         }
       ],
       showcase: [
         {
-          title: "自定义分组",
-          body: "根据您的喜好对应用进行分组和排序。"
+          title: "网格自由定制与全屏/窗口双形态",
+          body: "告别大屏幕上粗暴浪费黑边的固定布局。按需自定义 6×8、7×10 等高密网格，在超宽带鱼屏上更可切换为精致小窗口模式，随光标呼之即来。"
         },
         {
-          title: "软件设置",
-          body: "自定义快捷键、触发角度和布局模式。"
+          title: "右键深度卸载清理与多维文件联动",
+          body: "不再需要单独购买商业清理软件。右键 App 即可一键透视所有残留缓存文件并干净抹除，还能随手拖拽 App 固化到 Dock 栏，效率成倍提升。"
         }
       ]
     },
