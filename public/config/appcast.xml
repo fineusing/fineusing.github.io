@@ -4,8 +4,8 @@
         <title>AppPad</title>
         <item>
             <title>1.4.3</title>
-            <pubDate>Tue, 13 Oct 2026 22:39:03 +0800</pubDate>
-            <sparkle:version>12.0</sparkle:version>
+            <pubDate>Fri, 16 Oct 2026 22:35:44 +0800</pubDate>
+            <sparkle:version>12.1</sparkle:version>
             <sparkle:shortVersionString>1.4.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             
@@ -16,6 +16,8 @@
                     <ul>
                         <li>1 优化翻页动画。</li>
                         <li>2 优化触摸板和鼠标滚轮翻页逻辑。</li>
+                        <li>3 适配mos。</li>
+
                     </ul>
                     <h3>1.4.2</h3>
                     <ul>
@@ -76,9 +78,7 @@
                     </ul>
                 </div>
             ]]></description>
-            
-            
-            <enclosure url="https://fineusing.com/installer/AppPad-Installer.dmg" length="4946432" type="application/octet-stream" sparkle:edSignature="oZ4ktDIgjLhmyVR9CrgVTs8SZFyOdj0Os9OefoIjhJQdl7qtPYxFaG3C8NU+yoW+XP1zPgmE4UQfjhZjlTEhCg=="/>
+            <enclosure url="https://fineusing.com/installer/AppPad-Installer.dmg" length="4951040" type="application/octet-stream" sparkle:edSignature="a5LfxdWrf5fhdNjVsiPPmNJuBcwH5Ce3tOCNxhPCQpgk/KGFADmHtPH3DdhDzvZt1ozo6wKAxkpH6mU/vOgmDQ=="/>
         </item>
     </channel>
 </rss>
