@@ -24,10 +24,11 @@ const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
     <link rel="canonical" href="https://fineusing.com/blog/index.html" />
     <link rel="alternate" hreflang="en" href="https://fineusing.com/blog/index.html" />
     <link rel="alternate" hreflang="zh-Hans" href="https://fineusing.com/cn/blog/index.html" />
+    <link rel="alternate" hreflang="ja" href="https://fineusing.com/ja/blog/index.html" />
     <link rel="alternate" hreflang="x-default" href="https://fineusing.com/blog/index.html" />
   </Fragment>
 
-  <Navbar locale={DEFAULT_LOCALE} langHref="/cn/blog/index.html" />
+  <Navbar locale={DEFAULT_LOCALE} currentPath="/blog/index.html" />
 
   <main class="pt-28 pb-20 px-4 sm:px-6 bg-[#fafafa] min-h-screen">
     <section class="max-w-5xl mx-auto pb-10 border-b border-slate-200">

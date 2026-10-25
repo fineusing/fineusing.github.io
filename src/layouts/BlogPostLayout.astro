@@ -14,60 +14,62 @@ const { title, date, description, product } = meta;
 const rawPath = (Astro.url?.pathname ?? "/blog/index")
   .replace(/\/+$/, "")
   .replace(/\.html$/, "");
-const slugPath = rawPath.replace(/^\/cn/, "") || "/blog/index";
+const slugPath = rawPath.replace(/^\/(cn|ja)/, "") || "/blog/index";
 
 const enPath = `${slugPath}.html`;
 const cnPath = `/cn${slugPath}.html`;
+const jaPath = `/ja${slugPath}.html`;
 
 // 语言切换目标地址（严格精确到 .html，无末尾斜杠）
-const langHref = locale === DEFAULT_LOCALE ? cnPath : enPath;
-const canonicalUrl = `https://fineusing.com${locale === DEFAULT_LOCALE ? enPath : cnPath}`;
+const langHref = locale === DEFAULT_LOCALE ? cnPath : locale === "ja" ? jaPath : enPath;
+const canonicalUrl = `https://fineusing.com${locale === DEFAULT_LOCALE ? enPath : locale === "ja" ? jaPath : cnPath}`;
 const altEn = `https://fineusing.com${enPath}`;
 const altZh = `https://fineusing.com${cnPath}`;
+const altJa = `https://fineusing.com${jaPath}`;
 
 const productMetaMap: Record<string, any> = {
   Rightly: {
     name: "Rightly",
-    tagline: locale === "cn" ? "macOS 原生右键增强工具" : "Finder Right-Click Toolkit for macOS",
-    desc: locale === "cn" ? "把常用操作放进 Finder 右键菜单，支持新建 10+ 格式文件、30+ 格式压缩解压与常用目录直达。" : "Supercharge your Finder right-click menu with instant file creation, 30+ archive formats, and quick access.",
+    tagline: locale === "ja" ? "Mac用高機能Finder右クリックメニュー拡張ツール" : locale === "cn" ? "macOS 原生右键增强工具" : "Finder Right-Click Toolkit for macOS",
+    desc: locale === "ja" ? "日常の頻出操作を右クリックメニューへ集約。新規ファイル作成、30種以上の解凍・圧縮、常用フォルダやターミナルへの瞬時アクセスを実現。" : locale === "cn" ? "把常用操作放进 Finder 右键菜单，支持新建 10+ 格式文件、30+ 格式压缩解压与常用目录直达。" : "Supercharge your Finder right-click menu with instant file creation, 30+ archive formats, and quick access.",
     href: `${base}/rightly.html`,
-    cta: locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6806805796",
     logo: "/img/rightly-logo.png"
   },
   DeviceMirror: {
     name: "DeviceMirror",
-    tagline: locale === "cn" ? "iPhone / iPad 屏幕镜像到 Mac" : "iPhone Screen Mirroring to Mac",
-    desc: locale === "cn" ? "超低延迟投屏，支持无线 AirPlay 与 USB 有线连接，大屏畅享游戏与观影。" : "Low-latency AirPlay & USB wired screen mirroring for iPhone and iPad to Mac.",
+    tagline: locale === "ja" ? "iPhone / iPad 画面を Mac に高画質ミラーリング" : locale === "cn" ? "iPhone / iPad 屏幕镜像到 Mac" : "iPhone Screen Mirroring to Mac",
+    desc: locale === "ja" ? "超低遅延投屏，支持無線 AirPlay と USB 有線接続。大画面でゲーム実況や動画視聴を満喫。" : locale === "cn" ? "超低延迟投屏，支持无线 AirPlay 与 USB 有线连接，大屏畅享游戏与观影。" : "Low-latency AirPlay & USB wired screen mirroring for iPhone and iPad to Mac.",
     href: `${base}/devicemirror.html`,
-    cta: locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id1598771178",
     logo: "/img/devicemirror-logo.png"
   },
   NTFSSync: {
     name: "NTFSSync",
-    tagline: locale === "cn" ? "免内核扩展的 macOS NTFS 读写与格式化工具" : "Zero-Kext NTFS Read-Write & Formatter for macOS",
-    desc: locale === "cn" ? "基于 FUSE-T 用户态架构，免装内核驱动，零安全降级。插盘秒级读写挂载，并支持在 Mac 上将外置 U 盘/硬盘直接格式化为 NTFS。" : "Powered by FUSE-T (NFS v4) in pure userspace. No kernel extensions, no SIP disabling. Instant read-write mounting and direct NTFS formatting on Mac.",
+    tagline: locale === "ja" ? "カーネル拡張不要の Mac 用 NTFS 読み書き＆フォーマットツール" : locale === "cn" ? "免内核扩展的 macOS NTFS 读写与格式化工具" : "Zero-Kext NTFS Read-Write & Formatter for macOS",
+    desc: locale === "ja" ? "FUSE-T と NFS v4 のユーザー空間アーキテクチャ採用。SIP無効化不要、挿すだけで自動マウント、Mac単体で外付けドライブを直接NTFS初期化可能。" : locale === "cn" ? "基于 FUSE-T 用户态架构，免装内核驱动，零安全降级。插盘秒级读写挂载，并支持在 Mac 上将外置 U 盘/硬盘直接格式化为 NTFS。" : "Powered by FUSE-T (NFS v4) in pure userspace. No kernel extensions, no SIP disabling. Instant read-write mounting and direct NTFS formatting on Mac.",
     href: `${base}/ntfssync.html`,
-    cta: locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6475194342",
     logo: "/img/ntfssync-logo.png"
   },
   AppPad: {
     name: "AppPad",
-    tagline: locale === "cn" ? "macOS 26 原生级启动台替代品" : "Native Launchpad Alternative for macOS 26+",
-    desc: locale === "cn" ? "Swift 原生打造，自由网格行列与窗口模式，支持四指捏合唤出、右键深度卸载残留与老启动台还原。" : "Native Swift launcher with custom grid density, windowed mode, trackpad pinch gestures, and right-click deep uninstallation.",
+    tagline: locale === "ja" ? "macOS 26+ 向け次世代 Launchpad 代替アプリ" : locale === "cn" ? "macOS 26 原生级启动台替代品" : "Native Launchpad Alternative for macOS 26+",
+    desc: locale === "ja" ? "Swift ネイティブ設計。自由なグリッド行・列とウィンドウモード、トラックパッドピンチ操作、右クリック完全アンインストールに対応。" : locale === "cn" ? "Swift 原生打造，自由网格行列与窗口模式，支持四指捏合唤出、右键深度卸载残留与老启动台还原。" : "Native Swift launcher with custom grid density, windowed mode, trackpad pinch gestures, and right-click deep uninstallation.",
     href: `${base}/apppad.html`,
-    cta: locale === "cn" ? "立即下载体验" : "Download AppPad",
+    cta: locale === "ja" ? "無料ダウンロード" : locale === "cn" ? "立即下载体验" : "Download AppPad",
     downloadUrl: "https://fineusing.com/installer/AppPad-Installer.dmg",
     logo: "/img/apppad-logo.png"
   },
   ZipGo: {
     name: "ZipGo",
-    tagline: locale === "cn" ? "Finder 原生右键解压缩工具" : "Finder Right-Click Archiver for macOS",
-    desc: locale === "cn" ? "右键一键解压 30+ 格式，免解压极速预览压缩包，支持加密与分卷压缩。" : "Extract 30+ archive formats directly from Finder, preview without unpacking, and create encrypted archives.",
+    tagline: locale === "ja" ? "Finder 右クリック解凍・圧縮・中身プレビュー" : locale === "cn" ? "Finder 原生右键解压缩工具" : "Finder Right-Click Archiver for macOS",
+    desc: locale === "ja" ? "右クリックから即座に30種以上の形式を解凍、解凍不要のプレビュー、Shift-JIS文字化け自動解消、AES-256暗号化に対応。" : locale === "cn" ? "右键一键解压 30+ 格式，免解压极速预览压缩包，支持加密与分卷压缩。" : "Extract 30+ archive formats directly from Finder, preview without unpacking, and create encrypted archives.",
     href: `${base}/zipgo.html`,
-    cta: locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6799313183",
     logo: "/img/zipgo-logo.png"
   }
@@ -86,10 +88,11 @@ const currentProduct = product ? productMetaMap[product] : null;
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
   </Fragment>
 
-  <Navbar locale={locale} langHref={langHref} />
+  <Navbar locale={locale} currentPath={enPath} />
 
   <article class="pt-32 pb-20 px-4">
     <div class="max-w-3xl mx-auto">
@@ -135,7 +138,7 @@ const currentProduct = product ? productMetaMap[product] : null;
               href={currentProduct.href}
               class="px-4 py-2.5 bg-white border border-slate-200 hover:border-slate-400 text-slate-700 rounded-lg text-sm font-semibold text-center transition-colors"
             >
-              {locale === "cn" ? "了解更多" : "Learn more"}
+              {locale === "cn" ? "了解更多" : locale === "ja" ? "詳細を見る" : "Learn more"}
             </a>
           </div>
         </div>

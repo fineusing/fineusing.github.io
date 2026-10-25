@@ -36,6 +36,33 @@ const ldJson = locale === DEFAULT_LOCALE
             "name": "Fineusing"
         }
     }`
+  : locale === "ja"
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ZipGo",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "macOS Finder ネイティブの右クリック解凍・圧縮ツール。30種以上の形式、解凍不要プレビュー、Shift-JIS文字化け自動解消、AES-256暗号化に対応",
+        "url": "https://fineusing.com/ja/zipgo.html",
+        "image": "https://fineusing.com/img/zipgo-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+        },
+        "featureList": [
+            "Finder 右クリックでスマートに解凍",
+            "ZIP/7Z/TAR.GZ へ高速圧縮",
+            "解凍不要のアーカイブ内プレビュー＆個別抽出",
+            "30 種類以上のアーカイブ形式に対応",
+            "Windows 文字化け（Shift-JIS）自動解消＆クリーン圧縮"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`
   : `{
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -63,10 +90,15 @@ const ldJson = locale === DEFAULT_LOCALE
         }
     }`;
 
-const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/zipgo.html" : "https://fineusing.com/cn/zipgo.html";
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com/zipgo.html"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/zipgo.html"
+  : "https://fineusing.com/cn/zipgo.html";
 const ogUrl = canonical;
 const altEn = "https://fineusing.com/zipgo.html";
 const altZh = "https://fineusing.com/cn/zipgo.html";
+const altJa = "https://fineusing.com/ja/zipgo.html";
 
 const formatTags = [
   "7Z", "ZIP", "RAR", "TAR", "GZIP", "BZIP2", "XZ", "ISO",
@@ -75,12 +107,20 @@ const formatTags = [
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
-    <title>{locale === DEFAULT_LOCALE ? "ZipGo: Powerful Finder Archiver & Extractor for macOS" : "ZipGo: macOS Finder 原生右键解压缩工具"}</title>
+    <title>
+      {locale === DEFAULT_LOCALE
+        ? "ZipGo: Powerful Finder Archiver & Extractor for macOS"
+        : locale === "ja"
+        ? "ZipGo: Mac用高機能Finder右クリック解凍・圧縮ツール"
+        : "ZipGo: macOS Finder 原生右键解压缩工具"}
+    </title>
     <meta
       name="description"
       content={
         locale === DEFAULT_LOCALE
           ? "ZipGo seamlessly integrates into the macOS Finder context menu. Compress to ZIP/7Z/TAR.GZ with encryption, extract 30+ archive formats, and preview contents directly without unpacking."
+          : locale === "ja"
+          ? "Finderの右クリックから即座に解凍・圧縮・中身プレビュー。Shift-JIS文字化け自動解消、__MACOSX自動除外、30種以上の形式、AES-256暗号化に対応したMac用ネイティブアーカイブアプリ。"
           : "告别繁琐跨应用操作。ZipGo 深度集成于 macOS Finder 右键菜单，支持右键解压、压缩、免解压预览及 30+ 种格式，支持加密与分卷压缩。"
       }
     />
@@ -89,6 +129,8 @@ const formatTags = [
       content={
         locale === DEFAULT_LOCALE
           ? "ZipGo, Mac unarchive, Mac unzip, 7Z Mac, RAR Mac, Finder right click archiver, Mac archive preview, password encrypted zip Mac"
+          : locale === "ja"
+          ? "ZipGo, Mac 解凍, Mac 圧縮, Mac zip 解凍, 7Z Mac, RAR Mac, Finder 右クリック 解凍, 文字化け 解消 Shift-JIS, __MACOSX 削除, zip パスワード Mac"
           : "ZipGo, Mac 解压, Mac 压缩, 7Z 解压 Mac, RAR 解压 Mac, Finder 右键解压, Mac 免解压预览, 加密压缩, 分卷压缩"
       }
     />
@@ -96,13 +138,21 @@ const formatTags = [
 
     <meta
       property="og:title"
-      content={locale === DEFAULT_LOCALE ? "ZipGo: Finder Right-Click Archiver for macOS" : "ZipGo: macOS Finder 原生右键解压缩工具"}
+      content={
+        locale === DEFAULT_LOCALE
+          ? "ZipGo: Finder Right-Click Archiver for macOS"
+          : locale === "ja"
+          ? "ZipGo: Mac用高機能Finder右クリック解凍・圧縮ツール"
+          : "ZipGo: macOS Finder 原生右键解压缩工具"
+      }
     />
     <meta
       property="og:description"
       content={
         locale === DEFAULT_LOCALE
           ? "Effortless macOS archiver right inside your Finder context menu. Extract, compress, and preview 30+ formats."
+          : locale === "ja"
+          ? "Finder 右クリックから一発で解凍・圧縮・中身プレビュー。Windows 共有時の文字化けも自動解消。"
           : "告别繁琐的跨应用操作流程，Finder 右键一键搞定压缩、解压与预览。"
       }
     />
@@ -115,6 +165,7 @@ const formatTags = [
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
 
     <script type="application/ld+json" set:html={ldJson}></script>
@@ -166,7 +217,11 @@ const formatTags = [
       <div class="text-center max-w-2xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.zipgo.featuresTitle}</h2>
         <p class="text-slate-500 text-lg">
-          {locale === "cn" ? "右键直达，告别繁琐跨应用切换" : "Instant actions from right-click, zero cross-app switching"}
+          {locale === "cn"
+            ? "右键直达，告别繁琐跨应用切换"
+            : locale === "ja"
+            ? "右クリックから即座に操作、アプリ切り替えのストレスをゼロに"
+            : "Instant actions from right-click, zero cross-app switching"}
         </p>
       </div>
 
@@ -205,7 +260,7 @@ const formatTags = [
         </div>
         <div class="w-full md:w-1/2">
           <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-            {locale === "cn" ? "免解压 · 即时预览" : "No Unpack · Instant Preview"}
+            {locale === "cn" ? "免解压 · 即时预览" : locale === "ja" ? "解凍不要 · 即時プレビュー" : "No Unpack · Instant Preview"}
           </span>
           <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.zipgo.showcase[0].title}</h3>
           <p class="text-lg text-slate-500 leading-relaxed">{dict.zipgo.showcase[0].body}</p>
@@ -228,7 +283,7 @@ const formatTags = [
         </div>
         <div class="w-full md:w-1/2">
           <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">
-            {locale === "cn" ? "机密加密 · 自由分卷" : "Encrypted · Volume Split"}
+            {locale === "cn" ? "机密加密 · 自由分卷" : locale === "ja" ? "暗号化保護 · 分割圧縮" : "Encrypted · Volume Split"}
           </span>
           <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.zipgo.showcase[1].title}</h3>
           <p class="text-lg text-slate-500 leading-relaxed">{dict.zipgo.showcase[1].body}</p>
@@ -241,10 +296,18 @@ const formatTags = [
   <section class="py-16 bg-slate-50 border-y border-slate-100">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-2xl font-bold text-slate-900 mb-4">
-        {locale === "cn" ? "支持超过 30 种主流及专业归档格式" : "Supports Over 30 Popular & Specialized Formats"}
+        {locale === "cn"
+          ? "支持超过 30 种主流及专业归档格式"
+          : locale === "ja"
+          ? "30 種類以上の主要・専門アーカイブ形式に対応"
+          : "Supports Over 30 Popular & Specialized Formats"}
       </h2>
       <p class="text-slate-500 text-sm mb-8">
-        {locale === "cn" ? "从常见的办公压缩包到专业开发镜像，无论是 Linux 安装包还是老旧软件归档都能轻松应对" : "Handle standard archives, Linux system packages, and legacy software files with ease"}
+        {locale === "cn"
+          ? "从常见的办公压缩包到专业开发镜像，无论是 Linux 安装包还是老旧软件归档都能轻松应对"
+          : locale === "ja"
+          ? "日常的なオフィス用圧縮ファイルから開発用ディスクイメージ、Linux パッケージまで幅広く対応"
+          : "Handle standard archives, Linux system packages, and legacy software files with ease"}
       </p>
       <div class="flex flex-wrap items-center justify-center gap-2.5">
         {formatTags.map((fmt) => (
@@ -280,10 +343,18 @@ const formatTags = [
       <!-- Bottom Download CTA -->
       <div class="mt-16 text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-3xl p-10 shadow-xl">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">
-          {locale === "cn" ? "立即下载 ZipGo，让解压与压缩快人一步" : "Get ZipGo Today for Faster File Management"}
+          {locale === "cn"
+            ? "立即下载 ZipGo，让解压与压缩快人一步"
+            : locale === "ja"
+            ? "今すぐ ZipGo をダウンロードして、解凍・圧縮作業を圧倒的にスムーズに"
+            : "Get ZipGo Today for Faster File Management"}
         </h3>
         <p class="text-slate-300 mb-8 max-w-xl mx-auto">
-          {locale === "cn" ? "支持 macOS 11 及以上系统，可在 Mac App Store 免费下载体验。" : "Compatible with macOS 11+. Free download on Mac App Store."}
+          {locale === "cn"
+            ? "支持 macOS 11 及以上系统，可在 Mac App Store 免费下载体验。"
+            : locale === "ja"
+            ? "macOS 11 以降に対応。Mac App Store より無料でダウンロードいただけます。"
+            : "Compatible with macOS 11+. Free download on Mac App Store."}
         </p>
         <a
           href={dict.zipgo.downloadUrl}

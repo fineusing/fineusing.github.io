@@ -1,7 +1,7 @@
 ---
 import { getBasePath, getDictionary, DEFAULT_LOCALE } from "../i18n";
 
-const { locale = DEFAULT_LOCALE, active = "", langHref = "/cn/" } = Astro.props;
+const { locale = DEFAULT_LOCALE, active = "", langHref = "/cn/", currentPath = "" } = Astro.props;
 const dict = getDictionary(locale);
 const base = getBasePath(locale);
 
@@ -17,7 +17,13 @@ const privacyHref = `${base}/privacy.html`;
 
 const homeActive = active === "home";
 const productsActive = active === "products";
-const langData = locale === DEFAULT_LOCALE ? "zh" : "en";
+
+// Compute page links for language switcher
+const rawPage = currentPath || (langHref ? langHref.replace(/^\/(cn|ja)/, "") : "/index.html");
+const cleanPage = rawPage.startsWith("/") ? rawPage : `/${rawPage}`;
+const enHref = cleanPage;
+const cnHref = `/cn${cleanPage}`;
+const jaHref = `/ja${cleanPage}`;
 ---
 <nav class="fixed w-full z-50 top-0 start-0 bg-white/90 backdrop-blur-md border-b border-gray-100">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -131,18 +137,74 @@ const langData = locale === DEFAULT_LOCALE ? "zh" : "en";
           </a>
         </li>
 
-        <li class="flex items-center ml-2 border-l border-gray-200 pl-4 h-6">
-          <a
-            href={langHref}
-            id="lang-toggle"
-            data-lang={langData}
-            class="flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors group/lang cursor-pointer"
+        <!-- Vertical Divider -->
+        <li class="hidden md:block h-4 w-px bg-gray-200 my-auto mx-1" aria-hidden="true"></li>
+
+        <!-- Language Switcher Dropdown -->
+        <li class="relative group" id="lang-menu-item">
+          <button
+            id="lang-toggle-btn"
+            type="button"
+            class="flex items-center py-1.5 px-2 rounded-lg text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-gray-100/80 transition-colors cursor-pointer select-none"
+            aria-label="Language selection"
+            aria-expanded="false"
           >
-            <svg class="w-4 h-4 mr-1 text-slate-400 group-hover/lang:text-slate-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 mr-1 text-slate-400 group-hover:text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
             </svg>
-            {dict.nav.lang}
-          </a>
+            <span class="text-xs font-semibold">{locale === "ja" ? "日本語" : locale === "cn" ? "中文" : "English"}</span>
+            <svg class="w-2.5 h-2.5 ms-1 text-slate-400 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 10 6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+            </svg>
+          </button>
+
+          <!-- Dropdown card wrapper: pt-1.5 provides the seamless hover bridge -->
+          <div class="dropdown-menu-lang absolute right-0 top-full pt-1.5 z-50" id="lang-dropdown-panel">
+            <div class="bg-white divide-y divide-gray-100 rounded-xl shadow-xl border border-gray-100 py-1 w-32 text-sm overflow-hidden ring-1 ring-black/5">
+              <a
+                href={enHref}
+                data-lang="en"
+                class={`flex items-center justify-between px-3.5 py-2 transition-colors ${
+                  locale === "en" ? "text-blue-600 font-semibold bg-blue-50/70" : "text-gray-700 hover:bg-gray-50"
+                }`}
+              >
+                <span>English</span>
+                {locale === "en" && (
+                  <svg class="w-3.5 h-3.5 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+              </a>
+              <a
+                href={cnHref}
+                data-lang="zh"
+                class={`flex items-center justify-between px-3.5 py-2 transition-colors ${
+                  locale === "cn" ? "text-blue-600 font-semibold bg-blue-50/70" : "text-gray-700 hover:bg-gray-50"
+                }`}
+              >
+                <span>简体中文</span>
+                {locale === "cn" && (
+                  <svg class="w-3.5 h-3.5 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+              </a>
+              <a
+                href={jaHref}
+                data-lang="ja"
+                class={`flex items-center justify-between px-3.5 py-2 transition-colors ${
+                  locale === "ja" ? "text-blue-600 font-semibold bg-blue-50/70" : "text-gray-700 hover:bg-gray-50"
+                }`}
+              >
+                <span>日本語</span>
+                {locale === "ja" && (
+                  <svg class="w-3.5 h-3.5 text-blue-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+              </a>
+            </div>
+          </div>
         </li>
       </ul>
     </div>

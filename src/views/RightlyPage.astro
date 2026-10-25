@@ -36,6 +36,33 @@ const ldJson = locale === DEFAULT_LOCALE
             "name": "Fineusing"
         }
     }`
+  : locale === "ja"
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Rightly",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "macOS Finder ネイティブの右クリックメニュー拡張ツール。新規ファイル作成、30種以上の解凍・圧縮、クイックアクセス、パスコピーなどを統合",
+        "url": "https://fineusing.com/ja/rightly.html",
+        "image": "https://fineusing.com/img/rightly-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+        },
+        "featureList": [
+            "右クリックから新規ファイル＆テンプレート作成",
+            "30 種類以上のアーカイブ解凍・圧縮",
+            "暗号化圧縮とメール添付用分割圧縮",
+            "常用フォルダ＆アプリへのクイックアクセス",
+            "POSIX パスコピー＆ターミナル起動ユーティリティ"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`
   : `{
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -63,19 +90,32 @@ const ldJson = locale === DEFAULT_LOCALE
         }
     }`;
 
-const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/rightly.html" : "https://fineusing.com/cn/rightly.html";
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com/rightly.html"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/rightly.html"
+  : "https://fineusing.com/cn/rightly.html";
 const ogUrl = canonical;
 const altEn = "https://fineusing.com/rightly.html";
 const altZh = "https://fineusing.com/cn/rightly.html";
+const altJa = "https://fineusing.com/ja/rightly.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
-    <title>{locale === DEFAULT_LOCALE ? "Rightly: Powerful Finder Context Menu Enhancer for macOS" : "Rightly: macOS 原生右键增强工具"}</title>
+    <title>
+      {locale === DEFAULT_LOCALE
+        ? "Rightly: Powerful Finder Context Menu Enhancer for macOS"
+        : locale === "ja"
+        ? "Rightly: Mac用高機能Finder右クリックメニュー拡張ツール"
+        : "Rightly: macOS 原生右键增强工具"}
+    </title>
     <meta
       name="description"
       content={
         locale === DEFAULT_LOCALE
           ? "Rightly supercharges your macOS Finder context menu with instant file creation, 30+ archive format compression & extraction, quick directory/app access, and essential productivity tools."
+          : locale === "ja"
+          ? "Finderの右クリックからExcel・Word・テキストの即時新規作成、30種以上の形式の解凍・圧縮、常用フォルダやターミナルへの瞬時アクセスを実現するMac必須の右クリック強化アプリ。"
           : "Rightly 是一款 macOS 右键增强工具，深度集成 Finder 右键菜单。无需频繁切换窗口，即可完成新建文件、压缩解压、快速访问常用目录与 App，以及多种实用工具操作。"
       }
     />
@@ -84,6 +124,8 @@ const altZh = "https://fineusing.com/cn/rightly.html";
       content={
         locale === DEFAULT_LOCALE
           ? "Rightly, macOS context menu, Finder right click, Mac file management, new file Mac, 7Z unzip Mac, split volume compression, Mac utility, macOS Tahoe"
+          : locale === "ja"
+          ? "Rightly, Mac 右クリック 拡張, Finder 右クリック 新規作成, Mac 新規ファイル, Mac Excel 新規作成 右クリック, Mac 解凍 圧縮, ターミナル 現在フォルダ Mac, 隠しファイル 表示 切替"
           : "Rightly, macOS 右键增强, Finder 右键菜单, Mac 文件管理, Mac 新建文件, Mac 解压缩, 7Z 解压, 分卷压缩, Mac 效率工具"
       }
     />
@@ -91,13 +133,21 @@ const altZh = "https://fineusing.com/cn/rightly.html";
 
     <meta
       property="og:title"
-      content={locale === DEFAULT_LOCALE ? "Rightly: Finder Context Menu Enhancer for macOS" : "Rightly: macOS 原生右键增强工具"}
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Rightly: Finder Context Menu Enhancer for macOS"
+          : locale === "ja"
+          ? "Rightly: Mac用高機能Finder右クリックメニュー拡張ツール"
+          : "Rightly: macOS 原生右键增强工具"
+      }
     />
     <meta
       property="og:description"
       content={
         locale === DEFAULT_LOCALE
           ? "Supercharge your Finder right-click with instant file creation, 30+ archive formats, and quick access."
+          : locale === "ja"
+          ? "日常の頻出操作を右クリックメニューへ集約。新規ファイル作成、解凍・圧縮、パス取得までを瞬時に。"
           : "把常用操作放进右键菜单，让 Mac 文件管理更高效。"
       }
     />
@@ -110,6 +160,7 @@ const altZh = "https://fineusing.com/cn/rightly.html";
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
 
     <script type="application/ld+json" set:html={ldJson}></script>
@@ -160,7 +211,11 @@ const altZh = "https://fineusing.com/cn/rightly.html";
       <div class="text-center max-w-2xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.rightly.featuresTitle}</h2>
         <p class="text-slate-500 text-lg">
-          {locale === "cn" ? "无缝融入 macOS 体验，高频操作一键即达" : "Seamlessly integrated with macOS for effortless everyday operations"}
+          {locale === "cn"
+            ? "无缝融入 macOS 体验，高频操作一键即达"
+            : locale === "ja"
+            ? "macOS に自然に溶け込み、日常の高頻度操作をワンクリックで"
+            : "Seamlessly integrated with macOS for effortless everyday operations"}
         </p>
       </div>
 
@@ -198,7 +253,7 @@ const altZh = "https://fineusing.com/cn/rightly.html";
         </div>
         <div class="w-full md:w-1/2">
           <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-            {locale === "cn" ? "极速新建 · 格式自由" : "Instant Creation · Format Freedom"}
+            {locale === "cn" ? "极速新建 · 格式自由" : locale === "ja" ? "高速新規作成 · 自由なフォーマット" : "Instant Creation · Format Freedom"}
           </span>
           <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.rightly.showcase[0].title}</h3>
           <p class="text-lg text-slate-500 leading-relaxed">{dict.rightly.showcase[0].body}</p>
@@ -220,7 +275,7 @@ const altZh = "https://fineusing.com/cn/rightly.html";
         </div>
         <div class="w-full md:w-1/2">
           <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">
-            {locale === "cn" ? "全能解压 · 安全传输" : "All Formats · Secure Delivery"}
+            {locale === "cn" ? "全能解压 · 安全传输" : locale === "ja" ? "万能解凍 · 安全なファイル送信" : "All Formats · Secure Delivery"}
           </span>
           <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.rightly.showcase[1].title}</h3>
           <p class="text-lg text-slate-500 leading-relaxed">{dict.rightly.showcase[1].body}</p>
@@ -235,7 +290,11 @@ const altZh = "https://fineusing.com/cn/rightly.html";
       <div class="text-center max-w-2xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.rightly.audienceTitle}</h2>
         <p class="text-slate-500 text-lg">
-          {locale === "cn" ? "无论你是开发者、设计师还是办公达人，Rightly 都能让你的工作流更顺畅" : "Tailored features designed for diverse workflows on macOS"}
+          {locale === "cn"
+            ? "无论你是开发者、设计师还是办公达人，Rightly 都能让你的工作流更顺畅"
+            : locale === "ja"
+            ? "エンジニア、ビジネスパーソン、デザイナーまで、あらゆるワークフローを効率化"
+            : "Tailored features designed for diverse workflows on macOS"}
         </p>
       </div>
 
@@ -271,10 +330,18 @@ const altZh = "https://fineusing.com/cn/rightly.html";
       <!-- Bottom Download CTA -->
       <div class="mt-16 text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-3xl p-10 shadow-xl">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">
-          {locale === "cn" ? "立即下载 Rightly，让每一次右键都更高效" : "Supercharge Your Finder Right-Click Today"}
+          {locale === "cn"
+            ? "立即下载 Rightly，让每一次右键都更高效"
+            : locale === "ja"
+            ? "今すぐ Rightly をダウンロードして、毎日の右クリック作業を快適に"
+            : "Supercharge Your Finder Right-Click Today"}
         </h3>
         <p class="text-slate-300 mb-8 max-w-xl mx-auto">
-          {locale === "cn" ? "支持 macOS 12 及以上系统，可在 Mac App Store 免费下载体验。" : "Compatible with macOS 12+. Free download on Mac App Store."}
+          {locale === "cn"
+            ? "支持 macOS 12 及以上系统，可在 Mac App Store 免费下载体验。"
+            : locale === "ja"
+            ? "macOS 12 以降に対応。Mac App Store より無料でダウンロードいただけます。"
+            : "Compatible with macOS 12+. Free download on Mac App Store."}
         </p>
         <a
           href={dict.rightly.downloadUrl}

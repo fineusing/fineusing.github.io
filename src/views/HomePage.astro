@@ -62,6 +62,58 @@ const ldJson = locale === DEFAULT_LOCALE
         }
     ]
 }`
+  : locale === "ja"
+  ? `{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fineusing",
+    "description": "Macユーザーの作業効率を最大化する革新的なmacOSアプリケーションを提供",
+    "url": "https://fineusing.com/ja/",
+    "image": "https://fineusing.com/img/apppad-home.png",
+    "logo": "https://fineusing.com/img/apppad-logo.png",
+    "sameAs": [],
+    "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+    },
+    "makesOffer": [
+        {
+            "@type": "SoftwareApplication",
+            "name": "Rightly",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS Finder 右クリック拡張ツール（新規ファイル作成・解凍圧縮）"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "DeviceMirror",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "macOS",
+            "description": "iPhone/iPad の画面を Mac に超低遅延ミラーリング"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "NTFSSync",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "カーネル拡張不要の Mac 用 NTFS 読み書き＆フォーマットツール"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "AppPad",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "macOS 26+ 対応の次世代 Launchpad 代替アプリ"
+        },
+        {
+            "@type": "SoftwareApplication",
+            "name": "ZipGo",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "macOS",
+            "description": "Finder 右クリック解凍・圧縮・中身プレビュー（Shift-JIS文字化け自動解消）"
+        }
+    ]
+}`
   : `{
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -114,19 +166,36 @@ const ldJson = locale === DEFAULT_LOCALE
     ]
 }`;
 
-const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com" : "https://fineusing.com/cn/";
-const ogUrl = locale === DEFAULT_LOCALE ? "https://fineusing.com" : "https://fineusing.com/cn/index.html";
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/"
+  : "https://fineusing.com/cn/";
+const ogUrl = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/index.html"
+  : "https://fineusing.com/cn/index.html";
 const altEn = "https://fineusing.com";
 const altZh = "https://fineusing.com/cn/";
+const altJa = "https://fineusing.com/ja/";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
-    <title>{locale === DEFAULT_LOCALE ? "Fineusing: macOS 26 Tahoe Launchpad Alternative & iPhone Screen Mirroring" : "Fineusing: macOS 26 Tahoe启动台替代品与iPhone屏幕镜像到Mac"}</title>
+    <title>
+      {locale === DEFAULT_LOCALE
+        ? "Fineusing: macOS 26 Tahoe Launchpad Alternative & iPhone Screen Mirroring"
+        : locale === "ja"
+        ? "Fineusing: Macユーザーのための革新的な生産性・実用ユーティリティ"
+        : "Fineusing: macOS 26 Tahoe启动台替代品与iPhone屏幕镜像到Mac"}
+    </title>
     <meta
       name="description"
       content={
         locale === DEFAULT_LOCALE
           ? "Fineusing creates exceptional macOS applications including Rightly, ZipGo, NTFSSync, AppPad, and DeviceMirror."
+          : locale === "ja"
+          ? "Fineusing は macOS 向けの洗練された実用アプリを開発しています。ZipGo（右クリック解凍・圧縮）、Rightly（右クリック新規作成）、NTFSSync（カーネル拡張不要NTFS）、AppPad、DeviceMirror を提供。"
           : "Fineusing为macOS打造卓越应用，包括Rightly、ZipGo、NTFSSync、AppPad和DeviceMirror。"
       }
     />
@@ -135,16 +204,29 @@ const altZh = "https://fineusing.com/cn/";
       content={
         locale === DEFAULT_LOCALE
           ? "Fineusing, NTFSSync, NTFS for Mac, read write NTFS, ZipGo, Rightly, AppPad, DeviceMirror, Mac utility apps, Swift development"
+          : locale === "ja"
+          ? "Fineusing, ZipGo, Rightly, NTFSSync, AppPad, DeviceMirror, Mac ユーティリティ, Mac 便利アプリ, Mac NTFS 読み書き, Mac zip 解凍 文字化け"
           : "Fineusing, NTFSSync, NTFS 读写, NTFS for Mac, ZipGo, Rightly, AppPad, DeviceMirror, Mac实用工具, Swift 开发"
       }
     />
 
-    <meta property="og:title" content={locale === DEFAULT_LOCALE ? "Fineusing: Ultimate macOS Experience with AppPad & DeviceMirror" : "Fineusing: 使用AppPad和DeviceMirror打造终极 macOS 体验"} />
+    <meta
+      property="og:title"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Fineusing: Ultimate macOS Experience with AppPad & DeviceMirror"
+          : locale === "ja"
+          ? "Fineusing: Macユーザーのための革新的な生産性・実用ユーティリティ"
+          : "Fineusing: 使用AppPad和DeviceMirror打造终极 macOS 体验"
+      }
+    />
     <meta
       property="og:description"
       content={
         locale === DEFAULT_LOCALE
           ? "Creating exceptional macOS applications including AppPad app launcher and DeviceMirror screen mirroring"
+          : locale === "ja"
+          ? "macOS のために設計された、洗練された生産性向上ユーティリティスイート。"
           : "打造卓越的macOS应用，包括AppPad应用启动器和DeviceMirror屏幕镜像"
       }
     />
@@ -157,6 +239,7 @@ const altZh = "https://fineusing.com/cn/";
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
 
     <script type="application/ld+json" set:html={ldJson}></script>

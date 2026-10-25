@@ -18,6 +18,22 @@ body {
   transform: translateY(0) translateX(-50%);
 }
 
+.dropdown-menu-lang {
+  transition: opacity 0.18s ease-out, transform 0.18s ease-out, visibility 0.18s;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  pointer-events: none;
+}
+
+.group:hover .dropdown-menu-lang,
+.dropdown-menu-lang.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 .markdown h1,
 .markdown h2,
 .markdown h3,

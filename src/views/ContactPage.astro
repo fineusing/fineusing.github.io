@@ -8,16 +8,28 @@ const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
 const dict = getDictionary(locale);
 const langHref = getLangHref(locale, "/contact.html");
 
-const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/contact.html" : "https://fineusing.com/cn/contact.html";
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com/contact.html"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/contact.html"
+  : "https://fineusing.com/cn/contact.html";
 const altEn = "https://fineusing.com/contact.html";
 const altZh = "https://fineusing.com/cn/contact.html";
+const altJa = "https://fineusing.com/ja/contact.html";
 ---
 <SiteLayout lang={dict.langTag} bodyClass="bg-slate-50 text-slate-900 flex flex-col min-h-screen" enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
-    <title>{locale === DEFAULT_LOCALE ? "Fineusing: Contact Us" : "Fineusing: 联系我们"}</title>
+    <title>
+      {locale === DEFAULT_LOCALE
+        ? "Fineusing: Contact Us"
+        : locale === "ja"
+        ? "Fineusing: お問い合わせ"
+        : "Fineusing: 联系我们"}
+    </title>
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
   </Fragment>
 

@@ -37,6 +37,34 @@ const ldJson = locale === DEFAULT_LOCALE
             "name": "Fineusing"
         }
     }`
+  : locale === "ja"
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NTFSSync",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "macOS",
+        "description": "macOS 向け完全ユーザー空間 NTFS 読み書き＆ダイレクトフォーマットツール。FUSE-T（NFS v4）採用でカーネル拡張機能・SIP無効化一切不要、自動マウント対応",
+        "url": "https://fineusing.com/ja/ntfssync.html",
+        "image": "https://fineusing.com/img/ntfssync-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+        },
+        "featureList": [
+            "完全ユーザー空間動作（カーネル拡張機能 kext ゼロ）",
+            "Mac 上で外付けドライブを直接 NTFS にフォーマット",
+            "接続するだけで自動マウント（プラグ＆プレイ）",
+            "NTFS ファイルシステムのファーストエイド＆修復",
+            "メニューバーから全ドライブを安全に一括取り出し",
+            "Apple Silicon（M1〜M4）ネイティブの圧倒的転送速度"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`
   : `{
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
@@ -65,19 +93,32 @@ const ldJson = locale === DEFAULT_LOCALE
         }
     }`;
 
-const canonical = locale === DEFAULT_LOCALE ? "https://fineusing.com/ntfssync.html" : "https://fineusing.com/cn/ntfssync.html";
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com/ntfssync.html"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/ntfssync.html"
+  : "https://fineusing.com/cn/ntfssync.html";
 const ogUrl = canonical;
 const altEn = "https://fineusing.com/ntfssync.html";
 const altZh = "https://fineusing.com/cn/ntfssync.html";
+const altJa = "https://fineusing.com/ja/ntfssync.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
-    <title>{locale === DEFAULT_LOCALE ? "NTFSSync: Zero-Kext NTFS Read-Write & Formatter for Mac" : "NTFSSync: 免内核扩展的 macOS NTFS 读写与格式化工具"}</title>
+    <title>
+      {locale === DEFAULT_LOCALE
+        ? "NTFSSync: Zero-Kext NTFS Read-Write & Formatter for Mac"
+        : locale === "ja"
+        ? "NTFSSync: カーネル拡張不要の Mac 用 NTFS 読み書き＆フォーマットツール"
+        : "NTFSSync: 免内核扩展的 macOS NTFS 读写与格式化工具"}
+    </title>
     <meta
       name="description"
       content={
         locale === DEFAULT_LOCALE
           ? "NTFSSync mounts external NTFS drives in read-write mode automatically on macOS. Powered by FUSE-T userspace architecture with zero kernel extensions and direct NTFS drive formatting."
+          : locale === "ja"
+          ? "FUSE-TとNFS v4による完全ユーザー空間動作。SIP無効化不要で外付けNTFSドライブを即座に自動マウント＆読み書き。Mac上でUSBメモリを直接NTFSに初期化可能。"
           : "NTFSSync 是 macOS 上免内核扩展的纯用户态 NTFS 读写与格式化工具。底层采用 FUSE-T + NFS v4 架构，零安全降级，插盘自动挂载，支持直接把 U 盘抹为 NTFS。"
       }
     />
@@ -86,6 +127,8 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
       content={
         locale === DEFAULT_LOCALE
           ? "NTFSSync, Mac NTFS, format NTFS on Mac, NTFS for Mac no kext, FUSE-T Mac NTFS, mount NTFS Mac, Apple Silicon NTFS, format USB to NTFS Mac, NTFS read write Mac"
+          : locale === "ja"
+          ? "NTFSSync, Mac NTFS 読み書き, Mac NTFS フォーマット, 外付けHDD Mac 書き込み, FUSE-T Mac, Mac NTFS 無料, Mac USB NTFS 初期化, Apple Silicon NTFS, macOS Sequoia NTFS"
           : "NTFSSync, Mac NTFS 读写, Mac 格式化 NTFS, Mac U盘格式化为NTFS, 免内核扩展 NTFS, FUSE-T Mac, 移动硬盘 Mac 只读, Apple Silicon NTFS 读写, macOS Sequoia NTFS"
       }
     />
@@ -93,13 +136,21 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
 
     <meta
       property="og:title"
-      content={locale === DEFAULT_LOCALE ? "NTFSSync: Zero-Kext NTFS Read-Write & Formatter for Mac" : "NTFSSync: 免内核扩展的 macOS NTFS 读写与格式化工具"}
+      content={
+        locale === DEFAULT_LOCALE
+          ? "NTFSSync: Zero-Kext NTFS Read-Write & Formatter for Mac"
+          : locale === "ja"
+          ? "NTFSSync: カーネル拡張不要の Mac 用 NTFS 読み書き＆フォーマットツール"
+          : "NTFSSync: 免内核扩展的 macOS NTFS 读写与格式化工具"
+      }
     />
     <meta
       property="og:description"
       content={
         locale === DEFAULT_LOCALE
           ? "Safe, fast & reliable userspace NTFS read-write and direct formatting on macOS. No kernel extensions, no security compromises."
+          : locale === "ja"
+          ? "カーネル拡張ゼロ、Mac の安全性を保ったまま NTFS ドライブの自動読み書きと直接フォーマットを実現。"
           : "基于 FUSE-T 用户态架构的 macOS NTFS 读写与直接格式化工具，告别内核扩展，安全不降级。"
       }
     />
@@ -112,6 +163,7 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
 
     <script type="application/ld+json" set:html={ldJson}></script>
@@ -163,7 +215,11 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
       <div class="text-center max-w-2xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.ntfssync.featuresTitle}</h2>
         <p class="text-slate-500 text-lg">
-          {locale === "cn" ? "功能强大、运行稳定的全能 NTFS 磁盘管理利器" : "Powerful and rock-solid disk management engineered for macOS"}
+          {locale === "cn"
+            ? "功能强大、运行稳定的全能 NTFS 磁盘管理利器"
+            : locale === "ja"
+            ? "高機能で安定性抜群、Mac のためのオールインワン NTFS ツール"
+            : "Powerful and rock-solid disk management engineered for macOS"}
         </p>
       </div>
 
@@ -202,7 +258,7 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
         </div>
         <div class="w-full md:w-1/2">
           <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">
-            {locale === "cn" ? "即插即用 · 高速读写" : "Plug & Play · Native Speed"}
+            {locale === "cn" ? "即插即用 · 高速读写" : locale === "ja" ? "プラグ＆プレイ · 高速読み書き" : "Plug & Play · Native Speed"}
           </span>
           <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.ntfssync.showcase[0].title}</h3>
           <p class="text-lg text-slate-500 leading-relaxed">{dict.ntfssync.showcase[0].body}</p>
@@ -225,7 +281,7 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
         </div>
         <div class="w-full md:w-1/2">
           <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">
-            {locale === "cn" ? "磁盘急救 · 分区抹除" : "First Aid · Partition Erase"}
+            {locale === "cn" ? "磁盘急救 · 分区抹除" : locale === "ja" ? "ディスク修復 · NTFS初期化" : "First Aid · Partition Erase"}
           </span>
           <h3 class="text-3xl font-bold mt-2 mb-4 text-slate-900">{dict.ntfssync.showcase[1].title}</h3>
           <p class="text-lg text-slate-500 leading-relaxed">{dict.ntfssync.showcase[1].body}</p>
@@ -240,7 +296,11 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
       <div class="text-center max-w-2xl mx-auto mb-16">
         <h2 class="text-3xl font-bold text-slate-900 mb-4">{dict.ntfssync.whenNeedTitle}</h2>
         <p class="text-slate-500 text-lg">
-          {locale === "cn" ? "解决日常使用外接移动硬盘时的常见痛点" : "Overcome everyday external storage roadblocks on Mac"}
+          {locale === "cn"
+            ? "解决日常使用外接移动硬盘时的常见痛点"
+            : locale === "ja"
+            ? "Mac で外付けハードディスクを使う際のあらゆる悩みを解決"
+            : "Overcome everyday external storage roadblocks on Mac"}
         </p>
       </div>
 
@@ -276,10 +336,18 @@ const altZh = "https://fineusing.com/cn/ntfssync.html";
       <!-- Bottom Download CTA -->
       <div class="mt-16 text-center bg-gradient-to-r from-slate-900 to-slate-800 text-white rounded-3xl p-10 shadow-xl">
         <h3 class="text-2xl md:text-3xl font-bold mb-4">
-          {locale === "cn" ? "立即下载 NTFSSync，让 NTFS 磁盘在 Mac 上畅行无阻" : "Unlock Full NTFS Read-Write on Mac Today"}
+          {locale === "cn"
+            ? "立即下载 NTFSSync，让 NTFS 磁盘在 Mac 上畅行无阻"
+            : locale === "ja"
+            ? "今すぐ NTFSSync をダウンロードして、Mac で NTFS ドライブを快適に操作"
+            : "Unlock Full NTFS Read-Write on Mac Today"}
         </h3>
         <p class="text-slate-300 mb-8 max-w-xl mx-auto">
-          {locale === "cn" ? "支持 macOS 10.15 及以上系统，可在 Mac App Store 免费下载体验。" : "Compatible with macOS 10.15+. Free download on Mac App Store."}
+          {locale === "cn"
+            ? "支持 macOS 10.15 及以上系统，可在 Mac App Store 免费下载体验。"
+            : locale === "ja"
+            ? "macOS 10.15 以降に対応。Mac App Store より無料でダウンロードいただけます。"
+            : "Compatible with macOS 10.15+. Free download on Mac App Store."}
         </p>
         <a
           href={dict.ntfssync.downloadUrl}
