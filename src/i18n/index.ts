@@ -33,10 +33,10 @@ const dictionaries = {
       apppadBody:
         "AppPad restores and supercharges the classic visual Launchpad experience on macOS 26 Tahoe and beyond. Featuring customizable grid densities, full-screen and floating window modes, right-click deep uninstallation, and seamless trackpad pinch gestures.",
       devicemirrorTitle: "DeviceMirror",
-      devicemirrorSubtitle: "iPhone Screen Mirroring to Mac",
-      devicemirrorHeading: "Mirror iPhone with zero latency",
+      devicemirrorSubtitle: "Ultra-Low Latency iOS Screen & Audio Mirroring to Mac",
+      devicemirrorHeading: "USB 4K & Wi-Fi 2.5K dual-mode mirroring, multi-device sync & recording",
       devicemirrorBody:
-        "DeviceMirror supports casting your iPhone/iPad screen to your macOS computer for watching movies, playing games, listening to music, and demo presentations on a larger screen.",
+        "DeviceMirror seamlessly mirrors your iPhone and iPad screen and audio to Mac via USB or Wi-Fi (AirPlay). Zero app required on iOS. Enjoy 200+ video sites on the big screen, 4K 60FPS zero-lag mobile gaming, speaker audio listening, and recording to MP4, MOV, or GIF.",
       rightlyTitle: "Rightly",
       rightlySubtitle: "Mac Context Menu Enhancer",
       rightlyHeading: "Put frequent actions into right-click",
@@ -116,44 +116,51 @@ const dictionaries = {
     },
     devicemirror: {
       title: "DeviceMirror",
-      subtitle: "Mirror your iPhone/iPad screen to your macOS computer",
+      subtitle: "Dual-mode USB & Wi-Fi iOS screen and audio mirroring for Mac with multi-device support, 4K resolution, and recording",
       cta: "Free Download",
       downloadUrl: "https://apps.apple.com/app/id1598771178",
       features: [
         {
-          title: "Wireless Screen Mirroring via AirPlay 2",
-          body: "Supports wireless screen mirroring using the AirPlay 2 protocol; no need to install an app on your iPhone/iPad."
+          title: "Dual-Mode USB & Wi-Fi AirPlay Mirroring",
+          body: "Supports native AirPlay wireless mirroring and direct USB cable connection. Zero app installation required on your iPhone/iPad."
         },
         {
-          title: "Wired Connection Screen Mirroring",
-          body: "Supports connecting your iPhone/iPad to the computer via a cable for stable 60 FPS output, smooth and without lag."
+          title: "Simultaneous Multi-Device Mirroring",
+          body: "Break free from single-device limits. Mirror multiple iPhones and iPads to a single Mac display at the same time for testing and side-by-side comparison."
         },
         {
-          title: "Multiple Resolution Options, Up to 4K",
-          body: "Supports various resolutions for screen mirroring."
+          title: "Wired USB Connection Up to 4K",
+          body: "Supports 720P, 1080P, and 4K resolutions via USB cable with smooth 60 FPS output and ultra-low latency for gaming and professional presentations."
         },
         {
-          title: "AirPlay",
-          body: "Allows you to cast movies and TV shows from online video platforms to your computer for a big-screen experience."
+          title: "Wi-Fi Wireless Mirroring Up to 2.5K",
+          body: "Wirelessly mirror over your local network at up to 2.5K resolution. Cable-free convenience for meeting presentations and living room entertainment."
         },
         {
-          title: "Phone Screen Recording",
-          body: "During screen mirroring, you can record your phone's screen and audio as an MP4 file."
+          title: "Record Mirror Screen to MP4, MOV & GIF",
+          body: "Capture mirrored video and system audio directly to MP4, MOV, or animated GIF files without taking up phone storage space."
         },
         {
-          title: "Computer System Audio Recording",
-          body: "Easily record audio playing on your computer into an MP3 file without installing any audio drivers."
+          title: "Real-Time Screenshot Capture (PNG & JPEG)",
+          body: "Take instant high-resolution screenshots in lossless PNG or compressed JPEG formats with a single click on your Mac."
+        },
+        {
+          title: "Cast from 200+ Video Platforms",
+          body: "Effortlessly cast movies and live streams from YouTube, Tencent Video, iQiyi, and 200+ online video streaming sites to your Mac."
+        },
+        {
+          title: "Lossless Audio Sync & Speaker Playback",
+          body: "Stream high-fidelity system audio from iOS to your Mac speakers. Listen to phone music, podcasts, and video audio in pristine quality."
         }
       ],
       showcase: [
         {
-          title: "Enjoy the Big Screen",
-          body:
-            "Instantly mirror movies and games from your iPhone/iPad to the computer with one click, enjoy the big screen experience."
+          title: "Big-Screen Movies, Music & Gaming",
+          body: "Cast HD movies and TV shows from YouTube and 200+ streaming sites to your Mac's Retina display. Experience zero-lag 4K 60FPS mobile gaming and listen to phone music on Mac speakers."
         },
         {
-          title: "iPhone/iPad Screen Recording",
-          body: "Easily record your iPhone/iPad screen to capture wonderful moments"
+          title: "Online Course, App Demo & Multi-Device Testing",
+          body: "Record iOS screen tutorials directly to MP4, MOV, or GIF files on Mac with real-time PNG/JPEG snapshots. Simultaneously mirror multiple test devices for seamless multi-device QA."
         }
       ]
     },
@@ -415,10 +422,10 @@ const dictionaries = {
       apppadBody:
         "AppPad 完美找回并大幅超越经典启动台体验。基于 Swift 原生开发，支持自定义网格行列与窗口/全屏双模式，提供四指/五指触控板捏合唤出、右键深度卸载残留缓存、老启动台布局一键无损还原，以及直接拖拽图标到 Dock 栏。",
       devicemirrorTitle: "DeviceMirror",
-      devicemirrorSubtitle: "iPhone/iPad屏幕镜像到macOS",
-      devicemirrorHeading: "低延迟投屏体验",
+      devicemirrorSubtitle: "iPhone/iPad 屏幕与声音超清镜像到 Mac",
+      devicemirrorHeading: "USB 4K / Wi-Fi 2.5K 双模极速投屏，多设备并发与音画同录",
       devicemirrorBody:
-        "DeviceMirror支持将您的iPhone/iPad屏幕投射到macOS电脑，在大屏幕上观看电影、玩游戏、听音乐和演示展示。",
+        "支持免装 App 的原生 AirPlay 无线投屏与 USB 极速有线直连。在 Mac 大屏上畅享 200+ 平台高清影视、分享 4K 60FPS 手游实况，高保真聆听手机音乐，更支持将投屏一键录制为 MP4/MOV/GIF 与多机并发镜像。",
       rightlyTitle: "Rightly",
       rightlySubtitle: "macOS 右键增强工具",
       rightlyHeading: "把常用操作放进右键菜单",
@@ -497,43 +504,51 @@ const dictionaries = {
     },
     devicemirror: {
       title: "DeviceMirror",
-      subtitle: "将iPhone/iPad屏幕镜像到macOS电脑",
+      subtitle: "USB有线与Wi-Fi双模投屏：将iOS设备屏幕与声音超清镜像到Mac，支持多设备并发、4K画质与音画同录",
       cta: "免费下载",
       downloadUrl: "https://apps.apple.com/app/id1598771178",
       features: [
         {
-          title: "AirPlay 2 无线镜像",
-          body: "支持使用 AirPlay 2 协议无线屏幕镜像，无需在 iPhone/iPad 上安装应用。"
+          title: "USB直连与Wi-Fi双模投屏",
+          body: "支持原生AirPlay协议无线镜像，也支持通过USB数据线即插即连。无需在iPhone/iPad上安装任何App，零配置秒级投屏。"
         },
         {
-          title: "有线连接屏幕镜像",
-          body: "支持通过数据线连接 iPhone/iPad，实现稳定 60 FPS 输出，流畅不卡顿。"
+          title: "支持多台设备同时镜像",
+          body: "突破单设备限制，支持多台iPhone与iPad同时镜像到同一台Mac电脑。多机同屏监控、UI跨端适配与多任务对比得心应手。"
         },
         {
-          title: "多种分辨率选择，最高支持 4K",
-          body: "支持多种屏幕镜像分辨率。"
+          title: "USB连接最高支持 4K 超清分辨率",
+          body: "通过USB线缆连接支持 720P、1080P、4K 逐级画质输出，稳定 60 FPS 满帧传输，极低延迟，手游实战与大屏演示丝滑流畅。"
         },
         {
-          title: "AirPlay 大屏播放",
-          body: "将在线视频平台电影、电视剧投屏到电脑，享受大屏体验。"
+          title: "Wi-Fi 无线投屏最高支持 2.5K",
+          body: "在同一局域网下无线自由投射，最高支持 2.5K 超清画质，摆脱线缆束缚，随时随地开启会议演示与客厅大屏观影。"
         },
         {
-          title: "手机屏幕录制",
-          body: "在屏幕镜像过程中，可将手机屏幕与音频录制为 MP4 文件。"
+          title: "投屏录制为 MP4 / MOV / GIF",
+          body: "一键录制投屏画面与系统声音，直接生成 MP4、MOV 格式高清视频或轻量 GIF 动图，轻松录制网课教学、App演示与游戏高光。"
         },
         {
-          title: "电脑系统音频录制",
-          body: "无需安装音频驱动即可将电脑播放的音频录制为 MP3 文件。"
+          title: "实时截取高清投屏画面（PNG / JPEG）",
+          body: "支持在投屏过程中一键截图，保存为高画质 PNG 或高压缩率 JPEG 格式，省去手机端按键截图再传输到电脑的繁琐步骤。"
+        },
+        {
+          title: "支持 200+ 视频网站大屏投射",
+          body: "完美支持腾讯视频、爱奇艺、优酷、Bilibili、YouTube 等 200+ 在线视频平台的电影与剧集一键投屏，在 Mac 视网膜大屏畅享影音。"
+        },
+        {
+          title: "系统级声音同步与扬声器监听",
+          body: "无损同步 iOS 设备内部声音至 Mac 播放，在电脑扬声器上高保真聆听手机音乐与播客，支持课程讲解与游戏原声精准同步。"
         }
       ],
       showcase: [
         {
-          title: "享受大屏体验",
-          body: "一键将 iPhone/iPad 的电影和游戏投射到电脑，享受大屏体验。"
+          title: "大屏在线高清影音与手游实况分享",
+          body: "腾讯视频、爱奇艺、YouTube 200+ 视频网站一键推送，iPhone 音视频同步投射到 Mac 大屏，享受家庭影院级视听体验；USB 4K 60FPS 满血输出手游对战，告别手机小屏低头族。"
         },
         {
-          title: "iPhone/iPad 屏幕录制",
-          body: "轻松录制 iPhone/iPad 屏幕，捕捉精彩瞬间。"
+          title: "网课录制、App交互演示与多机同屏对比",
+          body: "无需在手机端录屏后繁琐 AirDrop 导出。在 Mac 上直接录制投屏画面为 MP4、MOV 或动态 GIF，实时截取 PNG/JPEG 教程配图，支持多台 iOS 设备并发同屏对比，大幅提升教学与研发效率。"
         }
       ]
     },
@@ -792,9 +807,9 @@ const dictionaries = {
     "apppadHeading": "ネイティブ Swift の爆速レスポンスでアプリを整理・起動・完全アンインストール",
     "apppadBody": "AppPad は、macOS 26 以降でクラシックな視覚的 Launchpad 体験を復元し、大幅に進化させます。自由なグリッド行・列とアイコンサイズ設定、フルスクリーン／ウィンドウの 2 つの表示モード、右クリックからの関連ファイル完全アンインストール、直感的なトラックパッドのピンチ操作に対応。",
     "devicemirrorTitle": "DeviceMirror",
-    "devicemirrorSubtitle": "iPhone の画面を Mac に超低遅延ミラーリング",
-    "devicemirrorHeading": "大画面でゲーム・動画・プレゼンをゼロ遅延で共有",
-    "devicemirrorBody": "DeviceMirror は、iPhone や iPad の画面を Mac にワイヤレス（AirPlay）および USB 有線接続で瞬時にミラーリングします。動画視聴、スマホゲームのプレイ、音楽鑑賞、プレゼンテーションを Mac の大画面で快適に楽しめます。",
+    "devicemirrorSubtitle": "iPhone / iPad 画面と音声を Mac に超低遅延ミラーリング",
+    "devicemirrorHeading": "USB 4K / Wi-Fi 2.5K 双モード投映、複数台同時ミラーリング＆高画質録画",
+    "devicemirrorBody": "iOS側にアプリ不要のAirPlayワイヤレス＆USB有線直結に対応。200以上の動画配信サイトの大画面再生、遅延ゼロの4K 60FPSゲーム実況、Macスピーカーでの音楽再生、MP4/MOV/GIFへの直接録画を快適に実現します。",
     "rightlyTitle": "Rightly",
     "rightlySubtitle": "Mac の Finder を強化する右クリック拡張ツール",
     "rightlyHeading": "日常の頻出操作をすべて右クリックメニューへ集約",
@@ -870,36 +885,52 @@ const dictionaries = {
   },
   "devicemirror": {
     "title": "DeviceMirror",
-    "subtitle": "iPhone や iPad の画面を Mac に超低遅延でミラーリング。大画面での動画視聴、ゲームプレイ、プレゼンテーション、システム音声付きの高画質録画に対応。",
+    "subtitle": "USB有線＆Wi-Fi両対応：iOSの画面と音声をMacに超低遅延ミラーリング。複数台同時表示、4K高画質、MP4/GIF録画に対応",
     "cta": "Mac App Store でダウンロード",
     "downloadUrl": "https://apps.apple.com/app/id1598771178",
     "featuresTitle": "主な機能",
     "features": [
       {
-        "title": "ワイヤレス（AirPlay）画面ミラーリング",
-        "body": "同じ Wi-Fi ネットワーク内であれば、AirPlay を使ってワンクリックで iPhone/iPad の画面を Mac にワイヤレス投影できます。"
+        "title": "USB有線＆Wi-Fiワイヤレス両対応",
+        "body": "標準AirPlayプロトコルによるワイヤレス投映と、USBケーブル直結の2モードをサポート。iPhone/iPad側にアプリをインストールする必要は一切ありません。"
       },
       {
-        "title": "USB 有線による超低遅延接続",
-        "body": "Lightning または USB-C ケーブルで Mac と接続することで、電波干渉のない極限の低遅延と安定した高画質ミラーリングを実現します。"
+        "title": "複数デバイスの同時画面ミラーリング",
+        "body": "1台のMacに複数のiPhoneやiPadを同時に画面ミラーリング可能。アプリの画面サイズ検証、UI比較、マルチタスク監視が1画面で完結します。"
       },
       {
-        "title": "端末画面の高画質録画",
-        "body": "ミラーリング中に、iPhone の画面と音声をワンクリックで高品質な MP4 ビデオファイルとして Mac 上に直接録画・保存できます。"
+        "title": "USB接続で最大4Kの超高解像度出力",
+        "body": "有線ケーブル接続時は720P、1080P、最大4K解像度に対応。安定した60 FPS満タスク表示と極小遅延により、音ゲーやアクションゲームも快適にプレイ可能。"
       },
       {
-        "title": "Mac システム音声の録音対応",
-        "body": "追加の仮想オーディオドライバをインストールすることなく、Mac で再生されているサウンドを MP3 ファイルとして手軽に録音できます。"
+        "title": "Wi-Fi接続で最大2.5Kのワイヤレス投映",
+        "body": "同一Wi-Fi環境下で最大2.5Kの高精細ワイヤレスミラーリングに対応。配線の煩わしさを解消し、会議室でのプレゼンやリビングでの鑑賞に最適です。"
+      },
+      {
+        "title": "MP4・MOV・GIF形式での画面録画",
+        "body": "投映画面と内部音声をワンクリックで直接Mac上に録画・保存。MP4、MOVのほか、ブログやREADMEに最適な軽量GIFアニメーション出力も可能です。"
+      },
+      {
+        "title": "リアルタイム高画質スクリーンショット（PNG/JPEG）",
+        "body": "投映中の画面をワンタッチで即座に静止画キャプチャ。用途に合わせて可逆圧縮のPNGおよび軽量JPEG形式でMacのデスクトップに直接保存できます。"
+      },
+      {
+        "title": "YouTubeなど200以上の動画配信サイトからの大画面キャスト",
+        "body": "YouTube、Tencent、iQiyiなど200種類以上の主要動画プラットフォームからの大画面キャストに対応。スマホの映像をMacのRetinaディスプレイで楽しめます。"
+      },
+      {
+        "title": "システム音声の同期とMacスピーカー再生",
+        "body": "iOS端末の音声を劣化なくMacへ転送。追加ドライバ不要でMacの外部スピーカーからスマホの音楽やポッドキャストを高音質で再生できます。"
       }
     ],
     "showcase": [
       {
-        "title": "迫力の大画面でゲームや動画を満喫",
-        "body": "iPhone/iPad のお気に入りの動画やスマホゲームを Mac の美しいディスプレイに瞬時に投影し、圧倒的な臨場感を楽しめます。"
+        "title": "迫力の大画面で4K動画視聴・ゲーム実況・音楽鑑賞",
+        "body": "YouTubeなど200以上の配信サイトの映画やドラマをMacの大画面に瞬時にキャスト。USB 4K 60FPS接続でスマホゲームの遅延ゼロプレイや、Macスピーカーでの高音質再生を満喫できます。"
       },
       {
-        "title": "iPhone/iPad 画面をワンタッチで録画",
-        "body": "ゲームの神プレイやアプリの操作デモ、プレゼンテーションの様子を、劣化のないクリアな画質と音声で簡単にキャプチャできます。"
+        "title": "オンライン講座録画、App操作チュートリアル、複数機テスト",
+        "body": "iPhone側での録画やAirDrop転送の手間をゼロに。Mac上で直接MP4/MOV/GIFへ録画し、PNG/JPEGで瞬時に作図。複数台のiOS端末を並べて同時に動作確認できるため、開発・検証効率が大幅に向上します。"
       }
     ]
   },

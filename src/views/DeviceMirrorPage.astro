@@ -15,7 +15,7 @@ const ldJson = locale === DEFAULT_LOCALE
         "name": "DeviceMirror",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "macOS",
-        "description": "Screen mirroring application for iPhone and iPad to Mac with AirPlay 2 support",
+        "description": "Dual-mode USB & Wi-Fi AirPlay iOS screen and audio mirroring for Mac with 4K resolution, multi-device support, and MP4/GIF recording",
         "url": "https://fineusing.com/devicemirror.html",
         "image": "https://fineusing.com/img/devicemirror-home.png",
         "screenshot": "https://fineusing.com/img/devicemirror-home.png",
@@ -25,11 +25,13 @@ const ldJson = locale === DEFAULT_LOCALE
             "priceCurrency": "USD"
         },
         "featureList": [
-            "AirPlay 2 Wireless Mirroring",
-            "Wired Connection Support",
-            "4K Resolution",
-            "Screen Recording",
-            "Audio Recording"
+            "USB 4K & Wi-Fi 2.5K Dual-Mode Mirroring",
+            "Simultaneous Multi-Device Screen Mirroring",
+            "Zero App Installation on iOS (Native AirPlay)",
+            "Screen Recording to MP4, MOV, and GIF",
+            "Real-Time High-Resolution Screenshots (PNG/JPEG)",
+            "Cast from 200+ Online Video Platforms",
+            "Lossless System Audio Sync & Speaker Playback"
         ],
         "permissions": "No app installation required on iOS devices"
     }`
@@ -40,7 +42,7 @@ const ldJson = locale === DEFAULT_LOCALE
         "name": "DeviceMirror",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "macOS",
-        "description": "iPhone/iPad の画面を Mac にワイヤレス（AirPlay）および USB 有線接続で超低遅延ミラーリングするアプリ",
+        "description": "iPhone/iPadの画面と音声をMacにUSB有線（4K）およびWi-Fi（2.5K）で超低遅延ミラーリングするアプリ。複数台同時表示、MP4/MOV/GIF録画、200+動画サイト対応。",
         "url": "https://fineusing.com/ja/devicemirror.html",
         "image": "https://fineusing.com/img/devicemirror-home.png",
         "screenshot": "https://fineusing.com/img/devicemirror-home.png",
@@ -50,10 +52,13 @@ const ldJson = locale === DEFAULT_LOCALE
             "priceCurrency": "JPY"
         },
         "featureList": [
-            "ワイヤレス（AirPlay）画面ミラーリング",
-            "USB 有線による超低遅延接続",
-            "iPhone / iPad 画面の 4K 高画質録画",
-            "Mac システム音声の録音対応"
+            "USB有線（最大4K）＆Wi-Fi（最大2.5K）双モード投映",
+            "複数デバイスの同時画面ミラーリング",
+            "iOS側アプリ不要（標準AirPlay対応）",
+            "MP4・MOV・GIF形式での画面録画",
+            "リアルタイム高画質スクリーンショット（PNG/JPEG）",
+            "200以上の動画配信サイトからの大画面キャスト",
+            "システム音声の同期とMacスピーカー再生"
         ],
         "author": {
             "@type": "Organization",
@@ -66,7 +71,7 @@ const ldJson = locale === DEFAULT_LOCALE
         "name": "DeviceMirror",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "macOS",
-        "description": "通过AirPlay和有线连接将iPhone/iPad屏幕低延迟镜像到Mac",
+        "description": "USB有线与Wi-Fi双模投屏：将iOS设备屏幕与声音超清镜像到Mac，支持多设备并发、4K画质、MP4/GIF录制与200+视频平台大屏播放。",
         "url": "https://fineusing.com/cn/devicemirror.html",
         "image": "https://fineusing.com/img/devicemirror-home.png",
         "screenshot": "https://fineusing.com/img/devicemirror-home.png",
@@ -76,10 +81,13 @@ const ldJson = locale === DEFAULT_LOCALE
             "priceCurrency": "CNY"
         },
         "featureList": [
-            "无线AirPlay镜像",
-            "有线连接镜像",
-            "屏幕录制",
-            "音频录制"
+            "USB有线（最高4K）与Wi-Fi（最高2.5K）双模投屏",
+            "支持多台iPhone/iPad同时并发镜像",
+            "免在iOS设备安装App（原生AirPlay协议）",
+            "投屏画面录制为 MP4 / MOV / GIF",
+            "实时截图保存为 PNG 与 JPEG 格式",
+            "支持腾讯、爱奇艺、YouTube等200+视频网站大屏投射",
+            "iOS系统音频无损同步与Mac扬声器监听"
         ],
         "author": {
             "@type": "Organization",
@@ -101,39 +109,39 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
   <Fragment slot="head">
     <title>
       {locale === DEFAULT_LOCALE
-        ? "DeviceMirror: iPhone Mirror for Mac | AirPlay Screen Mirroring"
+        ? "DeviceMirror: iPhone Mirror for Mac | USB 4K & Wi-Fi AirPlay Screen Mirroring"
         : locale === "ja"
-        ? "DeviceMirror: iPhone画面をMacにミラーリング | AirPlay 画面ミラーリング"
-        : "DeviceMirror: iPhone/iPad屏幕镜像到Mac | AirPlay屏幕镜像"}
+        ? "DeviceMirror: iPhone画面をMacにミラーリング | USB 4K＆Wi-Fi AirPlay対応"
+        : "DeviceMirror: iPhone/iPad投屏到Mac | USB 4K与Wi-Fi双模镜像录制"}
     </title>
     <meta
       name="title"
       content={
         locale === DEFAULT_LOCALE
-          ? "DeviceMirror - iPhone Mirror & Screen Mirroring for iPhone/iPad to Mac"
+          ? "DeviceMirror - Dual-Mode USB & Wi-Fi iOS Screen Mirroring for Mac"
           : locale === "ja"
-          ? "DeviceMirror - iPhone/iPad の画面を Mac に高画質ミラーリング"
-          : "DeviceMirror - 将iPhone/iPad的屏幕镜像到Mac电脑"
+          ? "DeviceMirror - iPhone/iPad画面をMacに超低遅延ミラーリング＆録画"
+          : "DeviceMirror - USB 4K与Wi-Fi双模：iPhone/iPad屏幕声音镜像到Mac"
       }
     />
     <meta
       name="description"
       content={
         locale === DEFAULT_LOCALE
-          ? "Best iPhone mirror app for Mac. Mirror iPhone/iPad screen to Mac wirelessly via AirPlay 2 or wired USB. Support 4K resolution, screen recording, and real-time streaming."
+          ? "Best iPhone mirror app for Mac. Mirror iOS screen and audio to Mac via USB (up to 4K) or Wi-Fi (up to 2.5K). Support multi-device mirroring, MP4/MOV/GIF recording, and 200+ video sites."
           : locale === "ja"
-          ? "iPhoneやiPadの画面をMacに超低遅延でミラーリング。AirPlayワイヤレス接続およびUSB有線に対応し、4K高解像度、音声付き画面録画、ゲーム実況を快適に実現。"
-          : "最佳的Mac版iPhone镜像应用。通过AirPlay2或有线USB将iPhone/iPad屏幕镜像到Mac。支持4K分辨率、屏幕录制和实时流传输。"
+          ? "iPhoneやiPadの画面と音声をMacに超低遅延ミラーリング。USB有線（最大4K）＆Wi-Fi（最大2.5K）対応、複数台同時表示、MP4/MOV/GIF録画、200以上の動画配信サイトの大画面再生をサポート。"
+          : "专业Mac版iPhone/iPad投屏软件。支持USB有线（最高4K）与Wi-Fi（最高2.5K）双模投屏、多台设备同时镜像、音画同录为MP4/MOV/GIF、实时PNG/JPEG截图以及200+主流视频网站大屏投射。"
       }
     />
     <meta
       name="keywords"
       content={
         locale === DEFAULT_LOCALE
-          ? "DeviceMirror, iPhone mirror, iPhone mirror for Mac, screen mirroring iPhone to Mac, AirPlay mirror, iPad mirror, mirror iPhone to Mac, AirPlay screen mirroring, wireless screen mirror, 4K screen mirroring"
+          ? "DeviceMirror, iPhone mirror for Mac, screen mirroring iPhone to Mac, AirPlay Mac, 4K screen mirroring, mirror iPad to Mac, record iPhone screen on Mac, multi-device mirroring, iOS screen recording GIF"
           : locale === "ja"
-          ? "DeviceMirror, iPhone ミラーリング Mac, iPhone 画面共有 Mac, AirPlay ミラーリング Mac, iPad ミラーリング, スマホ画面 Mac 録画, 4K ミラーリング"
-          : "DeviceMirror, iPhone 镜像, Mac版iPhone镜像, iPhone到Mac屏幕镜像, AirPlay镜像, iPad镜像, 镜像iPhone到Mac, AirPlay屏幕镜像, 无线屏幕镜像, 4K屏幕镜像"
+          ? "DeviceMirror, iPhone ミラーリング Mac, iPhone 画面共有 Mac, AirPlay ミラーリング Mac, iPad ミラーリング, スマホ画面 Mac 録画, 4K ミラーリング, 複数台 同時 ミラーリング, スマホ 画面録画 GIF"
+          : "DeviceMirror, iPhone投屏Mac, iPad投屏Mac, Mac接收AirPlay, USB投屏4K, 手机投屏录制GIF, 苹果手机镜像到电脑, 多台iPhone同时投屏, 腾讯视频投屏Mac, 爱奇艺投屏Mac"
       }
     />
     <meta name="author" content="Fineusing" />
@@ -205,11 +213,13 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
   </section>
 
   <section class="py-20 bg-slate-50">
-    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
       {dict.devicemirror.features.map((feature) => (
-        <div class="bg-white p-8 rounded-2xl shadow-sm">
-          <h3 class="text-xl font-bold mb-2">{feature.title}</h3>
-          <p class="text-slate-500">{feature.body}</p>
+        <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+          <div>
+            <h3 class="text-lg font-bold mb-2.5 text-slate-900">{feature.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{feature.body}</p>
+          </div>
         </div>
       ))}
     </div>
@@ -234,9 +244,9 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
       <div class="flex flex-col md:flex-row-reverse items-center gap-12">
         <div class="w-full md:w-1/2">
           <div
-            class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-500"
+            class="rounded-xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-lg transform rotate-2 hover:rotate-0 transition-transform duration-500 overflow-hidden"
           >
-            <img src="/img/devicemirror-record.png" alt="DeviceMirror recording" />
+            <img src="/img/devicemirror-record.png" alt="DeviceMirror recording" class="w-full h-full object-cover rounded-xl" />
           </div>
         </div>
         <div class="w-full md:w-1/2">
