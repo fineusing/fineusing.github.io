@@ -37,7 +37,7 @@ const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
     <section class="max-w-5xl mx-auto pb-10 border-b border-slate-200">
       <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">思考与产品手记</h1>
       <p class="text-slate-500 max-w-2xl leading-relaxed mt-4">
-        记录我们在构建 Rightly、DeviceMirror、NTFSSync、AppPad 与 ZipGo 过程中的设计思考与实用指南。
+        记录我们在构建 Rightly、DeviceMirror、NTFSSync、AppPad、ZipGo 与 AConverter 过程中的设计思考与实用指南。
       </p>
     </section>
 
@@ -79,6 +79,12 @@ const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
         >
           ZipGo
         </button>
+        <button
+          class="px-4 py-1.5 rounded-md bg-white border border-slate-200 text-slate-600 text-sm hover:border-slate-400 transition-colors"
+          data-filter="AConverter"
+        >
+          AConverter
+        </button>
       </div>
 
       <div class="space-y-14" id="blog-list">
@@ -95,6 +101,8 @@ const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
                     ? "bg-teal-50 text-teal-600"
                     : post.data.product === "ZipGo"
                     ? "bg-amber-50 text-amber-600"
+                    : post.data.product === "AConverter"
+                    ? "bg-rose-50 text-rose-600"
                     : "bg-indigo-50 text-indigo-600"
                 }`}
               >
@@ -103,6 +111,7 @@ const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
                   : post.data.product === "DeviceMirror" ? "DM"
                   : post.data.product === "NTFSSync" ? "NS"
                   : post.data.product === "ZipGo" ? "ZG"
+                  : post.data.product === "AConverter" ? "AC"
                   : "AP"
                 }</span>
               </div>
@@ -116,6 +125,8 @@ const posts = Object.values(import.meta.glob("./*.md", { eager: true }))
                     ? "text-teal-600"
                     : post.data.product === "ZipGo"
                     ? "text-amber-600"
+                    : post.data.product === "AConverter"
+                    ? "text-rose-600"
                     : "text-indigo-600"
                 }`}
               >

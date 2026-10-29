@@ -8,6 +8,7 @@ const base = getBasePath(locale);
 const homeHref = `${base}/index.html`;
 const apppadHref = `${base}/apppad.html`;
 const devicemirrorHref = `${base}/devicemirror.html`;
+const aconverterHref = `${base}/aconverter.html`;
 const rightlyHref = `${base}/rightly.html`;
 const zipgoHref = `${base}/zipgo.html`;
 const ntfssyncHref = `${base}/ntfssync.html`;
@@ -86,6 +87,15 @@ const jaHref = `/ja${cleanPage}`;
                     <div>
                       <div class="font-semibold text-gray-900">DeviceMirror</div>
                       <div class="text-xs text-gray-500">{dict.nav.devicemirrorTag}</div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href={aconverterHref} class="flex items-center px-4 py-3 hover:bg-gray-50 transition-colors">
+                    <img src="/img/aconverter-logo.png" onerror="this.onerror=null; this.src='/img/devicemirror-logo.png';" class="w-10 h-10 mr-3" alt="AConverter logo" />
+                    <div>
+                      <div class="font-semibold text-gray-900">AConverter</div>
+                      <div class="text-xs text-gray-500">{dict.nav.aconverterTag}</div>
                     </div>
                   </a>
                 </li>

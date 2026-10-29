@@ -13,6 +13,7 @@ const dictionaries = {
       privacy: "Privacy Policy",
       apppadTag: "Alternatives to macOS 26 Launchpad",
       devicemirrorTag: "iPhone Screen Mirroring To Mac",
+      aconverterTag: "All-in-One Audio Converter & Ringtone Maker",
       rightlyTag: "Finder Right-Click Toolkit",
       zipgoTag: "Finder Right-Click Archiver",
       ntfssyncTag: "NTFS Read-Write Driver for Mac",
@@ -37,6 +38,11 @@ const dictionaries = {
       devicemirrorHeading: "USB 4K & Wi-Fi 2.5K dual-mode mirroring, multi-device sync & recording",
       devicemirrorBody:
         "DeviceMirror seamlessly mirrors your iPhone and iPad screen and audio to Mac via USB or Wi-Fi (AirPlay). Zero app required on iOS. Enjoy 200+ video sites on the big screen, 4K 60FPS zero-lag mobile gaming, speaker audio listening, and recording to MP4, MOV, or GIF.",
+      aconverterTitle: "AConverter",
+      aconverterSubtitle: "Universal Audio Converter & Ringtone Maker for Mac",
+      aconverterHeading: "Convert any audio format, extract audio from videos, and cut ringtones with 8-thread speed",
+      aconverterBody:
+        "AConverter converts virtually any audio file to MP3, M4A, WAV, M4R, OGG, and more. Extract audio tracks directly from MP4, MOV, MKV, or WebM videos. Featuring visual waveform trimming for iPhone ringtones, sequential audio concatenation, and 100% private local batch conversion up to 8 parallel tasks.",
       rightlyTitle: "Rightly",
       rightlySubtitle: "Mac Context Menu Enhancer",
       rightlyHeading: "Put frequent actions into right-click",
@@ -161,6 +167,56 @@ const dictionaries = {
         {
           title: "Online Course, App Demo & Multi-Device Testing",
           body: "Record iOS screen tutorials directly to MP4, MOV, or GIF files on Mac with real-time PNG/JPEG snapshots. Simultaneously mirror multiple test devices for seamless multi-device QA."
+        }
+      ]
+    },
+    aconverter: {
+      title: "AConverter",
+      subtitle: "Universal Audio Converter for Mac: NetEase/QQ music conversion, video audio extraction, 8-thread batch concurrency, and 100% local processing",
+      cta: "Download on Mac App Store",
+      downloadUrl: "https://apps.apple.com/app/id1606741874",
+      features: [
+        {
+          title: "Mainstream Streaming Format Conversion",
+          body: "Directly converts proprietary formats from QQ Music (.mflac, .mgg) and NetEase Cloud Music (.ncm) into standard MP3 and lossless FLAC, ready for car stereos and portable DAPs."
+        },
+        {
+          title: "Universal Audio Input Support (17+ Formats)",
+          body: "Accepts virtually all audio formats: MP3, NCM, MFLAC, MGG, M4A, M4R, WAV, AIFF, FLAC, AC3, AAC, OGG, CAF, AMR, MP2, APE, WMA, and more."
+        },
+        {
+          title: "Direct Audio Extraction from 4K/HD Videos",
+          body: "Easily extract pure audio tracks from MP4, MOV, MKV, M4V, AVI, WMV, WEBM, FLV, TS, and more without opening bulky video editing software."
+        },
+        {
+          title: "Rich Audio Output Formats (12 Formats)",
+          body: "Export to MP3, M4A, M4R, WAV, AIFF, FLAC, AC3, AAC, OGG, CAF, AMR, MP2 with pristine acoustic fidelity and zero quality loss."
+        },
+        {
+          title: "Granular Audio Parameter Customization",
+          body: "Fine-tune sample rates (8kHz to 192kHz), bitrates (up to 320kbps / lossless), stereo/mono channels, and smooth audio fade-in & fade-out durations."
+        },
+        {
+          title: "Up to 8 Parallel Concurrency Tasks",
+          body: "Fully unleashes Apple Silicon hardware multi-core performance. Convert dozens of songs in parallel simultaneously in seconds with customizable concurrency."
+        },
+        {
+          title: "Visual Waveform Cutter & iPhone Ringtone Maker",
+          body: "Integrated audio player and millisecond-accurate waveform editor. Effortlessly preview, trim clips, add fade transitions, and export iPhone .m4r ringtones."
+        },
+        {
+          title: "Sequential Audio Merger & 100% Offline Privacy",
+          body: "Drag and drop multiple voice recordings or podcast chapters to merge them sequentially into a single file. 100% local offline conversion guarantees zero cloud leakage."
+        }
+      ],
+      showcase: [
+        {
+          title: "Music Platform Format Conversion & Universal Video Extraction",
+          body: "Unlock QQ Music (.mflac/.mgg) and NetEase Cloud (.ncm) songs to standard MP3/FLAC for your car audio system. Extract crystal-clear soundtrack from 4K movies and YouTube videos in seconds."
+        },
+        {
+          title: "Visual Ringtone Trimming, Audio Merging & 8-Thread Concurrency",
+          body: "Cut your favorite 29-second climax with smooth fade-in/fade-out for instant iPhone .m4r ringtones. Batch process hundreds of songs with 8 parallel threads or concatenate separate audio files seamlessly."
         }
       ]
     },
@@ -402,6 +458,7 @@ const dictionaries = {
       privacy: "隐私政策",
       apppadTag: "macOS 26启动台替代品",
       devicemirrorTag: "iPhone屏幕镜像到Mac",
+      aconverterTag: "全能音频格式转换与铃声制作",
       rightlyTag: "macOS 原生右键增强工具",
       zipgoTag: "macOS Finder 原生右键解压缩工具",
       ntfssyncTag: "macOS 专业 NTFS 磁盘读写工具",
@@ -426,6 +483,11 @@ const dictionaries = {
       devicemirrorHeading: "USB 4K / Wi-Fi 2.5K 双模极速投屏，多设备并发与音画同录",
       devicemirrorBody:
         "支持免装 App 的原生 AirPlay 无线投屏与 USB 极速有线直连。在 Mac 大屏上畅享 200+ 平台高清影视、分享 4K 60FPS 手游实况，高保真聆听手机音乐，更支持将投屏一键录制为 MP4/MOV/GIF 与多机并发镜像。",
+      aconverterTitle: "AConverter",
+      aconverterSubtitle: "支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌",
+      aconverterHeading: "全格式音频转换、视频提取音频、可视化铃声裁剪与 8 线程极速并发",
+      aconverterBody:
+        "AConverter 是 macOS 平台上的全能本地音频转换工具。支持网易云（ncm）与 QQ 音乐（mflac/mgg）格式转换，覆盖几乎所有音频与视频格式。提供毫秒级波形裁剪轻松制作 iPhone/Android 铃声，支持多音频顺序拼接合并，全本地运算，单曲数秒即转，最高支持 8 任务极速并发。",
       rightlyTitle: "Rightly",
       rightlySubtitle: "macOS 右键增强工具",
       rightlyHeading: "把常用操作放进右键菜单",
@@ -549,6 +611,56 @@ const dictionaries = {
         {
           title: "网课录制、App交互演示与多机同屏对比",
           body: "无需在手机端录屏后繁琐 AirDrop 导出。在 Mac 上直接录制投屏画面为 MP4、MOV 或动态 GIF，实时截取 PNG/JPEG 教程配图，支持多台 iOS 设备并发同屏对比，大幅提升教学与研发效率。"
+        }
+      ]
+    },
+    aconverter: {
+      title: "AConverter",
+      subtitle: "支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌",
+      cta: "App Store 免费下载",
+      downloadUrl: "https://apps.apple.com/app/id1606741874",
+      features: [
+        {
+          title: "主流音乐播放器格式转换",
+          body: "深度支持 QQ 音乐专属格式（.mflac、.mgg）与网易云音乐专属格式（.ncm）转换，批量转换为标准 MP3 与无损 FLAC，车载音响与随身听即插即放。"
+        },
+        {
+          title: "支持几乎所有音频格式输入（17+ 种）",
+          body: "全面支持 mp3, ncm, mflac, mgg, m4a, m4r, wav, aiff, flac, ac3, aac, ogg, caf, amr, mp2, ape, wma 等绝大部分常见与专业音频格式。"
+        },
+        {
+          title: "全格式视频秒级提取音频（9+ 种）",
+          body: "支持导入 mp4, mov, mkv, m4v, avi, wmv, webm, flv, ts 等绝大部分视频，无需打开笨重剪辑软件，一键抽离无损原声音轨。"
+        },
+        {
+          title: "12 种丰富音频格式输出",
+          body: "自由导出为 mp3, m4a, m4r, wav, aiff, flac, ac3, aac, ogg, caf, amr, mp2，无缝适配各种播放终端、剪辑工程与移动设备。"
+        },
+        {
+          title: "专业音频参数深度定制",
+          body: "支持自由调节采样率（8000Hz~192000Hz）、比特率（64kbps~320kbps 及无损）、声道（立体声/单声道/5.1）与首尾平滑淡入淡出时长。"
+        },
+        {
+          title: "多任务并发批量转换（最高 8 线程）",
+          body: "支持批量导入文件并自定义并发数量，最高支持 8 个任务同时全速转码，充分压榨 Apple Silicon 多核算力，单曲数秒极速搞定。"
+        },
+        {
+          title: "音乐播放、波形裁剪与专属铃声制作",
+          body: "内置高清波形编辑器与音频试听播放器，毫秒级拖动裁剪高潮片段，智能设置淡入淡出，一键导出 iPhone 专属 .m4r 或 Android 铃声。"
+        },
+        {
+          title: "多音频顺序拼接合并与 100% 本地隐私保护",
+          body: "支持将多段会议录音、有声书章节自由拖动排序并缝合为一个完整音频。全流程 100% 本地运算，无需联网上传云端，彻底杜绝隐私泄露。"
+        }
+      ],
+      showcase: [
+        {
+          title: "音乐平台格式转换与视频提取音频",
+          body: "将网易云（.ncm）与 QQ 音乐（.mflac/.mgg）一键转换为车载 U 盘可读的 MP3/FLAC；把 4K 电影、网课与 YouTube 视频快速剥离为纯音频随时复习。"
+        },
+        {
+          title: "可视化铃声制作、音频拼接与 8 线程并发",
+          body: "无需库乐队复杂搓屏，在 Mac 上截取 29 秒高潮片段加 1 秒淡出即成 iPhone 铃声；自定义拖拽排序合并多段零散录音，8 线程并发几分钟搞定上百首大文件批量转码。"
         }
       ]
     },
@@ -788,6 +900,7 @@ const dictionaries = {
     "privacy": "プライバシーポリシー",
     "apppadTag": "macOS 26 対応 Launchpad 代替アプリ",
     "devicemirrorTag": "iPhone 画面を Mac に高画質ミラーリング",
+    "aconverterTag": "万能オーディオコンバーター＆着信音作成",
     "rightlyTag": "Finder 右クリック拡張ツール",
     "zipgoTag": "Finder 右クリック解凍・圧縮ツール",
     "ntfssyncTag": "Mac 用 NTFS 読み書き＆フォーマット",
@@ -810,6 +923,10 @@ const dictionaries = {
     "devicemirrorSubtitle": "iPhone / iPad 画面と音声を Mac に超低遅延ミラーリング",
     "devicemirrorHeading": "USB 4K / Wi-Fi 2.5K 双モード投映、複数台同時ミラーリング＆高画質録画",
     "devicemirrorBody": "iOS側にアプリ不要のAirPlayワイヤレス＆USB有線直結に対応。200以上の動画配信サイトの大画面再生、遅延ゼロの4K 60FPSゲーム実況、Macスピーカーでの音楽再生、MP4/MOV/GIFへの直接録画を快適に実現します。",
+    "aconverterTitle": "AConverter",
+    "aconverterSubtitle": "主要音楽配信フォーマット変換、全形式の動画から音声抽出、8スレッド高速並行処理、完全ローカル変換でプライバシー保護",
+    "aconverterHeading": "あらゆる音楽・動画から音声を抽出、波形トリミングで着信音作成、8スレッド爆速バッチ変換",
+    "aconverterBody": "AConverter は、Mac 専用の万能オーディオ変換ツールです。主要音楽配信フォーマット（NCM/MFLAC/MGG）の変換、ほぼすべての音声・動画ファイルからの音声抽出に対応。直感的な波形編集で iPhone 用着信音（M4R）を瞬時に作成でき、複数ファイルの結合や最大 8 スレッドの並行バッチ変換をすべて完全ローカルで安全かつ高速に実行します。",
     "rightlyTitle": "Rightly",
     "rightlySubtitle": "Mac の Finder を強化する右クリック拡張ツール",
     "rightlyHeading": "日常の頻出操作をすべて右クリックメニューへ集約",
@@ -931,6 +1048,56 @@ const dictionaries = {
       {
         "title": "オンライン講座録画、App操作チュートリアル、複数機テスト",
         "body": "iPhone側での録画やAirDrop転送の手間をゼロに。Mac上で直接MP4/MOV/GIFへ録画し、PNG/JPEGで瞬時に作図。複数台のiOS端末を並べて同時に動作確認できるため、開発・検証効率が大幅に向上します。"
+      }
+    ]
+  },
+  "aconverter": {
+    "title": "AConverter",
+    "subtitle": "Mac専用万能オーディオ変換ツール：主要音楽配信フォーマット変換、全形式動画から音声抽出、8スレッド高速並行処理、完全ローカル変換で安心",
+    "cta": "Mac App Store でダウンロード",
+    "downloadUrl": "https://apps.apple.com/app/id1606741874",
+    "features": [
+      {
+        "title": "主要音楽ストリーミング形式の変換に対応",
+        "body": "QQ音楽（.mflac / .mgg）や網易雲音楽（.ncm）などの独自フォーマットを標準MP3や可逆圧縮FLACへ一括変換。カーナビや外部DAPプレイヤーで快適に再生できます。"
+      },
+      {
+        "title": "ほぼすべての音声入力に対応（17形式以上）",
+        "body": "MP3, NCM, MFLAC, MGG, M4A, M4R, WAV, AIFF, FLAC, AC3, AAC, OGG, CAF, AMR, MP2, APE, WMA など、一般的な形式から高音質ハイレゾ音源まで網羅。"
+      },
+      {
+        "title": "あらゆる動画から高音質音声を瞬時に抽出",
+        "body": "MP4, MOV, MKV, M4V, AVI, WMV, WEBM, FLV, TS などの動画ファイルをドラッグするだけで、動画編集ソフトを使わずに音声トラックのみを数秒で抽出可能。"
+      },
+      {
+        "title": "12種類の豊富なオーディオ出力フォーマット",
+        "body": "MP3, M4A, M4R, WAV, AIFF, FLAC, AC3, AAC, OGG, CAF, AMR, MP2 への書き出しに対応。再生機器や用途に合わせた最適な形式を選択できます。"
+      },
+      {
+        "title": "サンプリングレート・ビットレート・フェード調整",
+        "body": "サンプリング周波数（8kHz〜192kHz）、ビットレート（最大320kbps／無損失）、チャンネル（ステレオ/モノラル/5.1ch）、フェードイン・フェードアウトを細かく設定可能。"
+      },
+      {
+        "title": "最大8タスクの高速並行バッチ処理",
+        "body": "Apple Silicon のマルチコア性能をフル活用。最大8ファイル同時に高速並行変換を実行し、大量の音楽ライブラリもわずか数分で変換完了します。"
+      },
+      {
+        "title": "直感的な波形トリミングとiPhone着信音（M4R）作成",
+        "body": "高精度な波形編集と内蔵プレーヤーを搭載。サビ部分をミリ秒単位で切り出し、フェード処理を加えてワンクリックでiPhone専用の .m4r 着信音を作成できます。"
+      },
+      {
+        "title": "複数ファイルの順番通り結合＆完全オフライン保護",
+        "body": "バラバラの録音メモやオーディオブックのチャプターを自由に並べ替えて1つのファイルへスムーズに結合。クラウドへ送信しない100%ローカル処理で情報漏洩を防ぎます。"
+      }
+    ],
+    "showcase": [
+      {
+        "title": "音楽フォーマット変換＆動画からの音声スピード抽出",
+        "body": "専用形式の音楽ファイルを標準MP3/FLACへ即座に復元し車載USBで鑑賞。4K映画やWeb動画からクリアなBGMや講義音声をわずか数秒で抽出します。"
+      },
+      {
+        "title": "波形着信音作成、ファイル結合、8スレッド高速バッチ処理",
+        "body": "iPhone用着信音をフェード付きで直感作成。複数トラックの連結や、最大8スレッドによる数百曲のライブラリ一括変換もストレスなく完了します。"
       }
     ]
   },

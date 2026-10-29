@@ -23,6 +23,11 @@
        <priority>0.8000</priority>
   </url>
   <url>
+       <loc>https://fineusing.com/aconverter.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
        <loc>https://fineusing.com/ntfssync.html</loc>
        <lastmod>2026-10-01T15:15:38+00:00</lastmod>
        <priority>0.8000</priority>
@@ -60,6 +65,11 @@
   <url>
        <loc>https://fineusing.com/cn/devicemirror.html</loc>
        <lastmod>2026-10-01T15:15:38+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/aconverter.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
   <url>
@@ -121,6 +131,11 @@
   <url>
        <loc>https://fineusing.com/ja/devicemirror.html</loc>
        <lastmod>2026-10-25T18:00:00+00:00</lastmod>
+       <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/aconverter.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
        <priority>0.8000</priority>
   </url>
   <url>
@@ -957,6 +972,156 @@
   <url>
        <loc>https://fineusing.com/ja/blog/devicemirror-vs-quicktime-airserver-lonelyscreen.html</loc>
        <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-convert-ncm-mflac-mgg-to-mp3-flac.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-convert-ncm-mflac-mgg-to-mp3-flac.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-convert-ncm-mflac-mgg-to-mp3-flac.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-extract-audio-from-video-fast.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-extract-audio-from-video-fast.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-extract-audio-from-video-fast.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-make-iphone-m4r-ringtone-tutorial.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-make-iphone-m4r-ringtone-tutorial.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-make-iphone-m4r-ringtone-tutorial.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-why-offline-local-converter-beats-online-tools.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-why-offline-local-converter-beats-online-tools.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-why-offline-local-converter-beats-online-tools.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-batch-convert-8-threads-apple-silicon-benchmark.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-batch-convert-8-threads-apple-silicon-benchmark.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-batch-convert-8-threads-apple-silicon-benchmark.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-merge-combine-multiple-audio-files-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-merge-combine-multiple-audio-files-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-merge-combine-multiple-audio-files-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-flac-ape-wav-aiff-lossless-comparison-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-flac-ape-wav-aiff-lossless-comparison-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-flac-ape-wav-aiff-lossless-comparison-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-audio-sample-rate-44100-48000-audio-drift-fix.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-audio-sample-rate-44100-48000-audio-drift-fix.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-audio-sample-rate-44100-48000-audio-drift-fix.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-convert-amr-wma-caf-legacy-audio-formats.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-convert-amr-wma-caf-legacy-audio-formats.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-convert-amr-wma-caf-legacy-audio-formats.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/blog/aconverter-audio-bitrate-128k-320k-lossless-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/cn/blog/aconverter-audio-bitrate-128k-320k-lossless-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
+       <priority>0.6400</priority>
+  </url>
+  <url>
+       <loc>https://fineusing.com/ja/blog/aconverter-audio-bitrate-128k-320k-lossless-guide.html</loc>
+       <lastmod>2026-10-29T00:00:00+00:00</lastmod>
        <priority>0.6400</priority>
   </url>
 </urlset>

@@ -333,6 +333,43 @@ const altJa = "https://fineusing.com/ja/";
       </div>
     </section>
 
+    <section class="py-20 border-b border-gray-100 bg-slate-50/50">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="flex flex-col items-center justify-center mb-6">
+          <div class="w-24 h-24 bg-gradient-to-br from-500 to-600 rounded-2xl shadow-lg mb-4 flex items-center justify-center text-white text-3xl font-bold">
+            <img src="/img/aconverter-logo.png" onerror="this.onerror=null; this.src='/img/devicemirror-logo.png';" alt="AConverter logo" />
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">{dict.home.aconverterTitle}</h2>
+          <p class="text-lg text-slate-500 mt-2">{dict.home.aconverterSubtitle}</p>
+        </div>
+
+        <div class="mt-10">
+          <img src="/img/aconverter-home.png" class="rounded-xl shadow-md mx-auto" alt="AConverter screenshot" />
+
+          <div class="max-w-2xl mx-auto text-center mt-8">
+            <h3 class="text-2xl font-semibold text-slate-800 mb-4">{dict.home.aconverterHeading}</h3>
+            <p class="text-slate-600 leading-relaxed text-lg mb-6">{dict.home.aconverterBody}</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href={dict.aconverter.downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex px-8 py-3 bg-slate-900 hover:bg-slate-800 text-white rounded-full font-semibold transition-all"
+              >
+                {dict.home.ctaPrimary}
+              </a>
+              <a
+                href={`${base}/aconverter.html`}
+                class="inline-flex px-8 py-3 bg-white border border-gray-200 hover:border-blue-500 hover:text-blue-600 text-slate-700 rounded-full font-semibold transition-all"
+              >
+                {dict.home.learnMore}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="py-20 border-b border-gray-100">
       <div class="max-w-4xl mx-auto px-6 text-center">
         <div class="flex flex-col items-center justify-center mb-6">

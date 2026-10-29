@@ -1,0 +1,494 @@
+---
+import SiteLayout from "../layouts/SiteLayout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import { getDictionary, getLangHref, DEFAULT_LOCALE } from "../i18n";
+
+const { locale = DEFAULT_LOCALE, enableLangRedirect = false } = Astro.props;
+const dict = getDictionary(locale);
+const langHref = getLangHref(locale, "/aconverter.html");
+
+const ldJson = locale === DEFAULT_LOCALE
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AConverter",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS",
+        "description": "All-in-one local audio converter for Mac: NetEase/QQ music format conversion, universal video audio extraction, 8-thread batch concurrency, waveform ringtone trimmer, and audio merger",
+        "url": "https://fineusing.com/aconverter.html",
+        "image": "https://fineusing.com/img/aconverter-home.png",
+        "screenshot": "https://fineusing.com/img/aconverter-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "QQ Music (.mflac, .mgg) and NetEase Cloud (.ncm) format conversion",
+            "Extract audio from MP4, MOV, MKV, WebM and 9+ video formats",
+            "Export to MP3, M4A, M4R, WAV, AIFF, FLAC, AC3, AAC, OGG, CAF, AMR, MP2",
+            "Custom sample rate (8kHz-192kHz), bitrate (up to 320kbps/lossless), channels, and fade effects",
+            "Batch conversion with up to 8 parallel tasks on Apple Silicon",
+            "Waveform trimming and iPhone .m4r ringtone creation",
+            "Sequential audio concatenation and merger",
+            "100% offline local processing with zero cloud data upload"
+        ]
+    }`
+  : locale === "ja"
+  ? `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AConverter",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS",
+        "description": "Mac専用の万能オーディオコンバーター：主要音楽配信フォーマット（NCM/MFLAC/MGG）変換、全形式動画からの音声抽出、8スレッド高速並行処理、波形トリミング着信音作成、複数ファイル結合",
+        "url": "https://fineusing.com/ja/aconverter.html",
+        "image": "https://fineusing.com/img/aconverter-home.png",
+        "screenshot": "https://fineusing.com/img/aconverter-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "JPY"
+        },
+        "featureList": [
+            "QQ音楽（.mflac, .mgg）および網易雲音楽（.ncm）形式の変換",
+            "MP4, MOV, MKV, WebM など9種以上の動画から音声抽出",
+            "MP3, M4A, M4R, WAV, AIFF, FLAC, AC3, AAC, OGG, CAF, AMR, MP2への書き出し",
+            "サンプリングレート・ビットレート・チャンネル・フェードイン/アウト設定",
+            "最大8スレッドの並行バッチ処理",
+            "直感的な波形編集とiPhone専用着信音（.m4r）作成",
+            "複数音声ファイルの順番通り結合・連結",
+            "100%完全ローカル処理でプライバシー保護"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`
+  : `{
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AConverter",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS",
+        "description": "全能本地音频转换器：支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌",
+        "url": "https://fineusing.com/cn/aconverter.html",
+        "image": "https://fineusing.com/img/aconverter-home.png",
+        "screenshot": "https://fineusing.com/img/aconverter-home.png",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        },
+        "featureList": [
+            "支持QQ音乐（.mflac, .mgg）与网易云音乐（.ncm）格式转换",
+            "支持MP4、MOV、MKV、WebM等全格式视频秒级提取音频",
+            "支持输出MP3、M4A、M4R、WAV、AIFF、FLAC、AC3、AAC、OGG、CAF、AMR、MP2等12种格式",
+            "自由调节采样率、比特率、声道与淡入淡出",
+            "支持最高8个并发任务同时批量转换",
+            "内置音乐播放与毫秒级波形裁剪，轻松制作iPhone专属m4r铃声",
+            "多音频顺序无缝拼接合并",
+            "100%纯本地离线转换，零云端隐私上传"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Fineusing"
+        }
+    }`;
+
+const canonical = locale === DEFAULT_LOCALE
+  ? "https://fineusing.com/aconverter.html"
+  : locale === "ja"
+  ? "https://fineusing.com/ja/aconverter.html"
+  : "https://fineusing.com/cn/aconverter.html";
+const ogUrl = canonical;
+const altEn = "https://fineusing.com/aconverter.html";
+const altZh = "https://fineusing.com/cn/aconverter.html";
+const altJa = "https://fineusing.com/ja/aconverter.html";
+---
+<SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
+  <Fragment slot="head">
+    <title>
+      {locale === DEFAULT_LOCALE
+        ? "AConverter: All-in-One Local Audio Converter & Ringtone Maker for Mac"
+        : locale === "ja"
+        ? "AConverter: Mac専用万能オーディオコンバーター | 動画音声抽出＆着信音作成"
+        : "AConverter: 全能本地音频转换器 | 网易云QQ格式转换与视频提取音频"}
+    </title>
+    <meta
+      name="title"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "AConverter - Universal Audio Converter & Ringtone Trimmer for macOS"
+          : locale === "ja"
+          ? "AConverter - Mac専用万能オーディオ変換ツール＆着信音メーカー"
+          : "AConverter - 全能本地音频转换器：支持网易云/QQ音乐格式转换与全格式音视频提取"
+      }
+    />
+    <meta
+      name="description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Lossless audio converter for Mac. Convert NetEase NCM and QQ Music MFLAC/MGG, extract audio from videos, cut iPhone M4R ringtones, merge audio files, and batch process with up to 8 threads locally."
+          : locale === "ja"
+          ? "Mac専用の万能ローカル音声変換ツール。主要音楽形式（NCM/MFLAC/MGG）の変換、動画からの音声抽出、波形トリミングによるiPhone着信音作成、ファイル結合、最大8スレッド高速並行処理を完全ローカルで実現。"
+          : "AConverter 是一款 macOS 上的全能本地音频转换工具。支持网易云（ncm）与 QQ 音乐（mflac/mgg）格式转换、全格式音视频提取纯音频、毫秒级波形裁剪自制 iPhone 铃声、多音频顺序拼接合并，全本地运算，单曲数秒即转，支持最高 8 任务极速并发。"
+      }
+    />
+    <meta
+      name="keywords"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "AConverter, audio converter mac, convert ncm to mp3, convert mflac to flac, extract audio from video mac, make m4r ringtone mac, batch audio converter, merge audio files mac, offline audio converter"
+          : locale === "ja"
+          ? "AConverter, Mac 音声変換, 音声フォーマット変換, ncm mp3 変換, mflac 変換, 動画から音声抽出 Mac, iPhone 着信音 作成 m4r, 音声結合 Mac, オフライン 音声変換"
+          : "AConverter, 音频格式转换, Mac音频转换器, ncm转mp3, mflac转flac, mgg格式转换, 视频提取音频, Mac制作iPhone铃声, m4r铃声制作, 音频合并拼接, 本地批量音频转换"
+      }
+    />
+    <meta name="author" content="Fineusing" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonical} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={ogUrl} />
+    <meta
+      property="og:title"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "AConverter: All-in-One Local Audio Converter & Ringtone Maker for Mac"
+          : locale === "ja"
+          ? "AConverter: Mac専用万能オーディオコンバーター"
+          : "AConverter: 全能本地音频转换器 | 格式转换、视频提音与铃声裁剪"
+      }
+    />
+    <meta
+      property="og:description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Convert proprietary streaming formats, extract audio from any video, trim ringtones, and batch process with 8 parallel tasks. 100% offline & private."
+          : locale === "ja"
+          ? "主要音楽形式変換、動画からの音声抽出、着信音作成、最大8スレッド並行バッチ処理を完全ローカルで。"
+          : "支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌。"
+      }
+    />
+    <meta property="og:image" content="https://fineusing.com/img/aconverter-home.png" />
+    <meta property="og:site_name" content="Fineusing" />
+    <meta property="og:locale" content={dict.langTag} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="fineusing.com" />
+    <meta property="twitter:url" content={ogUrl} />
+    <meta
+      name="twitter:title"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "AConverter: All-in-One Local Audio Converter for Mac"
+          : locale === "ja"
+          ? "AConverter: Mac専用万能オーディオコンバーター"
+          : "AConverter: 全能本地音频转换器"
+      }
+    />
+    <meta
+      name="twitter:description"
+      content={
+        locale === DEFAULT_LOCALE
+          ? "Fast, private, multi-threaded audio conversion and ringtone creation on macOS."
+          : locale === "ja"
+          ? "Mac専用の万能ローカル音声変換ツール。完全ローカルで安全かつ爆速。"
+          : "支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌。"
+      }
+    />
+    <meta name="twitter:image" content="https://fineusing.com/img/aconverter-home.png" />
+
+    <!-- Alternate Links -->
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="zh" href={altZh} />
+    <link rel="alternate" hreflang="zh-CN" href={altZh} />
+    <link rel="alternate" hreflang="ja" href={altJa} />
+    <link rel="alternate" hreflang="ja-JP" href={altJa} />
+    <link rel="alternate" hreflang="x-default" href={altEn} />
+
+    <script type="application/ld+json" set:html={ldJson}></script>
+  </Fragment>
+
+  <Navbar locale={locale} active="products" langHref={langHref} />
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 text-blue-700 text-xs font-semibold mb-6">
+        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+        {locale === "ja" ? "100% 完全ローカル処理・プライバシー保護" : locale === "cn" ? "100% 纯本地极速离线运算 · 隐私零上传" : "100% Offline Local Processing · Zero Cloud Upload"}
+      </div>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 mb-6">{dict.aconverter.title}</h1>
+      <p class="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">{dict.aconverter.subtitle}</p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up delay-300">
+        <a
+          href={dict.aconverter.downloadUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          id="download"
+          class="w-full sm:w-auto px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+        >
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"
+            ></path>
+          </svg>
+          {dict.aconverter.cta}
+        </a>
+      </div>
+    </div>
+    <div class="mt-16 max-w-5xl mx-auto rounded-2xl border border-gray-200 bg-gray-50 p-4 mac-shadow overflow-hidden">
+      <img src="/img/aconverter-home.png" alt="AConverter macOS main window" class="w-full h-auto rounded-xl shadow-inner" />
+    </div>
+  </section>
+
+  <!-- 8 Core Features Grid -->
+  <section class="py-20 bg-slate-50 border-y border-slate-100">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-3xl font-bold text-slate-900 mb-3">
+          {locale === "ja" ? "Mac での音声処理を快適にする 8 大機能" : locale === "cn" ? "为 macOS 量身打造的 8 大全能音频特性" : "8 Core Pillars of Professional Audio Conversion on Mac"}
+        </h2>
+        <p class="text-slate-500 text-base">
+          {locale === "ja" ? "音楽配信フォーマット変換から着信音作成、動画抽出、8スレッドバッチ処理まで完全網羅" : locale === "cn" ? "涵盖音乐平台格式转换、视频一键提音、可视化裁剪铃声与多任务并发" : "Everything from streaming music format conversions to video soundtrack extraction, ringtone trims, and 8-thread batch processing."}
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {dict.aconverter.features.map((feature, idx) => (
+          <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-100 flex flex-col justify-between hover:shadow-md transition-shadow group">
+            <div>
+              <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                {String(idx + 1).padStart(2, '0')}
+              </div>
+              <h3 class="text-lg font-bold mb-2.5 text-slate-900">{feature.title}</h3>
+              <p class="text-slate-600 text-sm leading-relaxed">{feature.body}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Deep Showcase 1 & 2 -->
+  <section id="showcase" class="py-24 overflow-hidden">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <!-- Showcase 1 -->
+      <div class="flex flex-col md:flex-row items-center gap-14 mb-24">
+        <div class="w-full md:w-1/2">
+          <div class="rounded-2xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-xl transform -rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden">
+            <img src="/img/aconverter-waveform.png" alt="AConverter Waveform and Ringtone Trimmer" class="w-full h-full object-cover rounded-xl" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="inline-block px-3 py-1 rounded-md bg-indigo-50 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-4">
+            {locale === "ja" ? "波形編集＆着信音" : locale === "cn" ? "波形裁剪 · 专属铃声" : "Visual Waveform & Ringtone"}
+          </div>
+          <h3 class="text-3xl font-bold mb-4 text-slate-900">{dict.aconverter.showcase[0].title}</h3>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">{dict.aconverter.showcase[0].body}</p>
+          <ul class="space-y-3 text-slate-700 text-sm">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>{locale === "ja" ? "網易雲（.ncm）およびQQ音楽（.mflac/.mgg）の標準ファイル復元" : locale === "cn" ? "支持网易云（.ncm）与 QQ 音乐（.mflac/.mgg）一键转为标准 MP3/FLAC" : "Unlock NetEase (.ncm) and QQ Music (.mflac/.mgg) to standard audio"}
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>{locale === "ja" ? "MP4 / MOV / MKV / WebM など動画から無劣化で音声トラックを抽出" : locale === "cn" ? "拖入 MP4/MOV/MKV/WebM 视频，免渲染直接剥离高质量原声音轨" : "Extract lossless audio tracks directly from MP4/MOV/MKV without rendering"}
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>{locale === "ja" ? "車載USBメモリやポータブルプレイヤーへのスムーズな持ち出し" : locale === "cn" ? "转换后兼容车载音响、随身听、数字播放器与全系苹果设备" : "Fully compatible with car audio systems, portable DAPs, and Apple devices"}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Showcase 2 -->
+      <div class="flex flex-col md:flex-row-reverse items-center gap-14">
+        <div class="w-full md:w-1/2">
+          <div class="rounded-2xl bg-gray-100 aspect-video flex items-center justify-center border border-gray-200 shadow-xl transform rotate-1 hover:rotate-0 transition-transform duration-500 overflow-hidden">
+            <img src="/img/aconverter-batch.png" alt="AConverter Batch Conversion and Concurrency" class="w-full h-full object-cover rounded-xl" />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <div class="inline-block px-3 py-1 rounded-md bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
+            {locale === "ja" ? "8スレッド並行＆ファイル結合" : locale === "cn" ? "8 线程并发 · 顺序拼接" : "8-Thread Concurrency & Merger"}
+          </div>
+          <h3 class="text-3xl font-bold mb-4 text-slate-900">{dict.aconverter.showcase[1].title}</h3>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">{dict.aconverter.showcase[1].body}</p>
+          <ul class="space-y-3 text-slate-700 text-sm">
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>{locale === "ja" ? "最大8タスク同時並行処理。大量の音源ライブラリも数分で一括完了" : locale === "cn" ? "自定义 1~8 线程并发，数百首无损音乐库几分钟内极速转码完毕" : "Up to 8 concurrent threads. Convert hundreds of lossless songs in minutes"}
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>{locale === "ja" ? "会議録音やオーディオブック章立てをドラッグ並べ替えで1本に無縫結合" : locale === "cn" ? "支持将零散会议录音、有声小说多章节拖拽排序并缝合为一个文件" : "Drag-and-drop sort to merge scattered voice recordings or audiobook chapters"}
+              </span>
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+              <span>{locale === "ja" ? "サンプリング周波数、ビットレート、フェードイン/アウトの完全個別指定" : locale === "cn" ? "精细微调采样率、码率、单/立体声与首尾平滑淡入淡出曲线" : "Granular customization of sample rates, bitrates, channels, and fades"}
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Specifications Table -->
+  <section class="py-20 bg-slate-900 text-white">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="text-3xl font-bold mb-3">
+          {locale === "ja" ? "AConverter 技術仕様・対応フォーマット一覧" : locale === "cn" ? "AConverter 技术规格与全格式兼容表" : "AConverter Technical Specifications & Supported Formats"}
+        </h2>
+        <p class="text-slate-400 text-base">
+          {locale === "ja" ? "日常的に使う音楽から専門的なプロ仕様コーデックまで、包括的にサポート" : locale === "cn" ? "覆盖主流音乐、高清视频、冷门归档与专业母带级音频格式" : "Comprehensive compatibility across streaming, video soundtracks, and archival audio."}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700">
+          <div class="text-xs uppercase tracking-wider text-blue-400 font-semibold mb-2">
+            {locale === "ja" ? "入力フォーマット（音声＆動画）" : locale === "cn" ? "输入格式（音频 & 视频）" : "Input Formats (Audio & Video)"}
+          </div>
+          <h4 class="text-xl font-bold mb-4 text-white">
+            {locale === "ja" ? "ほぼすべての音源・映像に対応" : locale === "cn" ? "支持 26+ 种主流与专业多媒体输入" : "Broad Audio & Video Ingestion"}
+          </h4>
+          <div class="space-y-4 text-sm text-slate-300">
+            <div>
+              <span class="font-semibold text-white block mb-1">
+                {locale === "ja" ? "音声入力（17形式以上）：" : locale === "cn" ? "音频输入（17+ 种）：" : "Audio Inputs (17+ formats):"}
+              </span>
+              <p class="font-mono text-slate-400 leading-relaxed bg-slate-900/60 p-3 rounded-lg border border-slate-700/50">
+                mp3, ncm, mflac, mgg, m4a, m4r, wav, aiff, flac, ac3, aac, ogg, caf, amr, mp2, ape, wma
+              </p>
+            </div>
+            <div>
+              <span class="font-semibold text-white block mb-1">
+                {locale === "ja" ? "動画入力（9形式以上）：" : locale === "cn" ? "视频输入（9+ 种）：" : "Video Inputs (9+ formats):"}
+              </span>
+              <p class="font-mono text-slate-400 leading-relaxed bg-slate-900/60 p-3 rounded-lg border border-slate-700/50">
+                mp4, mov, mkv, m4v, avi, wmv, webm, flv, ts
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/80 p-8 rounded-2xl border border-slate-700">
+          <div class="text-xs uppercase tracking-wider text-emerald-400 font-semibold mb-2">
+            {locale === "ja" ? "出力フォーマット＆音響パラメータ" : locale === "cn" ? "输出格式 & 专业参数微调" : "Output Formats & Audio Parameters"}
+          </div>
+          <h4 class="text-xl font-bold mb-4 text-white">
+            {locale === "ja" ? "12種類の高音質書き出し" : locale === "cn" ? "支持 12 种主流输出与深度定制" : "12 Target Outputs & Controls"}
+          </h4>
+          <div class="space-y-4 text-sm text-slate-300">
+            <div>
+              <span class="font-semibold text-white block mb-1">
+                {locale === "ja" ? "音声出力（12形式）：" : locale === "cn" ? "音频输出（12 种）：" : "Target Formats (12 formats):"}
+              </span>
+              <p class="font-mono text-emerald-400/90 leading-relaxed bg-slate-900/60 p-3 rounded-lg border border-slate-700/50">
+                mp3, m4a, m4r, wav, aiff, flac, ac3, aac, ogg, caf, amr, mp2
+              </p>
+            </div>
+            <div>
+              <span class="font-semibold text-white block mb-1">
+                {locale === "ja" ? "パラメータカスタマイズ：" : locale === "cn" ? "自定义声学参数：" : "Acoustic Tuning:"}
+              </span>
+              <ul class="text-slate-400 list-disc pl-5 space-y-1">
+                <li>{locale === "ja" ? "サンプリング周波数：8,000Hz 〜 192,000Hz（44.1kHz / 48kHz 標準対応）" : locale === "cn" ? "采样率：8,000Hz 至 192,000Hz（支持 44.1kHz CD / 48kHz 影视标准）" : "Sample Rates: 8,000Hz to 192,000Hz (44.1kHz / 48kHz standard)"}</li>
+                <li>{locale === "ja" ? "ビットレート：64kbps 〜 320kbps および無損失可逆圧縮" : locale === "cn" ? "比特率：64kbps 至 320kbps 及无损母带级原样输出" : "Bitrates: 64kbps to 320kbps and Bit-Exact Lossless"}</li>
+                <li>{locale === "ja" ? "チャンネル：ステレオ（2ch）、モノラル（1ch）、5.1chサラウンド" : locale === "cn" ? "声道设置：立体声（Stereo）、单声道（Mono）、5.1 环绕声" : "Channels: Stereo (2ch), Mono (1ch), and 5.1 Surround"}</li>
+                <li>{locale === "ja" ? "フェードイン＆フェードアウト（0.5秒〜5.0秒）" : locale === "cn" ? "首尾平滑淡入淡出（0.5秒 至 5.0秒自由微调）" : "Fade-In & Fade-Out Envelope (0.5s - 5.0s customizable)"}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center text-slate-900 mb-12">
+        {locale === "ja" ? "よくあるご質問（FAQ）" : locale === "cn" ? "常见问题与真实解答" : "Frequently Asked Questions"}
+      </h2>
+      <div class="space-y-6">
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <h4 class="font-bold text-slate-900 text-lg mb-2">
+            {locale === "ja" ? "Q. 音声や動画ファイルはインターネットにアップロードされますか？" : locale === "cn" ? "问：转换过程中，音频或视频文件会被上传到云端服务器吗？" : "Q: Are my audio and video files uploaded to cloud servers?"}
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            {locale === "ja" ? "いいえ、一切アップロードされません。AConverter はすべてのトランスコード・抽出・波形編集処理をお使いの Mac の CPU / Apple Silicon 内部で 100% 完全ローカルに実行します。完全オフライン環境や機密性の高い音声でも安心してご利用いただけます。" : locale === "cn" ? "绝不上传。AConverter 的所有音频转码、音视频分离、波形裁剪与合并拼接均 100% 在你的 Mac 芯片本地完成，无需连接外部服务器。即使在完全断网或无网络连接的离线环境下也能秒速转换，商业会议录音与个人私密音频绝无外泄风险。" : "Absolutely not. AConverter executes 100% of transcoding, video extraction, waveform trimming, and concatenation locally inside your Mac's Apple Silicon/Intel hardware. No internet connection is required, ensuring zero cloud leakage for private recordings."}
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <h4 class="font-bold text-slate-900 text-lg mb-2">
+            {locale === "ja" ? "Q. QQ音楽の .mflac/.mgg や網易雲音楽の .ncm はなぜ通常再生できないのですか？" : locale === "cn" ? "问：为什么网易云（ncm）和 QQ 音乐（mflac/mgg）下载后车载电脑读不出来？" : "Q: Why can't my car stereo play downloaded NCM, MFLAC, or MGG files?"}
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            {locale === "ja" ? "これらは音楽配信プラットフォーム専用の独自形式で、通常のカーナビや標準プレイヤーではコーデックが対応しておらず再生エラーになります。AConverter を通すことで、音質を劣化させることなく汎用的な標準 MP3 や可逆圧縮 FLAC へ即座に変換でき、あらゆる機器で再生可能になります。" : locale === "cn" ? "这些后缀是音乐客户端的专属封装格式，普通车载音响、随身听或第三方播放软件没有内置对应的私有解码器，因此无法直接识别。通过 AConverter 可以直接批量将其还原为标准的 MP3（320kbps）或无损 FLAC，直接拷入车载 U 盘或随身听即可顺畅播放。" : "These extensions are proprietary packaged formats designed only for their respective desktop apps. Standard car audio stereos and Hi-Fi DAPs lack the proprietary decoders. AConverter converts them directly into standard 320kbps MP3 or lossless FLAC files ready for USB playback."}
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <h4 class="font-bold text-slate-900 text-lg mb-2">
+            {locale === "ja" ? "Q. iPhone の着信音（.m4r）を作成した後の転送方法は？" : locale === "cn" ? "问：在 Mac 上裁剪导出 .m4r 格式后，如何快速设置为 iPhone 电话铃声？" : "Q: How do I apply the exported .m4r file as my iPhone ringtone?"}
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            {locale === "ja" ? "AConverter で書き出した .m4r ファイルは、Lightning / USB-C ケーブルで Mac と iPhone を接続し、Finder のデバイス画面にドラッグ＆ドロップするだけで即座に同期されます。iPhone の「設定」→「サウンドと触覚」→「着信音」から作成した音源をワンタップで指定できます。" : locale === "cn" ? "非常简单。AConverter 导出的 .m4r 文件即为 iOS 原生铃声格式。只需用数据线将 iPhone 连接至 Mac，在访达（Finder）侧边栏选中你的 iPhone，将导出的 .m4r 文件直接拖拽到访达窗口内即可秒级同步。随后在 iPhone 的「设置」-「声音与触感」-「电话铃声」中即可直接选中播放。" : "It's seamless. The exported .m4r file matches iOS specifications. Connect your iPhone to your Mac via cable, open Finder, click your iPhone in the sidebar, and drag the .m4r file directly into the device window. Then head to iOS Settings > Sounds & Haptics > Ringtone to select it."}
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-50 border border-slate-100">
+          <h4 class="font-bold text-slate-900 text-lg mb-2">
+            {locale === "ja" ? "Q. 8スレッドの高速並行バッチ変換は Mac の動作を重くしますか？" : locale === "cn" ? "问：开启最高 8 任务并发批量转换时，会卡顿或大幅发热吗？" : "Q: Does 8-thread batch conversion cause system lag or overheating?"}
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            {locale === "ja" ? "AConverter は Apple Silicon（M1/M2/M3/M4）の効率コアと高性能コアに最適化されています。8タスク同時並行でもメモリ消費量は極めて少なく、バックグラウンドでブラウジングや他の作業を行いながら数分で数百曲の変換を静かに完了させることができます。" : locale === "cn" ? "完全不会。AConverter 针对 Apple Silicon（M1/M2/M3/M4 系列芯片）的能效核与性能核进行了底层硬件调度优化。即使拉满 8 线程并发转码，内存占用依然控制在几十兆级别，单首音频仅需 1~2 秒，在后台默默极速处理的同时，丝毫不影响你前台顺畅办公或剪辑。" : "Not at all. AConverter is optimized for Apple Silicon performance and efficiency cores. Even under full 8-thread concurrency, RAM usage stays around tens of megabytes, converting each song in just 1-2 seconds quietly in the background without stuttering."}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="py-20 bg-slate-50 border-t border-slate-100 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-slate-900 mb-4">
+        {locale === "ja" ? "今すぐ AConverter で快適なオーディオ変換を" : locale === "cn" ? "立即下载 AConverter，开启极致纯净的音频转换体验" : "Experience Ultra-Fast Audio Conversion with AConverter"}
+      </h2>
+      <p class="text-slate-500 mb-8 max-w-xl mx-auto">
+        {locale === "ja" ? "クラウド送信不要・8スレッド爆速処理・着信音作成まで、Mac での音声処理をこれ1本で。" : locale === "cn" ? "零上传隐私泄露风险、8 线程极速并发、一键铃声制作与音频合并，macOS 用户的全能利器。" : "Zero privacy risks, 8-thread local concurrency, ringtone trimmer, and audio merger. Designed natively for Mac."}
+      </p>
+      <a
+        href={dict.aconverter.downloadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg"
+      >
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.3-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.08-3.11-1.06.05-2.36.71-3.13 1.61-.65.77-1.22 2.01-1.07 3.11 1.2.09 2.4-.62 3.12-1.61"
+          ></path>
+        </svg>
+        {dict.aconverter.cta}
+      </a>
+    </div>
+  </section>
+
+  <Footer locale={locale} />
+</SiteLayout>
