@@ -97,13 +97,14 @@ const ldJson = locale === DEFAULT_LOCALE
 
 const canonical = locale === DEFAULT_LOCALE
   ? "https://fineusing.com/devicemirror.html"
-  : locale === "ja"
-  ? "https://fineusing.com/ja/devicemirror.html"
-  : "https://fineusing.com/cn/devicemirror.html";
+  : `https://fineusing.com/${locale}/devicemirror.html`;
 const ogUrl = canonical;
 const altEn = "https://fineusing.com/devicemirror.html";
 const altZh = "https://fineusing.com/cn/devicemirror.html";
 const altJa = "https://fineusing.com/ja/devicemirror.html";
+const altTc = "https://fineusing.com/tc/devicemirror.html";
+const altFr = "https://fineusing.com/fr/devicemirror.html";
+const altDe = "https://fineusing.com/de/devicemirror.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
@@ -112,6 +113,12 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
         ? "DeviceMirror: iPhone Mirror for Mac | USB 4K & Wi-Fi AirPlay Screen Mirroring"
         : locale === "ja"
         ? "DeviceMirror: iPhone画面をMacにミラーリング | USB 4K＆Wi-Fi AirPlay対応"
+        : locale === "tc"
+        ? "DeviceMirror: iPhone/iPad 投影到 Mac | USB 4K 與 Wi-Fi 雙模鏡像錄影"
+        : locale === "fr"
+        ? "DeviceMirror: Mise en miroir iPhone sur Mac | USB 4K & Wi-Fi AirPlay"
+        : locale === "de"
+        ? "DeviceMirror: iPhone Bildschirm auf Mac spiegeln | USB 4K & Wi-Fi AirPlay"
         : "DeviceMirror: iPhone/iPad投屏到Mac | USB 4K与Wi-Fi双模镜像录制"}
     </title>
     <meta
@@ -121,6 +128,12 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
           ? "DeviceMirror - Dual-Mode USB & Wi-Fi iOS Screen Mirroring for Mac"
           : locale === "ja"
           ? "DeviceMirror - iPhone/iPad画面をMacに超低遅延ミラーリング＆録画"
+          : locale === "tc"
+          ? "DeviceMirror - USB 4K 與 Wi-Fi 雙模：iPhone/iPad 螢幕聲音鏡像到 Mac"
+          : locale === "fr"
+          ? "DeviceMirror - Mise en miroir d'écran iOS sur Mac en USB & Wi-Fi"
+          : locale === "de"
+          ? "DeviceMirror - iOS-Bildschirmspiegelung auf Mac über USB & Wi-Fi"
           : "DeviceMirror - USB 4K与Wi-Fi双模：iPhone/iPad屏幕声音镜像到Mac"
       }
     />
@@ -131,6 +144,12 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
           ? "Best iPhone mirror app for Mac. Mirror iOS screen and audio to Mac via USB (up to 4K) or Wi-Fi (up to 2.5K). Support multi-device mirroring, MP4/MOV/GIF recording, and 200+ video sites."
           : locale === "ja"
           ? "iPhoneやiPadの画面と音声をMacに超低遅延ミラーリング。USB有線（最大4K）＆Wi-Fi（最大2.5K）対応、複数台同時表示、MP4/MOV/GIF録画、200以上の動画配信サイトの大画面再生をサポート。"
+          : locale === "tc"
+          ? "專業 Mac 版 iPhone/iPad 投影軟體。支援 USB 有線（最高 4K）與 Wi-Fi（最高 2.5K）雙模投影、多台設備同時鏡像、音畫同錄為 MP4/MOV/GIF、即時 PNG/JPEG 截圖以及 200+ 主流影音網站大螢幕投放。"
+          : locale === "fr"
+          ? "Diffusez l'écran et le son de votre iPhone/iPad sur Mac via USB (jusqu'à 4K) ou Wi-Fi (jusqu'à 2.5K). Enregistrement vidéo et prise en charge multi-appareils."
+          : locale === "de"
+          ? "Spiegeln Sie Bildschirm und Audio von iPhone/iPad auf den Mac via USB (bis 4K) oder Wi-Fi (bis 2,5K). Videoaufnahme und Multi-Geräte-Unterstützung."
           : "专业Mac版iPhone/iPad投屏软件。支持USB有线（最高4K）与Wi-Fi（最高2.5K）双模投屏、多台设备同时镜像、音画同录为MP4/MOV/GIF、实时PNG/JPEG截图以及200+主流视频网站大屏投射。"
       }
     />
@@ -141,6 +160,12 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
           ? "DeviceMirror, iPhone mirror for Mac, screen mirroring iPhone to Mac, AirPlay Mac, 4K screen mirroring, mirror iPad to Mac, record iPhone screen on Mac, multi-device mirroring, iOS screen recording GIF"
           : locale === "ja"
           ? "DeviceMirror, iPhone ミラーリング Mac, iPhone 画面共有 Mac, AirPlay ミラーリング Mac, iPad ミラーリング, スマホ画面 Mac 録画, 4K ミラーリング, 複数台 同時 ミラーリング, スマホ 画面録画 GIF"
+          : locale === "tc"
+          ? "DeviceMirror, iPhone投影Mac, iPad投影Mac, Mac接收AirPlay, USB投影4K, 手機投影錄影GIF, 蘋果手機鏡像到電腦, 多台iPhone同時投影, 影片投放Mac"
+          : locale === "fr"
+          ? "DeviceMirror, recopie de l'ecran iphone sur mac, airplay mac, partage ecran iphone mac, enregistrer ecran iphone sur mac"
+          : locale === "de"
+          ? "DeviceMirror, iPhone auf Mac spiegeln, AirPlay Mac, iOS Bildschirmaufnahme Mac, iPad auf Mac spiegeln"
           : "DeviceMirror, iPhone投屏Mac, iPad投屏Mac, Mac接收AirPlay, USB投屏4K, 手机投屏录制GIF, 苹果手机镜像到电脑, 多台iPhone同时投屏, 腾讯视频投屏Mac, 爱奇艺投屏Mac"
       }
     />
@@ -154,6 +179,12 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
           ? "DeviceMirror - AirPlay Screen Mirroring for iPhone/iPad to Mac"
           : locale === "ja"
           ? "DeviceMirror: iPhone画面をMacにミラーリング | AirPlay 画面ミラーリング"
+          : locale === "tc"
+          ? "DeviceMirror - iPhone/iPad 到 Mac 的 AirPlay 螢幕鏡像"
+          : locale === "fr"
+          ? "DeviceMirror - Recopie d'écran AirPlay iPhone/iPad sur Mac"
+          : locale === "de"
+          ? "DeviceMirror - AirPlay Bildschirmspiegelung für iPhone/iPad auf Mac"
           : "DeviceMirror - iPhone/iPad 到 Mac 的 AirPlay 屏幕镜像"
       }
     />
@@ -164,6 +195,12 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
           ? "Mirror your iPhone and iPad screens to Mac with DeviceMirror"
           : locale === "ja"
           ? "iPhone/iPad の画面を Mac の大画面に超低遅延でミラーリング。ゲーム実況や動画視聴に最適。"
+          : locale === "tc"
+          ? "使用 DeviceMirror 將您的 iPhone 和 iPad 螢幕鏡像到 Mac"
+          : locale === "fr"
+          ? "Diffusez l'écran de votre iPhone et iPad sur votre Mac avec DeviceMirror."
+          : locale === "de"
+          ? "Spiegeln Sie Ihre iPhone- und iPad-Bildschirme mit DeviceMirror auf den Mac."
           : "使用 DeviceMirror 将您的 iPhone 和 iPad 屏幕镜像到 Mac"
       }
     />
@@ -177,7 +214,9 @@ const altJa = "https://fineusing.com/ja/devicemirror.html";
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
     <link rel="alternate" hreflang="ja" href={altJa} />
-    <link rel="alternate" hreflang="x-default" href={altEn} />
+    <link rel="alternate" hreflang="zh-Hant" href={altTc} />
+    <link rel="alternate" hreflang="fr" href={altFr} />
+    <link rel="alternate" hreflang="de" href={altDe} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
 
     <script type="application/ld+json" set:html={ldJson}></script>

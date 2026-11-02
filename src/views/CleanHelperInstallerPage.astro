@@ -10,12 +10,13 @@ const langHref = getLangHref(locale, "/cleanhelperinstaller.html");
 
 const canonical = locale === DEFAULT_LOCALE
   ? "https://fineusing.com/cleanhelperinstaller.html"
-  : locale === "ja"
-  ? "https://fineusing.com/ja/cleanhelperinstaller.html"
-  : "https://fineusing.com/cn/cleanhelperinstaller.html";
+  : `https://fineusing.com/${locale}/cleanhelperinstaller.html`;
 const altEn = "https://fineusing.com/cleanhelperinstaller.html";
 const altZh = "https://fineusing.com/cn/cleanhelperinstaller.html";
 const altJa = "https://fineusing.com/ja/cleanhelperinstaller.html";
+const altTc = "https://fineusing.com/tc/cleanhelperinstaller.html";
+const altFr = "https://fineusing.com/fr/cleanhelperinstaller.html";
+const altDe = "https://fineusing.com/de/cleanhelperinstaller.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
@@ -24,6 +25,9 @@ const altJa = "https://fineusing.com/ja/cleanhelperinstaller.html";
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
     <link rel="alternate" hreflang="ja" href={altJa} />
+    <link rel="alternate" hreflang="zh-Hant" href={altTc} />
+    <link rel="alternate" hreflang="fr" href={altFr} />
+    <link rel="alternate" hreflang="de" href={altDe} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
   </Fragment>
 

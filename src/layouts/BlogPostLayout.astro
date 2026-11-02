@@ -14,71 +14,77 @@ const { title, date, description, product } = meta;
 const rawPath = (Astro.url?.pathname ?? "/blog/index")
   .replace(/\/+$/, "")
   .replace(/\.html$/, "");
-const slugPath = rawPath.replace(/^\/(cn|ja)/, "") || "/blog/index";
+const slugPath = rawPath.replace(/^\/(cn|ja|tc|fr|de)/, "") || "/blog/index";
 
 const enPath = `${slugPath}.html`;
 const cnPath = `/cn${slugPath}.html`;
 const jaPath = `/ja${slugPath}.html`;
+const tcPath = `/tc${slugPath}.html`;
+const frPath = `/fr${slugPath}.html`;
+const dePath = `/de${slugPath}.html`;
 
 // 语言切换目标地址（严格精确到 .html，无末尾斜杠）
-const langHref = locale === DEFAULT_LOCALE ? cnPath : locale === "ja" ? jaPath : enPath;
-const canonicalUrl = `https://fineusing.com${locale === DEFAULT_LOCALE ? enPath : locale === "ja" ? jaPath : cnPath}`;
+const langHref = locale === DEFAULT_LOCALE ? cnPath : locale === "ja" ? jaPath : locale === "tc" ? tcPath : locale === "fr" ? frPath : locale === "de" ? dePath : enPath;
+const canonicalUrl = `https://fineusing.com${locale === DEFAULT_LOCALE ? enPath : `/${locale}${slugPath}.html`}`;
 const altEn = `https://fineusing.com${enPath}`;
 const altZh = `https://fineusing.com${cnPath}`;
 const altJa = `https://fineusing.com${jaPath}`;
+const altTc = `https://fineusing.com${tcPath}`;
+const altFr = `https://fineusing.com${frPath}`;
+const altDe = `https://fineusing.com${dePath}`;
 
 const productMetaMap: Record<string, any> = {
   Rightly: {
     name: "Rightly",
-    tagline: locale === "ja" ? "Mac用高機能Finder右クリックメニュー拡張ツール" : locale === "cn" ? "macOS 原生右键增强工具" : "Finder Right-Click Toolkit for macOS",
-    desc: locale === "ja" ? "日常の頻出操作を右クリックメニューへ集約。新規ファイル作成、30種以上の解凍・圧縮、常用フォルダやターミナルへの瞬時アクセスを実現。" : locale === "cn" ? "把常用操作放进 Finder 右键菜单，支持新建 10+ 格式文件、30+ 格式压缩解压与常用目录直达。" : "Supercharge your Finder right-click menu with instant file creation, 30+ archive formats, and quick access.",
+    tagline: locale === "ja" ? "Mac用高機能Finder右クリックメニュー拡張ツール" : locale === "cn" ? "macOS 原生右键增强工具" : locale === "tc" ? "Mac 專用高階 Finder 右鍵選單增強工具" : locale === "fr" ? "Boîte à outils de menu contextuel Finder pour macOS" : locale === "de" ? "Finder Kontextmenü-Erweiterung für macOS" : "Finder Right-Click Toolkit for macOS",
+    desc: locale === "ja" ? "日常の頻出操作を右クリックメニューへ集約。新規ファイル作成、30種以上の解凍・圧縮、常用フォルダやターミナルへの瞬時アクセスを実現。" : locale === "cn" ? "把常用操作放进 Finder 右键菜单，支持新建 10+ 格式文件、30+ 格式压缩解压与常用目录直达。" : locale === "tc" ? "將常用操作收納進 Finder 右鍵選單，支援新增 10+ 格式檔案、30+ 格式解壓縮與常用目錄秒速直達。" : locale === "fr" ? "Intégrez vos actions fréquentes au clic droit Finder: création de fichiers, extraction de 30+ formats, et raccourcis instantanés." : locale === "de" ? "Finder-Kontextmenü erweitern: Neue Dateien erstellen, 30+ Archivformate entpacken und Schnellzugriff auf Ordner." : "Supercharge your Finder right-click menu with instant file creation, 30+ archive formats, and quick access.",
     href: `${base}/rightly.html`,
-    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : locale === "tc" ? "App Store 下載" : locale === "fr" ? "Télécharger sur le Mac App Store" : locale === "de" ? "Im Mac App Store laden" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6806805796",
     logo: "/img/rightly-logo.png"
   },
   DeviceMirror: {
     name: "DeviceMirror",
-    tagline: locale === "ja" ? "iPhone / iPad 画面を Mac に高画質ミラーリング" : locale === "cn" ? "iPhone / iPad 屏幕镜像到 Mac" : "iPhone Screen Mirroring to Mac",
-    desc: locale === "ja" ? "超低遅延投屏，支持無線 AirPlay と USB 有線接続。大画面でゲーム実況や動画視聴を満喫。" : locale === "cn" ? "超低延迟投屏，支持无线 AirPlay 与 USB 有线连接，大屏畅享游戏与观影。" : "Low-latency AirPlay & USB wired screen mirroring for iPhone and iPad to Mac.",
+    tagline: locale === "ja" ? "iPhone / iPad 画面を Mac に高画質ミラーリング" : locale === "cn" ? "iPhone / iPad 屏幕镜像到 Mac" : locale === "tc" ? "iPhone / iPad 螢幕低延遲鏡像到 Mac" : locale === "fr" ? "Mise en miroir iPhone & iPad sur Mac" : locale === "de" ? "iPhone & iPad Bildschirm-Synchronisierung auf Mac" : "iPhone Screen Mirroring to Mac",
+    desc: locale === "ja" ? "超低遅延投屏，支持無線 AirPlay と USB 有線接続。大画面でゲーム実況や動画視聴を満喫。" : locale === "cn" ? "超低延迟投屏，支持无线 AirPlay 与 USB 有线连接，大屏畅享游戏与观影。" : locale === "tc" ? "超低延遲投影，支援無線 AirPlay 與 USB 有線連接，大螢幕暢玩遊戲與觀影。" : locale === "fr" ? "Mise en miroir AirPlay & USB à très faible latence pour iPhone et iPad sur Mac." : locale === "de" ? "AirPlay- & USB-Bildschirmspiegelung mit minimaler Latenz für iPhone und iPad auf dem Mac." : "Low-latency AirPlay & USB wired screen mirroring for iPhone and iPad to Mac.",
     href: `${base}/devicemirror.html`,
-    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : locale === "tc" ? "App Store 下載" : locale === "fr" ? "Télécharger sur le Mac App Store" : locale === "de" ? "Im Mac App Store laden" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id1598771178",
     logo: "/img/devicemirror-logo.png"
   },
   AConverter: {
     name: "AConverter",
-    tagline: locale === "ja" ? "Mac用万能オーディオコンバーター＆着信音作成" : locale === "cn" ? "全能音频格式转换与铃声制作工具" : "Universal Audio Converter & Ringtone Maker for Mac",
-    desc: locale === "ja" ? "主要音楽形式（NCM/MFLAC/MGG）変換、動画からの音声抽出、8スレッド高速並行バッチ処理、波形トリミング着信音作成に対応。" : locale === "cn" ? "支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌。" : "Convert streaming audio formats, extract audio from any video, batch process with 8 threads, and cut ringtones offline.",
+    tagline: locale === "ja" ? "Mac用万能オーディオコンバーター＆着信音作成" : locale === "cn" ? "全能音频格式转换与铃声制作工具" : locale === "tc" ? "全能音訊格式轉換與鈴聲製作工具" : locale === "fr" ? "Convertisseur audio universel & Créateur de sonneries pour Mac" : locale === "de" ? "Universeller Audiokonverter & Klingelton-Ersteller für Mac" : "Universal Audio Converter & Ringtone Maker for Mac",
+    desc: locale === "ja" ? "主要音楽形式（NCM/MFLAC/MGG）変換、動画からの音声抽出、8スレッド高速並行バッチ処理、波形トリミング着信音作成に対応。" : locale === "cn" ? "支持网易云/QQ音乐格式转换、全格式音视频提取、8 线程极速并发，纯本地运行，数秒转换一首歌。" : locale === "tc" ? "支援網易雲/QQ音樂格式轉換、全格式音視訊提取、8 執行緒極速並行，純本機運行，數秒轉換一首歌。" : locale === "fr" ? "Convertissez vos formats audio, extrayez le son des vidéos, traitez par lots avec 8 threads et découpez vos sonneries hors-ligne." : locale === "de" ? "Streaming-Formate konvertieren, Audio aus Videos extrahieren, 8-Thread-Stapelverarbeitung und Offline-Klingeltöne erstellen." : "Convert streaming audio formats, extract audio from any video, batch process with 8 threads, and cut ringtones offline.",
     href: `${base}/aconverter.html`,
-    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : locale === "tc" ? "App Store 下載" : locale === "fr" ? "Télécharger sur le Mac App Store" : locale === "de" ? "Im Mac App Store laden" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id1606741874",
     logo: "/img/aconverter-logo.png"
   },
   NTFSSync: {
     name: "NTFSSync",
-    tagline: locale === "ja" ? "カーネル拡張不要の Mac 用 NTFS 読み書き＆フォーマットツール" : locale === "cn" ? "免内核扩展的 macOS NTFS 读写与格式化工具" : "Zero-Kext NTFS Read-Write & Formatter for macOS",
-    desc: locale === "ja" ? "FUSE-T と NFS v4 のユーザー空間アーキテクチャ採用。SIP無効化不要、挿すだけで自動マウント、Mac単体で外付けドライブを直接NTFS初期化可能。" : locale === "cn" ? "基于 FUSE-T 用户态架构，免装内核驱动，零安全降级。插盘秒级读写挂载，并支持在 Mac 上将外置 U 盘/硬盘直接格式化为 NTFS。" : "Powered by FUSE-T (NFS v4) in pure userspace. No kernel extensions, no SIP disabling. Instant read-write mounting and direct NTFS formatting on Mac.",
+    tagline: locale === "ja" ? "カーネル拡張不要の Mac 用 NTFS 読み書き＆フォーマットツール" : locale === "cn" ? "免内核扩展的 macOS NTFS 读写与格式化工具" : locale === "tc" ? "免核心擴充套件的 macOS NTFS 讀寫與格式化工具" : locale === "fr" ? "Pilote NTFS lecture-écriture & Formatage sans extension de noyau" : locale === "de" ? "Treiberloser NTFS Lese- & Schreibzugriff für macOS" : "Zero-Kext NTFS Read-Write & Formatter for macOS",
+    desc: locale === "ja" ? "FUSE-T と NFS v4 のユーザー空間アーキテクチャ採用。SIP無効化不要、挿すだけで自動マウント、Mac単体で外付けドライブを直接NTFS初期化可能。" : locale === "cn" ? "基于 FUSE-T 用户态架构，免装内核驱动，零安全降级。插盘秒级读写挂载，并支持在 Mac 上将外置 U 盘/硬盘直接格式化为 NTFS。" : locale === "tc" ? "基於 FUSE-T 使用者態架構，免裝核心驅動，零安全降級。隨插即讀寫掛載，並支援在 Mac 上將外接隨身碟/硬碟直接格式化為 NTFS。" : locale === "fr" ? "Architecture en espace utilisateur FUSE-T (NFS v4). Sans extension de noyau ni désactivation de SIP. Montage lecture-écriture instantané." : locale === "de" ? "Basiert auf FUSE-T (NFS v4) im Benutzerbereich. Ohne Kernel-Erweiterungen und ohne SIP-Deaktivierung. Sofortiges Lesen und Schreiben." : "Powered by FUSE-T (NFS v4) in pure userspace. No kernel extensions, no SIP disabling. Instant read-write mounting and direct NTFS formatting on Mac.",
     href: `${base}/ntfssync.html`,
-    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : locale === "tc" ? "App Store 下載" : locale === "fr" ? "Télécharger sur le Mac App Store" : locale === "de" ? "Im Mac App Store laden" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6475194342",
     logo: "/img/ntfssync-logo.png"
   },
   AppPad: {
     name: "AppPad",
-    tagline: locale === "ja" ? "macOS 26+ 向け次世代 Launchpad 代替アプリ" : locale === "cn" ? "macOS 26 原生级启动台替代品" : "Native Launchpad Alternative for macOS 26+",
-    desc: locale === "ja" ? "Swift ネイティブ設計。自由なグリッド行・列とウィンドウモード、トラックパッドピンチ操作、右クリック完全アンインストールに対応。" : locale === "cn" ? "Swift 原生打造，自由网格行列与窗口模式，支持四指捏合唤出、右键深度卸载残留与老启动台还原。" : "Native Swift launcher with custom grid density, windowed mode, trackpad pinch gestures, and right-click deep uninstallation.",
+    tagline: locale === "ja" ? "macOS 26+ 向け次世代 Launchpad 代替アプリ" : locale === "cn" ? "macOS 26 原生级启动台替代品" : locale === "tc" ? "macOS 26 原生級啟動台替代方案" : locale === "fr" ? "Alternative native au Launchpad pour macOS 26+" : locale === "de" ? "Native Launchpad-Alternative für macOS 26+" : "Native Launchpad Alternative for macOS 26+",
+    desc: locale === "ja" ? "Swift ネイティブ設計。自由なグリッド行・列とウィンドウモード、トラックパッドピンチ操作、右クリック完全アンインストールに対応。" : locale === "cn" ? "Swift 原生打造，自由网格行列与窗口模式，支持四指捏合唤出、右键深度卸载残留与老启动台还原。" : locale === "tc" ? "Swift 原生打造，自由自訂網格行列與視窗模式，支援四指捏合喚出、右鍵深度解除安裝殘留與經典啟動台還原。" : locale === "fr" ? "Lanceur Swift natif avec grille personnalisable, mode fenêtré, gestes de pincement et désinstallation complète par clic droit." : locale === "de" ? "Nativer Swift-Launcher mit anpassbarem Raster, Fenstermodus, Trackpad-Gesten und vollständiger Deinstallation per Rechtsklick." : "Native Swift launcher with custom grid density, windowed mode, trackpad pinch gestures, and right-click deep uninstallation.",
     href: `${base}/apppad.html`,
-    cta: locale === "ja" ? "無料ダウンロード" : locale === "cn" ? "立即下载体验" : "Download AppPad",
+    cta: locale === "ja" ? "無料ダウンロード" : locale === "cn" ? "立即下载体验" : locale === "tc" ? "立即下載體驗" : locale === "fr" ? "Télécharger gratuitement" : locale === "de" ? "Kostenlos herunterladen" : "Download AppPad",
     downloadUrl: "https://fineusing.com/installer/AppPad-Installer.dmg",
     logo: "/img/apppad-logo.png"
   },
   ZipGo: {
     name: "ZipGo",
-    tagline: locale === "ja" ? "Finder 右クリック解凍・圧縮・中身プレビュー" : locale === "cn" ? "Finder 原生右键解压缩工具" : "Finder Right-Click Archiver for macOS",
-    desc: locale === "ja" ? "右クリックから即座に30種以上の形式を解凍、解凍不要のプレビュー、Shift-JIS文字化け自動解消、AES-256暗号化に対応。" : locale === "cn" ? "右键一键解压 30+ 格式，免解压极速预览压缩包，支持加密与分卷压缩。" : "Extract 30+ archive formats directly from Finder, preview without unpacking, and create encrypted archives.",
+    tagline: locale === "ja" ? "Finder 右クリック解凍・圧縮・中身プレビュー" : locale === "cn" ? "Finder 原生右键解压缩工具" : locale === "tc" ? "Finder 原生右鍵解壓縮工具" : locale === "fr" ? "Archiveur clic droit Finder pour macOS" : locale === "de" ? "Finder Kontextmenü-Archivierer für macOS" : "Finder Right-Click Archiver for macOS",
+    desc: locale === "ja" ? "右クリックから即座に30種以上の形式を解凍、解凍不要のプレビュー、Shift-JIS文字化け自動解消、AES-256暗号化に対応。" : locale === "cn" ? "右键一键解压 30+ 格式，免解压极速预览压缩包，支持加密与分卷压缩。" : locale === "tc" ? "右鍵一鍵解壓 30+ 格式，免解壓縮極速預覽壓縮檔內容，支援加密與分卷壓縮。" : locale === "fr" ? "Extrayez 30+ formats directement depuis le Finder, prévisualisez sans décompresser et créez des archives chiffrées." : locale === "de" ? "30+ Archivformate direkt im Finder entpacken, Vorschau ohne Entpacken und verschlüsselte Archive erstellen." : "Extract 30+ archive formats directly from Finder, preview without unpacking, and create encrypted archives.",
     href: `${base}/zipgo.html`,
-    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : "Get on Mac App Store",
+    cta: locale === "ja" ? "Mac App Store で入手" : locale === "cn" ? "App Store 下载" : locale === "tc" ? "App Store 下載" : locale === "fr" ? "Télécharger sur le Mac App Store" : locale === "de" ? "Im Mac App Store laden" : "Get on Mac App Store",
     downloadUrl: "https://apps.apple.com/app/id6799313183",
     logo: "/img/zipgo-logo.png"
   }
@@ -98,6 +104,9 @@ const currentProduct = product ? productMetaMap[product] : null;
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
     <link rel="alternate" hreflang="ja" href={altJa} />
+    <link rel="alternate" hreflang="zh-Hant" href={altTc} />
+    <link rel="alternate" hreflang="fr" href={altFr} />
+    <link rel="alternate" hreflang="de" href={altDe} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
   </Fragment>
 
@@ -147,7 +156,7 @@ const currentProduct = product ? productMetaMap[product] : null;
               href={currentProduct.href}
               class="px-4 py-2.5 bg-white border border-slate-200 hover:border-slate-400 text-slate-700 rounded-lg text-sm font-semibold text-center transition-colors"
             >
-              {locale === "cn" ? "了解更多" : locale === "ja" ? "詳細を見る" : "Learn more"}
+              {locale === "cn" || locale === "tc" ? "了解更多" : locale === "ja" ? "詳細を見る" : "Learn more"}
             </a>
           </div>
         </div>

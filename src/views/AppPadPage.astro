@@ -98,13 +98,14 @@ const ldJson = locale === DEFAULT_LOCALE
 
 const canonical = locale === DEFAULT_LOCALE
   ? "https://fineusing.com/apppad.html"
-  : locale === "ja"
-  ? "https://fineusing.com/ja/apppad.html"
-  : "https://fineusing.com/cn/apppad.html";
+  : `https://fineusing.com/${locale}/apppad.html`;
 const ogUrl = canonical;
 const altEn = "https://fineusing.com/apppad.html";
 const altZh = "https://fineusing.com/cn/apppad.html";
 const altJa = "https://fineusing.com/ja/apppad.html";
+const altTc = "https://fineusing.com/tc/apppad.html";
+const altFr = "https://fineusing.com/fr/apppad.html";
+const altDe = "https://fineusing.com/de/apppad.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
@@ -113,6 +114,12 @@ const altJa = "https://fineusing.com/ja/apppad.html";
         ? "AppPad: Native Launchpad Alternative for macOS 26+"
         : locale === "ja"
         ? "AppPad: macOS 26+ 向け次世代 Launchpad 代替アプリ"
+        : locale === "tc"
+        ? "AppPad: macOS 26 及更高版本原生級啟動台替代方案"
+        : locale === "fr"
+        ? "AppPad: Alternative native au Launchpad pour macOS 26+"
+        : locale === "de"
+        ? "AppPad: Native Launchpad-Alternative für macOS 26+"
         : "AppPad: macOS 26 及更高系统原生级启动台替代品"}
     </title>
     <meta
@@ -122,6 +129,12 @@ const altJa = "https://fineusing.com/ja/apppad.html";
           ? "AppPad is the native Swift Launchpad alternative for macOS 26 Tahoe and beyond. Featuring customizable grid densities, full-screen and windowed modes, right-click deep uninstall, and trackpad gestures."
           : locale === "ja"
           ? "macOS 26 Tahoe 以降に対応した Swift ネイティブの Launchpad 代替アプリ。自由なグリッド行・列とアイコンサイズ、フルスクリーン／ウィンドウ表示、右クリックからの完全アンインストール、ピンチジェスチャーに対応。"
+          : locale === "tc"
+          ? "AppPad 是為 macOS 26 及更高版本打造的原生級啟動台替代方案。支援自訂網格行列與圖示尺寸、全螢幕/視窗雙模式、觸控板四指捏合手勢、右鍵深度解除安裝殘留、經典啟動台佈局一鍵還原與拖曳到 Dock 欄。"
+          : locale === "fr"
+          ? "AppPad réinvente l'expérience Launchpad sur macOS 26+ : disposition personnalisable en grille, modes plein écran et fenêtré, désinstallation complète et gestes trackpad."
+          : locale === "de"
+          ? "AppPad ist die native Launchpad-Alternative für macOS 26+. Mit anpassbarem Raster, Fenstermodus, Tiefendeinstallation per Rechtsklick und Trackpad-Gesten."
           : "AppPad 是为 macOS 26 及更高系统打造的原生级启动台替代品。支持自定义网格行列与图标尺寸、全屏/窗口双模式、触控板四指捏合手势、右键深度卸载残留、老启动台布局一键还原与拖拽到 Dock 栏。"
       }
     />
@@ -132,6 +145,12 @@ const altJa = "https://fineusing.com/ja/apppad.html";
           ? "AppPad, Launchpad alternative, macOS 26 Launchpad, Mac app launcher, uninstall Mac apps leftovers, Launchpad grid rows columns, trackpad pinch gesture Launchpad, Launchpad layout backup"
           : locale === "ja"
           ? "AppPad, Launchpad 代替 Mac, macOS 26 Launchpad, Mac アプリランチャー, Mac アプリ 完全削除 アンインストール, Launchpad グリッド カスタマイズ, トラックパッド ピンチ Launchpad"
+          : locale === "tc"
+          ? "AppPad, macOS 26 啟動台, Mac 啟動台替代方案, 啟動台自訂網格, 啟動台四指捏合, Mac 軟體深度解除安裝, 啟動台備份還原, Launchpad 替代, Mac 應用程式啟動器"
+          : locale === "fr"
+          ? "AppPad, alternative Launchpad mac, macOS 26 launchpad, lanceur applications mac, desinstaller application mac, gestes trackpad launchpad"
+          : locale === "de"
+          ? "AppPad, Launchpad Alternative Mac, macOS 26 Launchpad, Mac App Launcher, Mac Apps deinstallieren Reste entfernen, Launchpad Raster anpassen"
           : "AppPad, macOS 26 启动台, Mac 启动台替代品, 启动台自定义网格, 启动台四指捏合, Mac 软件深度卸载, 启动台备份还原, Launchpad 替代, Mac 应用程序启动器"
       }
     />
@@ -144,6 +163,12 @@ const altJa = "https://fineusing.com/ja/apppad.html";
           ? "AppPad: Native Launchpad Alternative for macOS 26+"
           : locale === "ja"
           ? "AppPad: macOS 26+ 向け次世代 Launchpad 代替アプリ"
+          : locale === "tc"
+          ? "AppPad: macOS 26 及更高版本原生級啟動台替代方案"
+          : locale === "fr"
+          ? "AppPad: Alternative native au Launchpad pour macOS 26+"
+          : locale === "de"
+          ? "AppPad: Native Launchpad-Alternative für macOS 26+"
           : "AppPad: macOS 26 及更高系统原生级启动台替代品"
       }
     />
@@ -154,6 +179,12 @@ const altJa = "https://fineusing.com/ja/apppad.html";
           ? "Lightning-fast native app launcher for macOS 26+ with custom grid density, deep uninstall, and pinch gestures."
           : locale === "ja"
           ? "Swift ネイティブの超高速アプリランチャー。グリッド配置、完全アンインストール、旧 Launchpad 復元に対応。"
+          : locale === "tc"
+          ? "macOS 26 極速原生啟動台替代方案，支援自訂網格行列、右鍵深度解除安裝與觸控板手勢。"
+          : locale === "fr"
+          ? "Lanceur d'applications rapide et moderne pour macOS 26+ avec grille personnalisée et désinstallation profonde."
+          : locale === "de"
+          ? "Blitzschneller nativer App-Launcher für macOS 26+ mit anpassbarem Raster und Tiefendeinstallation."
           : "macOS 26 极速原生启动台替代品，支持自定义网格行列、右键深度卸载与触控板手势。"
       }
     />
@@ -167,6 +198,9 @@ const altJa = "https://fineusing.com/ja/apppad.html";
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
     <link rel="alternate" hreflang="ja" href={altJa} />
+    <link rel="alternate" hreflang="zh-Hant" href={altTc} />
+    <link rel="alternate" hreflang="fr" href={altFr} />
+    <link rel="alternate" hreflang="de" href={altDe} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
 
     <script type="application/ld+json" set:html={ldJson}></script>

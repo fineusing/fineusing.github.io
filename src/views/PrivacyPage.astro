@@ -10,12 +10,13 @@ const langHref = getLangHref(locale, "/privacy.html");
 
 const canonical = locale === DEFAULT_LOCALE
   ? "https://fineusing.com/privacy.html"
-  : locale === "ja"
-  ? "https://fineusing.com/ja/privacy.html"
-  : "https://fineusing.com/cn/privacy.html";
+  : `https://fineusing.com/${locale}/privacy.html`;
 const altEn = "https://fineusing.com/privacy.html";
 const altZh = "https://fineusing.com/cn/privacy.html";
 const altJa = "https://fineusing.com/ja/privacy.html";
+const altTc = "https://fineusing.com/tc/privacy.html";
+const altFr = "https://fineusing.com/fr/privacy.html";
+const altDe = "https://fineusing.com/de/privacy.html";
 ---
 <SiteLayout lang={dict.langTag} enableLangRedirect={enableLangRedirect}>
   <Fragment slot="head">
@@ -24,12 +25,21 @@ const altJa = "https://fineusing.com/ja/privacy.html";
         ? "Fineusing: Privacy Policy"
         : locale === "ja"
         ? "Fineusing: プライバシーポリシー"
+        : locale === "tc"
+        ? "Fineusing: 隱私權政策"
+        : locale === "fr"
+        ? "Fineusing: Politique de confidentialité"
+        : locale === "de"
+        ? "Fineusing: Datenschutzrichtlinie"
         : "Fineusing: 隐私政策"}
     </title>
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="en" href={altEn} />
     <link rel="alternate" hreflang="zh-Hans" href={altZh} />
     <link rel="alternate" hreflang="ja" href={altJa} />
+    <link rel="alternate" hreflang="zh-Hant" href={altTc} />
+    <link rel="alternate" hreflang="fr" href={altFr} />
+    <link rel="alternate" hreflang="de" href={altDe} />
     <link rel="alternate" hreflang="x-default" href={altEn} />
   </Fragment>
 
