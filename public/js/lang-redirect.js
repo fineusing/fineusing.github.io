@@ -6,7 +6,7 @@
   var isTc = path.indexOf('/tc/') === 0 || path === '/tc';
   var isFr = path.indexOf('/fr/') === 0 || path === '/fr';
   var isDe = path.indexOf('/de/') === 0 || path === '/de';
-  var cleanPath = path.replace(/^\/(cn|ja|tc|fr|de)/, '') || '/';
+  var cleanPath = path.replace(/^\/(cn|ja|tc|fr|de)(?=\/|$)/, '') || '/';
   var targetPath = cleanPath.startsWith('/') ? cleanPath : '/' + cleanPath;
 
   if (storedLang === 'en') {

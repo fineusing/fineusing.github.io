@@ -20,7 +20,7 @@ const homeActive = active === "home";
 const productsActive = active === "products";
 
 // Compute page links for language switcher
-const rawPage = currentPath || (langHref ? langHref.replace(/^\/(cn|ja|tc|fr|de)/, "") : "/index.html");
+const rawPage = currentPath || (langHref ? langHref.replace(/^\/(cn|ja|tc|fr|de)(?=\/|$)/, "") : "/index.html");
 const cleanPage = rawPage.startsWith("/") ? rawPage : `/${rawPage}`;
 const enHref = cleanPage;
 const cnHref = `/cn${cleanPage}`;

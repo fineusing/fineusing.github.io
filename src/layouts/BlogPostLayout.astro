@@ -14,7 +14,7 @@ const { title, date, description, product } = meta;
 const rawPath = (Astro.url?.pathname ?? "/blog/index")
   .replace(/\/+$/, "")
   .replace(/\.html$/, "");
-const slugPath = rawPath.replace(/^\/(cn|ja|tc|fr|de)/, "") || "/blog/index";
+const slugPath = rawPath.replace(/^\/(cn|ja|tc|fr|de)(?=\/|$)/, "") || "/blog/index";
 
 const enPath = `${slugPath}.html`;
 const cnPath = `/cn${slugPath}.html`;
